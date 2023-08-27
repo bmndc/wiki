@@ -1,8 +1,11 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: BH Wiki
+description: BananaHackers Wiki hosted on GitHub Pages
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://minhduc-bui1.github.io/wiki
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Discord: https://discord.gg/rQ93zEu
+  Matrix: https://matrix.to/#/%23bananahackers:mozilla.org
+  Reddit: https://reddit.com/r/KaiOS
+  Google Groups: https://groups.google.com/g/bananahackers
