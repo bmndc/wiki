@@ -3,7 +3,6 @@ description: BananaHackers Wiki hosted on GitHub Pages
 theme: just-the-docs
 
 url: https://minhduc-bui1.github.io/wiki
-baseurl: "/docs"
 
 aux_links:
   Discord: https://discord.gg/rQ93zEu
