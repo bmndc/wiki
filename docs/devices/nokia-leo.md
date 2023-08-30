@@ -1,5 +1,5 @@
 ---
-title: Nokia 6300 4G (nokia-leo)
+title: Nokia 6300 4G
 parent: Devices
 layout: default
 nav_order: 5
