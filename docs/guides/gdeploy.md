@@ -5,6 +5,8 @@ layout: default
 nav_order: 2
 ---
 
+# `gdeploy`
+
 `gdeploy` is a small cross-platform command-line utility developed by Luxferre as an alternative to the graphical WebIDE, and can even be used as NodeJS module/library. According to Luxferre, 'it uses the same `firefox-client` backend but has much simpler architecture for application management'.
 
 For Windows 10 version 1709 and later, type these commands one by one into Command Prompt, with [DIR_PATH] replaced by the extracted folder directory of the app you want to install (see step 8 above):

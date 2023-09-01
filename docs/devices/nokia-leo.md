@@ -180,6 +180,7 @@ For the sake of simplicity, the guide assumes you've moved the Gerda Recovery im
 > This portion of the guide was taken from [Development/EDL tools on BananaHackers Wiki](https://wiki.bananahackers.net/development/edl) so that you don't have to switch tabs. Kudos to Cyan for the guides!
 
 #### Linux
+{: .no_toc }
 1. Install Python from your operating system's package manager e.g.
 ```console
 sudo apt-get install python pip3
@@ -200,6 +201,7 @@ Additionally, if you have issue with device access:
 - Copy both `51-edl.rules` and `50-android.rules` in the root of extracted EDL tools folder to `/etc/udev/rules.d`.
 
 #### macOS
+{: .no_toc }
 1. Follow the instructions to install Homebrew on [its homepage](https://brew.sh). Basically just open Terminal and copy the long streak of code shown on the page, and type your password when prompted.
 2. While you're in Terminal, type this into the command-line:
 ```console
@@ -210,6 +212,7 @@ brew install python android-platform-tools libusb && pip3 install pyusb pyserial
   - From the turned off state, hold down `*` and `#` at the same time while inserting the USB cable to the phone.
 
 #### Windows
+{: .no_toc }
 1. Open the Python installer and proceed with installation. Remember to tick the box next to "Add python.exe to PATH". This would make Python able to be called everywhere in the command-line instead of specifically pointing to its folder, which the next part of the guide won't cover on.
 
 ![Demostration of a installation window for Python 3.9 showing two options, 'Install Now' and 'Customize installation', with the checkbox for 'Add Python 3.9 to PATH' being selected](/assets/python.png)
