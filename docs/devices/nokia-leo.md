@@ -179,7 +179,7 @@ cd kaiosrt
 
 > To remove unwanted apps from the phone, you can use [this fork of Luxferre's AppBuster](https://github.com/minhduc-bui1/AppBuster) which lets you disable any apps you don't need and enable them again if you want.
 
-# ROOT: Boot partition modifying (non-US only)
+## ROOT: Boot partition modifying (non-US only)
 
 On KaiOS 2.5.4 devices, such as the 6300 4G and 8000 4G, ADB and WebIDE can be used to install most third-party apps. However, apps with special ‘forbidden’ permissions are not allowed, including most BananaHackers apps with `engmode-extension` like Wallace Toolbox, which can be used to gain exclusive access of the phone. You also cannot make changes to the system. On the 2720 Flip and 800 Tough with KaiOS 2.5.2.2, with HMD/Nokia Mobile changing their release branches from `dev-keys` to `release-keys`, the situation is even worse as you cannot sideload at all. 
 
@@ -191,7 +191,7 @@ The guide below is based on the main guide from BananaHackers website, but has b
 
 **DISCLAIMER: This process will void your phone's warranty, disable its ability to receive WhatsApp calls and over-the-air updates, but you can undo this if you save a copy of the original boot partition. However, you might also brick your phone if you make a mistake in the process, so proceed at your own risk and with caution! I won't be responsible for any damages done to your phone by following these.**
 
-## What we'll need
+### What we'll need
 - an international non-US version of Nokia 6300 4G (not TA-1324) or Nokia 8000 4G, Nokia 2720 Flip or Nokia 800 Tough;
 - an USB cable capable of data transferring (EDL cables will also do);
 - an Internet connection to download the tools needed;
@@ -228,10 +228,10 @@ The guide below is based on the main guide from BananaHackers website, but has b
 
 For the sake of simplicity, the guide assumes you've moved the Gerda Recovery image and the MBN loader file into the root of EDL tools folder, which you should do for convenience. If you'd like to have those in other folders, change the directory path accordingly.
 
-## Part 1: Set up environment for EDL tools
+### Part 1: Set up environment for EDL tools
 > This portion of the guide was taken from [Development/EDL tools on BananaHackers Wiki](https://wiki.bananahackers.net/development/edl) so that you don't have to switch tabs. Kudos to Cyan for the guides!
 
-### Linux
+#### Linux
 1. Install Python from your operating system's package manager e.g.
 ```console
 sudo apt-get install python pip3
@@ -251,7 +251,7 @@ Additionally, if you have issue with device access:
 - Open `/etc/modprobe.d/blacklist.conf` in a text editor and append `blacklist qcserial`.
 - Copy both `51-edl.rules` and `50-android.rules` in the root of extracted EDL tools folder to `/etc/udev/rules.d`.
 
-### macOS
+#### macOS
 1. Follow the instructions to install Homebrew on [its homepage](https://brew.sh). Basically just open Terminal and copy the long streak of code shown on the page, and type your password when prompted.
 2. While you're in Terminal, type this into the command-line:
 ```console
@@ -261,7 +261,7 @@ brew install python android-platform-tools libusb && pip3 install pyusb pyserial
   - From the turned on state, turn on debugging mode on your phone by dialing `*#*#33284#*#*`, connect it to your computer and type `adb reboot edl` in a command-line window.
   - From the turned off state, hold down `*` and `#` at the same time while inserting the USB cable to the phone.
 
-### Windows
+#### Windows
 1. Open the Python installer and proceed with installation. Remember to tick the box next to "Add python.exe to PATH". This would make Python able to be called everywhere in the command-line instead of specifically pointing to its folder, which the next part of the guide won't cover on.
 
 ![Demostration of a installation window for Python 3.9 showing two options, 'Install Now' and 'Customize installation', with the checkbox for 'Add Python 3.9 to PATH' being selected](/assets/python.png)
@@ -297,9 +297,9 @@ In both cases, the phone's screen should blink with a 'enabled by KaiOS' logo th
 
 *As I've said above, the latest 2.8 version of Zadig might have some troubles detecting the phone's EDL driver. If you were using it and the driver installation takes too much time and the tool aborts it, exit Zadig, exit and re-enter EDL mode on the phone, then try to install again. If that still doesn't help, try to [download version 2.7](https://github.com/pbatard/libwdi/releases/tag/v1.4.1) instead.*
 
-## Part 2: Obtaining the boot partition
+### Part 2: Obtaining the boot partition
 
-### Nokia 8000 4G and Nokia 6300 4G with bkerler's EDL
+#### Nokia 8000 4G and Nokia 6300 4G with bkerler's EDL
 > Beware: due to the firehose loader being malfunctioned, the EDL tool only accepts one command each session, after which you'll have to disconnect the phone and restart the phone in EDL mode. If you try to throw a second command, it'll result in a `bytearray index out of range` error.
 
 1. Turn on the phone in EDL mode.
@@ -332,7 +332,7 @@ You can disconnect the phone from your computer for now.
 
 **Copy and keep the original boot partition somewhere safe in case you need to restore to the original state for over-the-air updates or re-enabling WhatsApp calls.**
 
-### Nokia 2720 Flip and Nokia 800 Tough with andybalholm's EDL
+#### Nokia 2720 Flip and Nokia 800 Tough with andybalholm's EDL
 Unlike the 6300 4G and 8000 4G, our phones' EDL loader properly works with both reading and writing, so the steps are more straightforward.
 
 1. Switch your phone to EDL mode and connect it to your computer.
@@ -359,8 +359,8 @@ You can disconnect the phone from your computer for now.
 
 **Copy and keep the original boot partition somewhere safe in case you need to restore to the original state for over-the-air updates or re-enabling WhatsApp calls.**
 
-## Part 3: Modifying the boot partition
-### Automatic patching with `8k-boot-patcher`
+### Part 3: Modifying the boot partition
+#### Automatic patching with `8k-boot-patcher`
 1. Follow [Docker's tutorial](https://docs.docker.com/compose/install/#scenario-one-install-docker-desktop) on installing Docker Desktop. Once set up, open the program, click Accept on this box and let the Docker Engine start before exiting.
 
 ![Demostration of a window titled as 'Docker Subscription Service Agreement' which declares that you will have to accept Docker's Subscription Service Agreements, Data Processing Agreement and Data Privacy Policy in order to use the program, and the free scope of it is limited to personal and small business uses. The window also lists the options to view the full agreements, accept them or reject and close the program.](/assets/docker_abomination.png)
@@ -381,7 +381,7 @@ That's it! On your desktop there will be two new image files, the modified `boot
 
 ![Demostration of boot.img and boot-orig.img files as shown on desktop](/assets/after_patch.png)
 
-### Manual patching with Android Image Kitchen
+#### Manual patching with Android Image Kitchen
 1. Extract the Android Image Kitchen tools and copy the boot image we've just obtained over to the root of the extracted folder.
 
 ![Demostration of a list of folders and files contained in the extracted Android Image Kitchen folder](/assets/aik.png)
@@ -431,7 +431,7 @@ That's it! On your desktop there will be two new image files, the modified `boot
 
 If the newly packaged image is barely over 1/3 the size of the original image, it's a normal behaviour and you can proceed.
 
-## Part 4: Flashing the modified boot partition
+### Part 4: Flashing the modified boot partition
 1. Turn on your phone in EDL mode and connect it to your computer.
 
 2. Move the newly created `boot.img`, `unsigned-new.img` or `image-new.img` to the EDL tools folder and open a command-line window within it. From here type either of these commands depending on which image file you have:
@@ -463,7 +463,7 @@ python edl.py reset
 ```
 ![Demostration of a command-line window showing the results after typing the first command above](/assets/edl_bootog.png)
 
-### Next steps
+#### Next steps
 - Now that you've rooted your phone, to install applications with 'forbidden' permissions, connect it to a WebIDE session, then open Device Preferences by the right pane, search for `devTools.apps.forbiddenPermissions`, clear its value, then either restart the phone or hold the top Power button and choose Memory Cleaner > Deep Clean Memory to restart B2G.
 
 ![Demostration of a WebIDE window in which the location of Device Preferences is highlighted in the right pane and the value of devTools.apps.forbiddenPermissions has been emptied](/assets/devpref.png)
@@ -481,6 +481,7 @@ HMD Global/Nokia Mobile has published the device's source code for its Linux 4.9
 Note that the source code released does not contain proprietary parts from other parties like Qualcomm.
 
 ## External links
+{: .h1}
 - [Nokia 8000 4G product page](https://www.nokia.com/phones/en_int/nokia-8000-4g) on Nokia Mobile's website
 - [Nokia 6300 4G product page](https://www.nokia.com/phones/en_int/nokia-6300-4g) on Nokia Mobile's website
 - [Discussion: Nokia 6300 4G and Nokia 8000 4G](https://4pda.to/forum/index.php?showtopic=1009510) on 4PDA Forum (Russian)
