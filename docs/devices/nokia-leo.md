@@ -181,12 +181,13 @@ For the sake of simplicity, the guide assumes you've moved the Gerda Recovery im
 
 #### Linux
 {: .no_toc }
+
 1. Install Python from your operating system's package manager e.g.
-```console
+```
 sudo apt-get install python pip3
 ```
 2. Then, open Terminal and type this to install the dependencies for EDL tools:
-```console
+```
 sudo -H pip3 install pyusb pyserial capstone keystone-engine docopt
 ``` 
 3. Switch your phone to EDL mode and connect it to your computer.
@@ -202,9 +203,10 @@ Additionally, if you have issue with device access:
 
 #### macOS
 {: .no_toc }
+
 1. Follow the instructions to install Homebrew on [its homepage](https://brew.sh). Basically just open Terminal and copy the long streak of code shown on the page, and type your password when prompted.
 2. While you're in Terminal, type this into the command-line:
-```console
+```
 brew install python android-platform-tools libusb && pip3 install pyusb pyserial capstone keystone-engine docopt
 ```
 3. Switch your phone to EDL mode and connect it to your computer.
@@ -213,6 +215,7 @@ brew install python android-platform-tools libusb && pip3 install pyusb pyserial
 
 #### Windows
 {: .no_toc }
+
 1. Open the Python installer and proceed with installation. Remember to tick the box next to "Add python.exe to PATH". This would make Python able to be called everywhere in the command-line instead of specifically pointing to its folder, which the next part of the guide won't cover on.
 
 ![Demostration of a installation window for Python 3.9 showing two options, 'Install Now' and 'Customize installation', with the checkbox for 'Add Python 3.9 to PATH' being selected](/assets/python.png)
@@ -223,7 +226,7 @@ brew install python android-platform-tools libusb && pip3 install pyusb pyserial
 ![Demostration of the App execution alias page, where the toggles for App Installer (python.exe) and App Installer (python3.exe) are both turned off. Description says Apps can declare a name used to run the app from a command prompt. If multiple apps use the same name, choose which one to use](/assets/alias_off.png)
 
 3. Open Command Prompt with administrator privileges and run this command:
-```console
+```
 pip3 install pyusb pyserial capstone keystone-engine docopt
 ```
 ![Demostration of a command-line window showing the successful process of collecting and downloading dependencies after typing the above command](/assets/pythoooon.png)
@@ -256,7 +259,7 @@ In both cases, the phone's screen should blink with a 'enabled by KaiOS' logo th
 1. Turn on the phone in EDL mode.
 
 2. Open the EDL tools folder in a command-line window. Flash the Gerda Recovery image to the recovery partition by typing this command:
-```console
+```
 python edl.py w recovery recovery-8110.img --loader=8k.mbn
 ```
 *If the progress bar stops at 99% and you get this error `'usb.core.USBError: [Errno None] b'libusb0-dll:err [_usb_reap_async] timeout error\n'` or `usb.core.USBError: [Errno 60] Command timed out`, don't panic! This is because the phone doesn't send any indicator information back to the EDL tool when in fact the image has been successfully written. Don't mind the error and proceed with the next step.*
@@ -272,7 +275,7 @@ Don't worry if this boots into a white screen, you can still use ADB right after
 Check if ADB can recognise the phone by typing `adb devices` into the command-line.
 
 5. Navigate the command-line to the `platform-tools` folder (if needed) and pull the boot image from the phone by typing this command:
-```console
+```
 adb pull /dev/block/bootdevice/by-name/boot boot.img
 ```
 You should now see `/dev/block/bootdevice/by-name/boot: 1 file pulled, 0 skipped.` and have a copy of the boot partition with the size of 32.0MB (32,768KB). Fetched boot image will be saved to the current directory.
@@ -293,17 +296,17 @@ Unlike the 6300 4G and 8000 4G, our phones' EDL loader properly works with both 
 In both cases, the phone's screen should blink with a 'Powered by KaiOS' logo then become blank. This is normal behaviour letting you know you're in EDL mode and you can proceed.
 
 2. Open the EDL tools folder in a command-line window. Extract the boot partition of the phone by typing one of these commands depend on which file you have:
-```console
+```
 python edl.py -r boot boot.img -loader 2720.mbn
 ```
-```console
+```
 python edl.py -r boot boot.img -loader 800t.mbn
 ```
 3. When finished, reboot the phone into normal operation by typing one of these into the command-line, or remove and re-insert the battery:
-```console
+```
 python edl.py -reset -loader 2720.mbn
 ```
-```console
+```
 python edl.py -reset -loader 800t.mbn
 ```
 You can disconnect the phone from your computer for now.
@@ -317,13 +320,13 @@ You can disconnect the phone from your computer for now.
 ![Demostration of a window titled as 'Docker Subscription Service Agreement' which declares that you will have to accept Docker's Subscription Service Agreements, Data Processing Agreement and Data Privacy Policy in order to use the program, and the free scope of it is limited to personal and small business uses. The window also lists the options to view the full agreements, accept them or reject and close the program.](/assets/docker_abomination.png)
 
 2. Clone/download the boot patcher toolkit by typing this into a command-line window. This will download the toolkit and have Docker set it up. Do not omit the dot/period at the end of this command, this tells Docker where our downloaded toolkit are located on the system.
-```console
+```
 git clone https://gitlab.com/suborg/8k-boot-patcher.git && cd 8k-boot-patcher && docker build -t 8kbootpatcher .
 ```
 ![Demostration of a macOS Terminal window showing some logs in purple text after typing the command above](/assets/docker_build.png)
 
 3. Copy the `boot.img` file we've just pulled from our phone to the desktop and do not change its name. Type this into the command-line to run the modifying process:
-```console
+```
 docker run --rm -it -v ~/Desktop:/image 8kbootpatcher
 ```
 ![Demostration of a macOS Terminal window listing a list of processed files after typing the command above](/assets/docker_patch.png)
@@ -365,7 +368,7 @@ That's it! On your desktop there will be two new image files, the modified `boot
 ![Demostration of the modified content of the init.rc file, with line 393 marked as comment. This has the same effects as deleting the line altogether.](/assets/reload_policy.png)
 
 > Psst, if you wish to disable the Low Memory Killer function, now's a good time to do so! In the same `ramdisk/init.rc` file, after line 420, make a new line and add:
-> ```console
+> ```
 > write /sys/module/lowmemorykiller/parameters/enable_lmk 0
 > ```
 > Indent the new line to match up with other lines as shown. 
@@ -386,20 +389,20 @@ If the newly packaged image is barely over 1/3 the size of the original image, i
 1. Turn on your phone in EDL mode and connect it to your computer.
 
 2. Move the newly created `boot.img`, `unsigned-new.img` or `image-new.img` to the EDL tools folder and open a command-line window within it. From here type either of these commands depending on which image file you have:
-```console
+```
 python edl.py w boot boot.img --loader=8k.mbn
 ```
-```console
+```
 python edl.py w boot unsigned-new.img --loader=8k.mbn
 ```
-```console
+```
 python edl.py w boot image-new.img --loader=8k.mbn
 ```
 For Nokia 2720 Flip and Nokia 800 Tough with andybalholm's EDL:
-```console
+```
 python edl.py -w boot boot.img -loader 2720.mbn
 ```
-```console
+```
 python edl.py -w boot boot.img -loader 800t.mbn
 ```
 
@@ -408,7 +411,7 @@ python edl.py -w boot boot.img -loader 800t.mbn
 3. Restart the phone to normal operation mode by typing `python edl.py reset`. And we're done!
 
 *If you still have the original boot partition and wish to revert all the messes and damages, connect the phone to your computer in EDL mode, move the image file to the EDL tools folder, open a command-line window within it and type these one-line at a time:*
-```console
+```
 python edl.py w boot boot.img --loader=8k.mbn
 python edl.py reset
 ```
@@ -421,7 +424,7 @@ python edl.py reset
 
 - If you wish to retain privileged permissions after restoring the phone to its unrooted state, before doing so, back up all data, sideload Luxferre's [CrossTweak](https://gitlab.com/suborg/crosstweak) then press # to perform a privileged factory reset — this will wipe all data of the phone and let you set up with a privileged session. This session will last until an OTA update overrides or you choose to factory reset normally yourself.
 - After rooting, you can spoof SELinux's Enforced status for WhatsApp VoIP by typing these commands one-by-one into the rooted ADB shell. This will last until a restart.
-```console
+```
 echo -n 1 > /data/enforce
 mount -o bind /data/enforce /sys/fs/selinux/enforce
 ```
@@ -432,7 +435,6 @@ HMD Global/Nokia Mobile has published the device's source code for its Linux 4.9
 Note that the source code released does not contain proprietary parts from other parties like Qualcomm.
 
 ## External links
-{: .h1}
 - [Nokia 8000 4G product page](https://www.nokia.com/phones/en_int/nokia-8000-4g) on Nokia Mobile's website
 - [Nokia 6300 4G product page](https://www.nokia.com/phones/en_int/nokia-6300-4g) on Nokia Mobile's website
 - [Discussion: Nokia 6300 4G and Nokia 8000 4G](https://4pda.to/forum/index.php?showtopic=1009510) on 4PDA Forum (Russian)
