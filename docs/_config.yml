@@ -4,6 +4,7 @@ theme: just-the-docs
 color_scheme: bananahackers
 
 url: https://minhduc-bui1.github.io/wiki
+logo: "/assets/bHackersStore.png"
 
 aux_links:
   Discord: https://discord.gg/rQ93zEu

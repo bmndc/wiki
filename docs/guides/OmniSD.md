@@ -1,6 +1,6 @@
 ---
-title: Injecting via recovery
+title: OmniSD
 parent: Sideloading and debugging
 layout: default
-nav_order: 3
+nav_order: 4
 ---
