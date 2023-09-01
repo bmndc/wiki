@@ -7,6 +7,8 @@ nav_order: 5
 # Nokia 6300 4G (nokia-leo)
 {: .no_toc }
 
+Table of Contents
+{: .text-delta }
 - TOC
 {:toc}
 
@@ -119,64 +121,9 @@ EDL loader for the international version of this phone (not TA-1324) can be foun
 
 BananaHackers' definitions put this phone and most other KaiOS 2.5.4 devices in the first category, which means that you can install and debug apps from outside sources, but with a few caveats: apps with 'forbidden' permissions, like `embed-apps`, `embed-widgets` and `engmode-extension` cannot be sideloaded, and you cannot debug apps that came with the device using WebIDE's Developer Tools (you can, however, see the system's global warnings and errors with `adb logcat`).
 
+For detailed instructions, see [Sideloading and debugging/WebIDE]({% link docs/guides/WebIDE.md %}).
+
 **Do note that OmniSD, one of the methods used for on-device sideloading, and many Gerda-related apps requires the `navigator.mozApps.mgmt.import` API that has been removed from KaiOS 2.5.2.2.** However, the Privileged factory reset feature that could be used on KaiOS 2.5.2 and older can now be activated after permanent rooting to gain privileged userspace session.
-
-<details>
-  <summary>Why sideloading?</summary>
-
----
-According to [How-To Geek](https://www.howtogeek.com/773639/what-is-sideloading-and-should-you-do-it), sideloading is 'the practice of installing software on a device without using the approved app store or software distribution channel'. You may want to do so because you found a cool piece of software is not in the device's app store, either because it doesn't meet the app store's standards, it's not available in your country, or you're a developer and looking to test your app before making it public.
-
-This is where Android Debug Bridge (ADB) and WebIDE comes in. Every electronic device has some special protocols for developers and engineers to communicate and do special operations, like sideloading apps, and KaiOS devices are no different. ADB and WebIDE are handy tools for engineers to decode those protocols.
-
-For those born after the 90s, ADB works in the command-line interface, which is a way of talking to the computer using only the keyboard, where you type instructions for the computer to execute ([freeCodeCamp](https://www.freecodecamp.org/news/command-line-for-beginners)). On the other hand, WebIDE works in graphical—which is what you usually see on phones and computers—where you can use the mouse or touchscreen to interact with things (like what you're doing right now).
-
-Why do we use ADB and a browser for WebIDE? KaiOS inherited most of its development from Mozilla's now-defunct Firefox OS. Firefox OS and KaiOS devices use an Android compatibility layer to work better with the hardware. Mozilla also needed to have a place in their browser for Firefox OS development.
-
----
-</details>
-
-### ADB and WebIDE
-<img align="right" width="320" alt="Screenshot of the USB Storage toggle in Settings app, with an USB icon and a bug icon shown in the status bar" src="https://github.com/minhduc-bui1/nokia-leo/assets/93396463/1ebf59a2-0435-47a5-b98b-d0d209944036">
-
-1. Turn on debugging mode on the phone by dialing `*#*#debug#*#*` on the home screen.
-- If you're connecting to a Linux-based PC, you may need to go to Settings > Storage and turn on USB Storage for `udev` to properly register your phone as an USB peripheral. Another icon in the status bar will appear indicating storage access via USB.
-2. Connect the phone to a computer with an USB cable. On the computer, download Android Debug Bridge: [Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip), [macOS](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip), [Linux](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
-- If your operating system has a package manager, you can utilize that to quickly install and set up ADB (skip step 3 when done):
-  - Windows: `choco install adb`<br>(`winget` [prohibits installing executables with symlinks](https://github.com/microsoft/winget-pkgs/issues/4082))
-  - macOS: `brew install android-platform-tools`
-  - Linux (Debian/Ubuntu): `sudo apt-get install adb`
-  - Linux (Fedora): `sudo dnf install android-tools`
-  - Linux (Arch): `sudo pacman -S android-tools`
-3. Extract the downloaded archive to a folder (double-click the file on macOS/Linux, 7-Zip > Extract here on Windows), navigate to its `platform-tools` root and open Command Prompt/Terminal within it.
-4. Type `adb devices` to start the ADB server. If a `device` shows, that means your phone is being detected by ADB and you're good to go.
-5. Download and install either the latest version of [Waterfox Classic](https://classic.waterfox.net), Firefox 59/ESR 52.9 or Pale Moon 28.6.1 corresponding to your operating system.
-> - Firefox 59 (ESR 52.9): the last official Firefox version to bundle with working WebIDE and other tools for development on Firefox OS devices, before Mozilla decided to kill the project in 2016. Archives of all Firefox releases can be found on https://archive.mozilla.org.
-> - Pale Moon 28.6.1 (Windows/Linux): a popular fork of Firefox with older user interface, legacy Firefox add-on support and always running in single-process mode. Archives of all releases can be found on https://www.palemoon.org/archived.shtml.
-6. Open the browser and press Shift + F8 (or select Menu > Developer > WebIDE) to open the WebIDE window.
-7. Your phone's name should already appear in the right pane. Click it to connect. If you don't see any, type this into the command-line window:
-```console
-adb forward tcp:6000 localfilesystem:/data/local/debugger-socket
-```
-- In WebIDE, click Remote Runtime, leave it as default at localhost:6000 and press OK.
-- If you're using other means to access WebIDE such as Firefox v59 or Pale Moon <28.6.1, you may now see a warning header about mismatched build date. You can safely ignore it as WebIDE was mainly designed to support Firefox OS device builds released alongside that Firefox/Pale Moon versions.
-8. To sideload an app, download it and extract its ZIP content (if you see an OmniSD-packaged application.zip you may need to extract that). Select Open Packaged Apps in WebIDE's left sidebar and navigate to the root of the app folder you just extracted.
-9. Once you've got the app loaded, press the triangle Install and Run in the top bar to sideload, or click the wrench to open the Developer Tools for debugging.
-
-> Tip: If you've downloaded the SDK package from Android Developers' website, for quicker access to ADB next time, include the extracted ADB folder in PATH. [We won't cover this here as this would be a lengthy process.](https://gist.github.com/nex3/c395b2f8fd4b02068be37c961301caa7) This will be automatically handled if you've installed ADB via package manager.
-
-**Other means of sideloading**
-- KaiOS RunTime (Linux): official developing environment for KaiOS 2.5 made by KaiOS Technologies. To download and set up KaiOSRT on Ubuntu, type these commands one-by-one in Terminal:
-```console
-wget https://s3.amazonaws.com/kaicloudsimulatordl/developer-portal/simulator/Kaiosrt_ubuntu.tar.bz2
-tar -axvf Kaiosrt_ubuntu.tar.bz2
-cd kaiosrt-v2.5-ubuntu-20190925163557-n378
-tar -axvf kaiosrt-v2.5.en-US.linux-x86_64.tar.bz2
-cd kaiosrt
-./kaiosrt
-```
-*It's also possible to get KaiOSRT to work on Windows 10 and later using Windows Subsystem for Linux (WSLg). [See this video on YouTube for action](https://youtu.be/eg2SOCTMxYU).*
-- [Make KaiOS Install](https://github.com/jkelol111/make-kaios-install): another command-line tool to install apps using KaiOS's remote debugging protocol.
 
 > To remove unwanted apps from the phone, you can use [this fork of Luxferre's AppBuster](https://github.com/minhduc-bui1/AppBuster) which lets you disable any apps you don't need and enable them again if you want.
 
