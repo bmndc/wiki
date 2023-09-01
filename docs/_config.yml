@@ -1,4 +1,4 @@
-title: BH Wiki
+title: BananaHackers Wiki
 description: BananaHackers Wiki hosted on GitHub Pages
 theme: just-the-docs
 color_scheme: bananahackers
@@ -7,7 +7,13 @@ url: https://minhduc-bui1.github.io/wiki
 logo: "/assets/bHackersStore.png"
 
 aux_links:
-  Discord: https://discord.gg/rQ93zEu
-  Matrix: https://matrix.to/#/%23bananahackers:mozilla.org
-  Reddit: https://reddit.com/r/KaiOS
-  Google Groups: https://groups.google.com/g/bananahackers
+  BananaHackers Store: https://store.bananahackers.net
+  GitHub: https://github.com/minhduc-bui1/wiki
+
+nav_external_links:
+  - title: r/KaiOS on Reddit
+    url: https://reddit.com/r/KaiOS
+  - title: Google Groups
+    url: https://groups.google.com/g/bananahackers
+  - title: Join our Discord chat
+    url: https://discord.gg/rQ93zEu
