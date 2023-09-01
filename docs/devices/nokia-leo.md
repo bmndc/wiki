@@ -8,7 +8,9 @@ nav_order: 5
 {: .no_toc }
 
 <details>
-  <summary>Table of Contents</summary>
+  <summary>
+    Table of Contents
+  </summary>
   {: .text-delta }
 - TOC
 {:toc}
