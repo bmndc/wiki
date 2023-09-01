@@ -6,6 +6,13 @@ has_children: true
 has_toc: false
 ---
 
+# Devices
+
+{: .note }
+> ✅ = debugging can be done out-of-the-box by opening the phone's Browser, go to https://w2d.bananahackers.net and select *Launch Developer menu, Debugger, ADB and DevTools*
+> ⚠️ = needs additional work for debugging to work, see the phone's dedicated page for more information
+> 🔒 = currently debug-locked or unknown
+
 | Model name | KaiOS version | Debugging status | Note |
 |:--|:--|:-:|:--|
 | Nokia 8110 4G | 2.5.1 | ✅ |   |

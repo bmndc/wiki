@@ -15,3 +15,16 @@ nav_external_links:
     url: https://reddit.com/r/KaiOS
   - title: Join our Discord chat
     url: https://discord.gg/rQ93zEu
+
+callouts:
+  warning:
+    title: Warning
+    color: yellow
+  caution:
+    title: Caution
+    color: red
+  note:
+    title: Note
+    color: blue
+  success:
+    color: green
