@@ -254,13 +254,12 @@ python edl.py w recovery recovery-8110.img --loader=8k.mbn
 3. When finished, disconnect the phone from your computer and exit EDL mode by removing and re-inserting the battery. 
 
 4. Then, hold down the top Power button and `*` to turn on the phone in recovery mode. Connect the phone to your computer again.
-
-{: .warning }
-> **Be careful not to boot into normal operation mode at this point! As stated above, while SELinux is still in `Enforced` mode, it'll try to revert all system modifications on startup, in this case, the custom recovery image we've just flashed will be overwritten by the stock one. If you accidentally start into normal mode (with the Nokia logo), you'll have to start over from step 1.**
-> 
-> Don't worry if this boots into a white screen, you can still use ADB right after boot. This is because the display driver for the Nokia 8110 4G included in the recovery image are not compatible with the display of 8000 4G/6300 4G.
-> 
-> Check if ADB can recognise the phone by typing `adb devices` into the command-line.
+<br><br>
+**Be careful not to boot into normal operation mode at this point! As stated above, while SELinux is still in `Enforced` mode, it'll try to revert all system modifications on startup, in this case, the custom recovery image we've just flashed will be overwritten by the stock one. If you accidentally start into normal mode (with the Nokia logo), you'll have to start over from step 1.**
+<br><br>
+Don't worry if this boots into a white screen, you can still use ADB right after boot. This is because the display driver for the Nokia 8110 4G included in the recovery image are not compatible with the display of 8000 4G/6300 4G.
+<br><br>
+Check if ADB can recognise the phone by typing `adb devices` into the command-line.
 
 5. Navigate the command-line to the `platform-tools` folder (if needed) and pull the boot image from the phone by typing this command:
 ```
@@ -280,9 +279,9 @@ Unlike the 6300 4G and 8000 4G, our phones' EDL loader properly works with both 
 1. Switch your phone to EDL mode and connect it to your computer.
   - From the turned on state, turn on debugging mode on your phone by dialing `*#*#33284#*#*`, connect it to your computer and type `adb reboot edl` in a command-line window.
   - From the turned off state, hold down both side volume keys (2720 Flip) or both D-Pad Up and Down keys (800 Tough) at the same time while inserting the USB cable to the phone.
-
+<br><br>
 In both cases, the phone's screen should blink with a 'Powered by KaiOS' logo then become blank. This is normal behaviour letting you know you're in EDL mode and you can proceed.
-<ol start="2">
+
 2. Open the EDL tools folder in a command-line window. Extract the boot partition of the phone by typing one of these commands depend on which file you have:
 ```
 python edl.py -r boot boot.img -loader 2720.mbn
