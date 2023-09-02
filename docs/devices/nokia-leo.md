@@ -203,34 +203,34 @@ brew install python android-platform-tools libusb && pip3 install pyusb pyserial
 {: .no_toc }
 1. Open the Python installer and proceed with installation. Remember to tick the box next to "Add python.exe to PATH". This would make Python able to be called everywhere in the command-line instead of specifically pointing to its folder, which the next part of the guide won't cover on.
 
-![Demostration of a installation window for Python 3.9 showing two options, 'Install Now' and 'Customize installation', with the checkbox for 'Add Python 3.9 to PATH' being selected](/assets/python.png)
+![Screenshot of an installation window for Python 3.9 showing two options, 'Install Now' and 'Customize installation', with the checkbox for 'Add Python 3.9 to PATH' being selected](../assets/nokia-leo/python.png)
 
 2. On Windows 10/11, by default, typing the `python` or `python3` aliases within Command Prompt will call the Microsoft Store version of Python, which we don't have installed. To override this default into calling the local version of Python, head over to Settings > Apps > Apps & features > App execution aliases and toggle off both App Installer (python.exe) and App Installer (python3.exe).
 
-![Demostration of the Apps & features page in Windows 10's Settings app, of which the App execution aliases link is located under the Apps & features section](/assets/settings_alias.png)
-![Demostration of the App execution alias page, where the toggles for App Installer (python.exe) and App Installer (python3.exe) are both turned off. Description says Apps can declare a name used to run the app from a command prompt. If multiple apps use the same name, choose which one to use](/assets/alias_off.png)
+![Screenshot of the Apps & features page in Windows 10's Settings app, of which the App execution aliases link is located under the Apps & features section](../assets/nokia-leo/settings_alias.png)
+![Screenshot of the App execution alias page, where the toggles for App Installer (python.exe) and App Installer (python3.exe) are both turned off. Description says Apps can declare a name used to run the app from a command prompt. If multiple apps use the same name, choose which one to use](../assets/nokia-leo/alias_off.png)
 
 3. Open Command Prompt with administrator privileges and run this command:
 ```
 pip3 install pyusb pyserial capstone keystone-engine docopt
 ```
-![Demostration of a command-line window showing the successful process of collecting and downloading dependencies after typing the above command](/assets/pythoooon.png)
+![Screenshot of a console window showing the successful process of collecting and downloading dependencies after typing the above command](../assets/nokia-leo/pythoooon.png)
 
 4. Open the extracted EDL tools folder, go to the Drivers > Windows folder and run `Qualcomm_Diag_QD_Loader_2016_driver.exe` with administrator rights. Proceed with installation and leave everything as default, restart the computer if it prompts you to do so.
 
-![Demostration of a installation window for Qualcomm's diagnostic driver, in which two radio buttons are shown labelled 'WWAN-DHCP is not used to get IPAddress' and 'ETHERNET-DHCP is used to get IPAddress' respectively. The first button is selected.](/assets/whatever.png)
+![Screenshot of an installation window for Qualcomm's diagnostic driver, in which two radio buttons are shown labelled 'WWAN-DHCP is not used to get IPAddress' and 'ETHERNET-DHCP is used to get IPAddress' respectively. The first button is selected.](../assets/nokia-leo/whatever.png)
 
 5. Switch your phone to EDL mode and connect it to your computer.
   - From the turned on state, turn on debugging mode on your phone by dialing `*#*#33284#*#*`, connect it to your computer and type `adb reboot edl` in a command-line window.
   - From the turned off state, hold down `*` and `#` at the same time while inserting the USB cable to the phone.
-
+<br><br>
 In both cases, the phone's screen should blink with a 'enabled by KaiOS' logo then become blank. This is normal behaviour letting you know you're in EDL mode and you can proceed.
 
 6. Run the Zadig tool (use the version downloaded above and NOT the one provided by the EDL package) and select *Options > List All Devices*. In the front dropdown menu, select `QHSUSB__BULK` (your device in EDL mode). In the target driver box (which the green arrow is pointing to), click on the up/down arrows until you see `libusb-win32` and click on Replace Driver.
 
-![Demostration of Zadig program with the Option dropdown menu shown, in which the List All Devices option is highlighted and selected](/assets/listall.png)
-![Demostration of Zadig's main interface with the front dropdown list shown listing all devices connected to computer, in which the option for QHSUSB_BULK is highlighted](/assets/qhsusb.png)
-![Demostration of Zadig's main interface with the second label box on the Drivers line, which the green arrow points to, showing 'libusb-win32 (v1.2.6.0)'. Two smaller up/down arrows are shown to the right of that box.](/assets/arg.png)
+![Screenshot of Zadig program with the Option dropdown menu shown, in which the List All Devices option is highlighted and selected](../assets/nokia-leo/listall.png)
+![Screenshot of Zadig's main interface with the front dropdown list shown listing all devices connected to computer, in which the option for QHSUSB_BULK is highlighted](../assets/nokia-leo/qhsusb.png)
+![Screenshot of Zadig's main interface with the second label box on the Drivers line, which the green arrow points to, showing 'libusb-win32 (v1.2.6.0)'. Two smaller up/down arrows are shown to the right of that box.](../assets/nokia-leo/arg.png)
 
 7. If you're installing the driver for the first time, an "USB Device Not Recognised" pop-up may appear. Exit EDL mode by removing and re-inserting the battery, then turn on the phone in EDL mode again.
 
