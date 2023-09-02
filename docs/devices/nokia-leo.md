@@ -203,22 +203,22 @@ brew install python android-platform-tools libusb && pip3 install pyusb pyserial
 {: .no_toc }
 1. Open the Python installer and proceed with installation. Remember to tick the box next to "Add python.exe to PATH". This would make Python able to be called everywhere in the command-line instead of specifically pointing to its folder, which the next part of the guide won't cover on.
 
-![Screenshot of an installation window for Python 3.9 showing two options, 'Install Now' and 'Customize installation', with the checkbox for 'Add Python 3.9 to PATH' being selected](../assets/nokia-leo/python.png)
+![Screenshot of an installation window for Python 3.9 showing two options, 'Install Now' and 'Customize installation', with the checkbox for 'Add Python 3.9 to PATH' being selected](../../assets/nokia-leo/python.png)
 
 2. On Windows 10/11, by default, typing the `python` or `python3` aliases within Command Prompt will call the Microsoft Store version of Python, which we don't have installed. To override this default into calling the local version of Python, head over to Settings > Apps > Apps & features > App execution aliases and toggle off both App Installer (python.exe) and App Installer (python3.exe).
 
-![Screenshot of the Apps & features page in Windows 10's Settings app, of which the App execution aliases link is located under the Apps & features section](../assets/nokia-leo/settings_alias.png)
-![Screenshot of the App execution alias page, where the toggles for App Installer (python.exe) and App Installer (python3.exe) are both turned off. Description says Apps can declare a name used to run the app from a command prompt. If multiple apps use the same name, choose which one to use](../assets/nokia-leo/alias_off.png)
+![Screenshot of the Apps & features page in Windows 10's Settings app, of which the App execution aliases link is located under the Apps & features section](../../assets/nokia-leo/settings_alias.png)
+![Screenshot of the App execution alias page, where the toggles for App Installer (python.exe) and App Installer (python3.exe) are both turned off. Description says Apps can declare a name used to run the app from a command prompt. If multiple apps use the same name, choose which one to use](../../assets/nokia-leo/alias_off.png)
 
 3. Open Command Prompt with administrator privileges and run this command:
 ```
 pip3 install pyusb pyserial capstone keystone-engine docopt
 ```
-![Screenshot of a console window showing the successful process of collecting and downloading dependencies after typing the above command](../assets/nokia-leo/pythoooon.png)
+![Screenshot of a console window showing the successful process of collecting and downloading dependencies after typing the above command](../../assets/nokia-leo/pythoooon.png)
 
 4. Open the extracted EDL tools folder, go to the Drivers > Windows folder and run `Qualcomm_Diag_QD_Loader_2016_driver.exe` with administrator rights. Proceed with installation and leave everything as default, restart the computer if it prompts you to do so.
 
-![Screenshot of an installation window for Qualcomm's diagnostic driver, in which two radio buttons are shown labelled 'WWAN-DHCP is not used to get IPAddress' and 'ETHERNET-DHCP is used to get IPAddress' respectively. The first button is selected.](../assets/nokia-leo/whatever.png)
+![Screenshot of an installation window for Qualcomm's diagnostic driver, in which two radio buttons are shown labelled 'WWAN-DHCP is not used to get IPAddress' and 'ETHERNET-DHCP is used to get IPAddress' respectively. The first button is selected.](../../assets/nokia-leo/whatever.png)
 
 5. Switch your phone to EDL mode and connect it to your computer.
   - From the turned on state, turn on debugging mode on your phone by dialing `*#*#33284#*#*`, connect it to your computer and type `adb reboot edl` in a command-line window.
@@ -228,9 +228,9 @@ In both cases, the phone's screen should blink with a 'enabled by KaiOS' logo th
 
 6. Run the Zadig tool (use the version downloaded above and NOT the one provided by the EDL package) and select *Options > List All Devices*. In the front dropdown menu, select `QHSUSB__BULK` (your device in EDL mode). In the target driver box (which the green arrow is pointing to), click on the up/down arrows until you see `libusb-win32` and click on Replace Driver.
 
-![Screenshot of Zadig program with the Option dropdown menu shown, in which the List All Devices option is highlighted and selected](../assets/nokia-leo/listall.png)
-![Screenshot of Zadig's main interface with the front dropdown list shown listing all devices connected to computer, in which the option for QHSUSB_BULK is highlighted](../assets/nokia-leo/qhsusb.png)
-![Screenshot of Zadig's main interface with the second label box on the Drivers line, which the green arrow points to, showing 'libusb-win32 (v1.2.6.0)'. Two smaller up/down arrows are shown to the right of that box.](../assets/nokia-leo/arg.png)
+![Screenshot of Zadig program with the Option dropdown menu shown, in which the List All Devices option is highlighted and selected](../../assets/nokia-leo/listall.png)
+![Screenshot of Zadig's main interface with the front dropdown list shown listing all devices connected to computer, in which the option for QHSUSB_BULK is highlighted](../../assets/nokia-leo/qhsusb.png)
+![Screenshot of Zadig's main interface with the second label box on the Drivers line, which the green arrow points to, showing 'libusb-win32 (v1.2.6.0)'. Two smaller up/down arrows are shown to the right of that box.](../../assets/nokia-leo/arg.png)
 
 7. If you're installing the driver for the first time, an "USB Device Not Recognised" pop-up may appear. Exit EDL mode by removing and re-inserting the battery, then turn on the phone in EDL mode again.
 
@@ -301,32 +301,32 @@ You can disconnect the phone from your computer for now.
 #### Automatic patching with `8k-boot-patcher`
 1. Follow [Docker's tutorial](https://docs.docker.com/compose/install/#scenario-one-install-docker-desktop) on installing Docker Desktop. Once set up, open the program, click Accept on this box and let the Docker Engine start before exiting.
 
-![Demostration of a window titled as 'Docker Subscription Service Agreement' which declares that you will have to accept Docker's Subscription Service Agreements, Data Processing Agreement and Data Privacy Policy in order to use the program, and the free scope of it is limited to personal and small business uses. The window also lists the options to view the full agreements, accept them or reject and close the program.](/assets/docker_abomination.png)
+![Screenshot of a window titled as 'Docker Subscription Service Agreement' which declares that you will have to accept Docker's Subscription Service Agreements, Data Processing Agreement and Data Privacy Policy in order to use the program, and the free scope of it is limited to personal and small business uses. The window also lists the options to view the full agreements, accept them or reject and close the program.](../../assets/nokia-leo/docker_abomination.png)
 
 2. Clone/download the boot patcher toolkit by typing this into a command-line window. This will download the toolkit and have Docker set it up. Do not omit the dot/period at the end of this command, this tells Docker where our downloaded toolkit are located on the system.
 ```
 git clone https://gitlab.com/suborg/8k-boot-patcher.git && cd 8k-boot-patcher && docker build -t 8kbootpatcher .
 ```
-![Demostration of a macOS Terminal window showing some logs in purple text after typing the command above](/assets/docker_build.png)
+![Screenshot of a macOS Terminal window showing some logs in purple text after typing the command above](../../assets/nokia-leo/docker_build.png)
 
 3. Copy the `boot.img` file we've just pulled from our phone to the desktop and do not change its name. Type this into the command-line to run the modifying process:
 ```
 docker run --rm -it -v ~/Desktop:/image 8kbootpatcher
 ```
-![Demostration of a macOS Terminal window listing a list of processed files after typing the command above](/assets/docker_patch.png)
+![Screenshot of a macOS Terminal window listing a list of processed files after typing the command above](../../assets/nokia-leo/docker_patch.png)
 
-That's it! On your desktop there will be two new image files, the modified `boot.img` and the original `boot-orig.img`. You can now head to part 4.
+That's it! On your desktop there will be two new image files, the modified `boot.img` and the original `boot-orig.img`. You can now head to [part 4](#part-4-flashing-the-modified-boot-partition).
 
-![Demostration of boot.img and boot-orig.img files as shown on desktop](/assets/after_patch.png)
+![Screenshot of boot.img and boot-orig.img files as shown on desktop](../../assets/nokia-leo/after_patch.png)
 
 #### Manual patching with Android Image Kitchen
 1. Extract the Android Image Kitchen tools and copy the boot image we've just obtained over to the root of the extracted folder.
 
-![Demostration of a list of folders and files contained in the extracted Android Image Kitchen folder](/assets/aik.png)
+![Screenshot of a list of folders and files contained in the extracted Android Image Kitchen folder](../../assets/nokia-leo/aik.png)
 
 2. Open the folder in a command-line window and type `unpackimg boot.img`. This will split the image file and unpack the ramdisk to their subdirectories.
 
-![Demostration of a Windows Command Prompt window showing some logs of the boot partition extracting process after typing the command above](/assets/unpack.png)
+![Screenshot of a Windows Command Prompt window showing some logs of the boot partition extracting process after typing the command above](../../assets/nokia-leo/unpack.png)
 
 **Be sure to edit the files correctly, else the phone won't boot!**
 
@@ -336,20 +336,20 @@ That's it! On your desktop there will be two new image files, the modified `boot
 - line 8: `security.perf_harden=1` -> `security.perf_harden=0`
 - line 10: `ro.debuggable=0` -> `ro.debuggable=1`
 
-![Demostration of the original content of the default.prop file](/assets/default_prop.png)
-![Demostration of the modified content of the default.prop file](/assets/default_prop_edited.png)
+![Screenshot of the original content of the default.prop file](../../assets/nokia-leo/default_prop.png)
+![Screenshot of the modified content of the default.prop file](../../assets/nokia-leo/default_prop_edited.png)
 
 4. Open `ramdisk/init.qcom.early_boot.sh` in Notepad++ and add `setenforce 0` as a new line at the end of the file.
 
-![Demostration of the modified content of the init.qcom.early_boot.sh file](/assets/setenforce.png)
+![Screenshot of the modified content of the init.qcom.early_boot.sh file](../../assets/nokia-leo/setenforce.png)
 
 5. Go back to the root Android Image Kitchen folder and open `split_img/boot.img-cmdline` in Notepad++. Without adding a new line, scroll to the end of the first line and append `androidboot.selinux=permissive enforcing=0`.
 
-![Demostration of the modified content of the boot.img-cmdline file](/assets/append.png)
+![Screenshot of the modified content of the boot.img-cmdline file](../../assets/nokia-leo/append.png)
 
 6. Open `ramdisk/init.rc` (NOT `ramdisk/init`) and delete line 393 `setprop selinux.reload_policy 1` or mark a comment as shown. This will ultimately prevent SELinux from overwriting the policy changes we made above. 
 
-![Demostration of the modified content of the init.rc file, with line 393 marked as comment. This has the same effects as deleting the line altogether.](/assets/reload_policy.png)
+![Screenshot of the modified content of the init.rc file, with line 393 marked as comment. This has the same effects as deleting the line altogether.](../../assets/nokia-leo/reload_policy.png)
 
 > Psst, if you wish to disable the Low Memory Killer function, now's a good time to do so! In the same `ramdisk/init.rc` file, after line 420, make a new line and add:
 > ```
@@ -357,15 +357,15 @@ That's it! On your desktop there will be two new image files, the modified `boot
 > ```
 > Indent the new line to match up with other lines as shown. 
 
-![Demostration of the modified content of the init.rc file, with line 421 added to disable the Low Memory Killer module](/assets/disable_lmk.png)
+![Screenshot of the modified content of the init.rc file, with line 421 added to disable the Low Memory Killer module](../../assets/nokia-leo/disable_lmk.png)
 
 7. And that's a wrap! Open the root Android Image Kitchen folder in a command-line window and type `repackimg` to package our modified boot partition.
 
-![Demostration of a Windows Command Prompt window showing some logs of the boot partition repacking process after typing the above command, but has a signing error at the end](/assets/repack_unsigned.png)
+![Screenshot of a Windows Command Prompt window showing some logs of the boot partition repacking process after typing the above command, but has a signing error at the end](../../assets/nokia-leo/repack_unsigned.png)
 
 *If you happen to encounter an error during the signing process, that's likely because the process uses `java` to power the `boot-signer.jar` sequence and you don't have it installed. The image will still be packaged and ready for flashing, but if you're a perfectionist, you can install JRE and try again.*
 
-![Demostration of a Windows Command Prompt window showing some logs of the fully successful boot partition process](/assets/repackimg_signed.png)
+![Screenshot of a Windows Command Prompt window showing some logs of the fully successful boot partition process](../../assets/nokia-leo/repackimg_signed.png)
 
 If the newly packaged image is barely over 1/3 the size of the original image, it's a normal behaviour and you can proceed.
 
@@ -399,12 +399,12 @@ python edl.py -w boot boot.img -loader 800t.mbn
 python edl.py w boot boot.img --loader=8k.mbn
 python edl.py reset
 ```
-![Demostration of a command-line window showing the results after typing the first command above](/assets/edl_bootog.png)
+![Demostration of a command-line window showing the results after typing the first command above](../../assets/nokia-leo/edl_bootog.png)
 
 #### Next steps
 - Now that you've rooted your phone, to install applications with 'forbidden' permissions, connect it to a WebIDE session, then open Device Preferences by the right pane, search for `devTools.apps.forbiddenPermissions`, clear its value, then either restart the phone or hold the top Power button and choose Memory Cleaner > Deep Clean Memory to restart B2G.
 
-![Demostration of a WebIDE window in which the location of Device Preferences is highlighted in the right pane and the value of devTools.apps.forbiddenPermissions has been emptied](/assets/devpref.png)
+![Screenshot of a WebIDE window in which the location of Device Preferences is highlighted in the right pane and the value of devTools.apps.forbiddenPermissions has been emptied](../../assets/nokia-leo/devpref.png)
 
 - If you wish to retain privileged permissions after restoring the phone to its unrooted state, before doing so, back up all data, sideload Luxferre's [CrossTweak](https://gitlab.com/suborg/crosstweak) then press # to perform a privileged factory reset — this will wipe all data of the phone and let you set up with a privileged session. This session will last until an OTA update overrides or you choose to factory reset normally yourself.
 - After rooting, you can spoof SELinux's Enforced status for WhatsApp VoIP by typing these commands one-by-one into the rooted ADB shell. This will last until a restart.
