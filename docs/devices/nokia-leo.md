@@ -15,7 +15,6 @@ Table of Contents
 <table><thead><tr><th colspan="2">Nokia 6300 4G (nokia-leo)</th></tr></thead><tbody><tr><td>Released</td><td>13 November 2020</td></tr><tr><td>Model</td><td>TA-1286, TA-1287, TA-1291, TA-1294, TA-1324</td></tr><tr><td colspan="2"><strong>Specifications</strong></td></tr><tr><td>SoC</td><td>Qualcomm MSM8909 Snapdragon 210 (4 x 1.1GHz Cortex-A7)</td></tr><tr><td>RAM</td><td>512MB LPDDR2/3</td></tr><tr><td>GPU</td><td>Adreno 304</td></tr><tr><td>Storage</td><td>4GB eMMC 4.5 (+ up to 32GB microSDHC card)</td></tr><tr><td>Network</td><td>2G GSM, 3G UMTS, 4G LTE Cat4 150/50Mbps<br><em>+ EU (except East Ukraine, Azerbaijan, Georgia), APAC: band 1, 3, 5, 7, 8, 20<br>+ MENA, CN, Nigeria, Tanzania: band 1, 3, 5, 7, 8, 20, 28, 38, 39, 40, 41<br>+ US: band 2, 4, 5, 12, 17, 66, 71<br>+ LATAM: band 2, 3, 4, 5, 7, 28<br>+ ROW: band 1, 3, 5, 7, 8, 20, 38, 40</em><br>VoLTE &amp; VoWiFi support<br>Single or Dual SIM (Nano-SIM, dual-standby)</td></tr><tr><td>Screen</td><td>320 x 240 @ 167 PPI<br>2.4 inches QVGA TFT LCD, 16M colors</td></tr><tr><td>Bluetooth</td><td>4.0, A2DP, LE</td></tr><tr><td>Wi-Fi</td><td>802.11b/g/n, 2.4GHz, Hotspot</td></tr><tr><td>Peripherals</td><td>GPS</td></tr><tr><td>Cameras</td><td>Rear: VGA, LED flash</td></tr><tr><td>Dimensions<br>(HWD)</td><td>131.4 * 53 * 13.7 (mm)<br>5.17 * 2.09 * 0.54 (in)</td></tr><tr><td>Weight</td><td>107.4 g (3.70 oz)</td></tr><tr><td>Ports</td><td>- microUSB charging &amp; USB 2.0 data transferring port<br>- 3.5mm headphone jack</td></tr><tr><td>Battery</td><td>Removable Li-Ion 1500mAh (BL-4XL), 5W wired charging</td></tr><tr><td colspan="2"><strong>KaiOS info</strong></td></tr><tr><td>Version</td><td>KaiOS 2.5.4</td></tr><tr><td>WA VoIP</td><td>Supported</td></tr><tr><td>Build no.</td><td>10.00.17.01, 12.00.17.01, 20.00.17.01, 30.00.17.01</td></tr></tbody></table>
 
 ## Before making the decision
-
 **BEWARE OF COUNTERFEIT DEVICES!** Many KaiOS devices, such as the Nokia 8110 4G, 2720 Flip and 6300 4G are being offered at numerous tech stores and online sites for amazingly low prices; those turn out to be counterfeits and did not bring the experiences that people expected, and you wouldn't be able to get a refund as the store gets away with it.
 
 To spot out the counterfeits:
@@ -36,7 +35,6 @@ To spot out the counterfeits:
 Remember, **only buy from trusted, reputable sources**, even if they have higher prices. That higher cost usually guarantees that you're buying a genuine device.
 
 ## Tips and tricks
-
 - To take a screenshot, press both * and # keys simultaneously.
 - KaiOS accounts are NOT mandatory for the phone' operations or downloading apps from KaiStore, but they can be set up under *Settings > Accounts* if you need them for Anti-Theft features.
 - If you're bothered by KaiStore's advertising notifications, turn them off in *Settings, Personalization, Notices, App notices, Store, Allow Notices*, and *Store, Options, Settings & Account, Show rich content, Do not show*.
@@ -50,7 +48,6 @@ Remember, **only buy from trusted, reputable sources**, even if they have higher
   - Alternatively you can also sideload [CrossTweak](https://gitlab.com/suborg/crosstweak) and toggle call recording feature by pressing 3.
 
 ## Known issues
-
 - The multiple clips holding the back panel can be stressed and quickly broken. Speaker is decent, but muffled on strong bass. *For tactile responses on keypad presses, turn on Keypad vibration under Settings, Device, Accessibility.*
   - *Note that phone shutting itself down or not receiving any charges often come down to loose or dirty battery connectors or charging port and not software problem. Happened to me once, got the phone checked and repaired for less than $10.*
 - [MAJOR] Battery can drain heavily (from 5–7 days of 4G standby to 18 hours, or 2 hours in active usage) if you leave Wi-Fi or mobile data on at all time, e.g. to be immediately notified of incoming WhatsApp messages ⇒ workaround: turn them off if you don't plan to use Internet connection, and only turn them on periodically to check for notifications.
@@ -64,7 +61,6 @@ Remember, **only buy from trusted, reputable sources**, even if they have higher
 - *According to reports from GSMArena and Reddit, some call and text entries may not be registered in the log. I've not been able to replicate those during my usage however, could be related to other mentioned issues.*
 
 ### KaiOS-specific
-
 - If you're setting up the phone for the first time with no SIM card, pre-installed apps such as WhatsApp, Facebook and Google apps may not appear in the app list or in KaiStore. After popping in a SIM, those apps will show up as normal.
   - *KaiStore will show up in all circumstances, regardless of whether there's a SIM card inserted or not.*
 - The 8000 4G and 6300 4G runs KaiOS 2.5, which itself is based on Gecko 48 from 2016, meaning without optimizations and new web technologies, some websites like Instagram and Uber just fall apart and the overall performance is unbearable.
@@ -84,19 +80,16 @@ Remember, **only buy from trusted, reputable sources**, even if they have higher
   - Speaking of built-in Calendar app, if you manage to opt for syncing your Google account with the phone, only the calendar *with your email address as its name* will sync.
  
 ### WhatsApp-specific
-
 - 8MB download/5MB upload limit: This is to avoid 'out of memory' errors with the nature of WhatsApp's end-to-end encryption. All things sent through the app's servers—including photos and videos—are encrypted on device, and to decrypt them bit-by-bit would take huge chunks of memory, which isn't suitable for KaiOS devices having hardware as limited as 256MB of RAM.
 - Pairing account with the WhatsApp Web interface or desktop applications is NOT possible, due to KaiOS devices' limitations on background processes and battery life, which prevents the feature from syncing decryption keys and mirroring messages & calls from the phone.
   - On a related note, you cannot sign into another device, pair with those interfaces and then sign into the KaiOS version of WhatsApp. Attempting to do so will result in the renewal of the decryption keys and all other devices being forced to log off automatically.
 
 ## Secret codes
-
 - `*#*#33284*#*#`: Toggle debugging mode, allow the phone to be accessed with ADB and DevTools. A bug icon will appear in the status bar letting you know debugging mode is on. This mode can also be turned on under *Settings > Device > Developer > Debugger > ADB and DevTools*.
 - `*#06#`: Display the IMEI(s).
 - `*#0000#`: Display device information, such as firmware version, build date, model number, variant and CUID.
 
 ## Special boot modes
-
 - **Recovery mode**: With the device powered off, hold the top Power button and the * key, or type `adb reboot recovery` when connected to a computer. Allows you to factory reset the device by wiping /data and /cache, view boot and kernel logs, and install patches from `adb sideload` interface or SD card.
 - **EDL mode**: With the device powered off, hold the top Power button and both the * and # keys, or type `adb reboot edl` when connected to a computer. Boots into a black screen, allows you to read and write partitions in low-level with proprietary Qualcomm tools. Remove the battery to exit.
 
@@ -118,17 +111,15 @@ You can also **force reboot** the phone by holding the top Power button and the 
 EDL loader for the international version of this phone (not TA-1324) can be found on BananaHackers' [EDL archive site](https://edl.bananahackers.net/loaders/8k.mbn) with hardware ID 0x009600e100420029 (a copy is available [here](../main/8k.mbn)). The US version of this phone has been signed with a different PK_HASH and needs a different firehose loader which we currently don't have in archive.
 
 ## Sideloading and debugging third-party applications
-
 BananaHackers' definitions put this phone and most other KaiOS 2.5.4 devices in the first category, which means that you can install and debug apps from outside sources, but with a few caveats: apps with 'forbidden' permissions, like `embed-apps`, `embed-widgets` and `engmode-extension` cannot be sideloaded, and you cannot debug apps that came with the device using WebIDE's Developer Tools (you can, however, see the system's global warnings and errors with `adb logcat`).
 
 For detailed instructions, see [Sideloading and debugging/WebIDE]({% link guides/WebIDE.md %}).
 
-**Do note that OmniSD, one of the methods used for on-device sideloading, and many Gerda-related apps requires the `navigator.mozApps.mgmt.import` API that has been removed from KaiOS 2.5.2.2.** However, the Privileged factory reset feature that could be used on KaiOS 2.5.2 and older can now be activated after permanent rooting to gain privileged userspace session.
+**Do note that OmniSD, one of the methods used for on-device sideloading, and many Gerda-related apps requires the `navigator.mozApps.mgmt.import` API that has been removed from KaiOS 2.5.2.2, and therefore no longer work on this phone.** However, the Privileged factory reset feature that could be used on KaiOS 2.5.2 and older can now be activated after permanent rooting to gain privileged userspace session.
 
 > To remove unwanted apps from the phone, you can use [this fork of Luxferre's AppBuster](https://github.com/minhduc-bui1/AppBuster) which lets you disable any apps you don't need and enable them again if you want.
 
 ## ROOT: Boot partition modifying (non-US only)
-
 On KaiOS 2.5.4 devices, such as the 6300 4G and 8000 4G, ADB and WebIDE can be used to install most third-party apps. However, apps with special ‘forbidden’ permissions are not allowed, including most BananaHackers apps with `engmode-extension` like Wallace Toolbox, which can be used to gain exclusive access of the phone. You also cannot make changes to the system. On the 2720 Flip and 800 Tough with KaiOS 2.5.2.2, with HMD/Nokia Mobile changing their release branches from `dev-keys` to `release-keys`, the situation is even worse as you cannot sideload at all. 
 
 This is because in order for WhatsApp's VoIP feature to work on these KaiOS versions, a security module called SELinux is now set to be `Enforced` which checks and reverts system modifications on boot. To get total read-write access to the devices, you'll now have to permanently root them by setting SELinux to `Permissive` mode.
@@ -181,7 +172,6 @@ For the sake of simplicity, the guide assumes you've moved the Gerda Recovery im
 
 #### Linux
 {: .no_toc }
-
 1. Install Python from your operating system's package manager e.g.
 ```
 sudo apt-get install python pip3
@@ -203,7 +193,6 @@ Additionally, if you have issue with device access:
 
 #### macOS
 {: .no_toc }
-
 1. Follow the instructions to install Homebrew on [its homepage](https://brew.sh). Basically just open Terminal and copy the long streak of code shown on the page, and type your password when prompted.
 2. While you're in Terminal, type this into the command-line:
 ```
@@ -215,7 +204,6 @@ brew install python android-platform-tools libusb && pip3 install pyusb pyserial
 
 #### Windows
 {: .no_toc }
-
 1. Open the Python installer and proceed with installation. Remember to tick the box next to "Add python.exe to PATH". This would make Python able to be called everywhere in the command-line instead of specifically pointing to its folder, which the next part of the guide won't cover on.
 
 ![Demostration of a installation window for Python 3.9 showing two options, 'Install Now' and 'Customize installation', with the checkbox for 'Add Python 3.9 to PATH' being selected](/assets/python.png)
@@ -252,7 +240,6 @@ In both cases, the phone's screen should blink with a 'enabled by KaiOS' logo th
 *As I've said above, the latest 2.8 version of Zadig might have some troubles detecting the phone's EDL driver. If you were using it and the driver installation takes too much time and the tool aborts it, exit Zadig, exit and re-enter EDL mode on the phone, then try to install again. If that still doesn't help, try to [download version 2.7](https://github.com/pbatard/libwdi/releases/tag/v1.4.1) instead.*
 
 ### Part 2: Obtaining the boot partition
-
 #### Nokia 8000 4G and Nokia 6300 4G with bkerler's EDL
 > Beware: due to the firehose loader being malfunctioned, the EDL tool only accepts one command each session, after which you'll have to disconnect the phone and restart the phone in EDL mode. If you try to throw a second command, it'll result in a `bytearray index out of range` error.
 
@@ -266,13 +253,14 @@ python edl.py w recovery recovery-8110.img --loader=8k.mbn
 
 3. When finished, disconnect the phone from your computer and exit EDL mode by removing and re-inserting the battery. 
 
-4. Then, hold down the top Power button and `*` to turn on the phone in recovery mode. Connect the phone to your computer again.  
+4. Then, hold down the top Power button and `*` to turn on the phone in recovery mode. Connect the phone to your computer again.
 
-**Be careful not to boot into normal operation mode at this point! As stated above, while SELinux is still in `Enforced` mode, it'll try to revert all system modifications on startup, in this case, the custom recovery image we've just flashed will be overwritten by the stock one. If you accidentally start into normal mode (with the Nokia logo), you'll have to start over from step 1.**
-
-Don't worry if this boots into a white screen, you can still use ADB right after boot. This is because the display driver for the Nokia 8110 4G included in the recovery image are not compatible with the display of 8000 4G/6300 4G.
-
-Check if ADB can recognise the phone by typing `adb devices` into the command-line.
+{: .warning }
+> **Be careful not to boot into normal operation mode at this point! As stated above, while SELinux is still in `Enforced` mode, it'll try to revert all system modifications on startup, in this case, the custom recovery image we've just flashed will be overwritten by the stock one. If you accidentally start into normal mode (with the Nokia logo), you'll have to start over from step 1.**
+> 
+> Don't worry if this boots into a white screen, you can still use ADB right after boot. This is because the display driver for the Nokia 8110 4G included in the recovery image are not compatible with the display of 8000 4G/6300 4G.
+> 
+> Check if ADB can recognise the phone by typing `adb devices` into the command-line.
 
 5. Navigate the command-line to the `platform-tools` folder (if needed) and pull the boot image from the phone by typing this command:
 ```
@@ -294,7 +282,7 @@ Unlike the 6300 4G and 8000 4G, our phones' EDL loader properly works with both 
   - From the turned off state, hold down both side volume keys (2720 Flip) or both D-Pad Up and Down keys (800 Tough) at the same time while inserting the USB cable to the phone.
 
 In both cases, the phone's screen should blink with a 'Powered by KaiOS' logo then become blank. This is normal behaviour letting you know you're in EDL mode and you can proceed.
-
+<ol start="2">
 2. Open the EDL tools folder in a command-line window. Extract the boot partition of the phone by typing one of these commands depend on which file you have:
 ```
 python edl.py -r boot boot.img -loader 2720.mbn

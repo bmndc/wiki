@@ -11,7 +11,7 @@ nav_order: 2
 
 For Windows 10 version 1709 and later, type these commands one by one into Command Prompt, with [DIR_PATH] replaced by the extracted folder directory of the app you want to install (see step 8 above):
 
-```console
+```
 winget install Git.Git
 winget install OpenJS.NodeJS.LTS
 cd /d "%USERPROFILE%\Desktop"
@@ -28,7 +28,7 @@ gdeploy install [DIR_PATH]
 
 For macOS and Linux, if you have Homebrew installed as a package manager:
 
-```console
+```
 brew install git node android-platform-tools
 cd ~/Desktop
 git clone https://gitlab.com/suborg/gdeploy.git
