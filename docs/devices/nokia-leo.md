@@ -15,7 +15,7 @@ Table of Contents
 <table><thead><tr><th colspan="2">Nokia 6300 4G (nokia-leo)</th></tr></thead><tbody><tr><td>Released</td><td>13 November 2020</td></tr><tr><td>Model</td><td>TA-1286, TA-1287, TA-1291, TA-1294, TA-1324</td></tr><tr><td colspan="2"><strong>Specifications</strong></td></tr><tr><td>SoC</td><td>Qualcomm MSM8909 Snapdragon 210 (4 x 1.1GHz Cortex-A7)</td></tr><tr><td>RAM</td><td>512MB LPDDR2/3</td></tr><tr><td>GPU</td><td>Adreno 304</td></tr><tr><td>Storage</td><td>4GB eMMC 4.5 (+ up to 32GB microSDHC card)</td></tr><tr><td>Network</td><td>2G GSM, 3G UMTS, 4G LTE Cat4 150/50Mbps<br><em>+ EU (except East Ukraine, Azerbaijan, Georgia), APAC: band 1, 3, 5, 7, 8, 20<br>+ MENA, CN, Nigeria, Tanzania: band 1, 3, 5, 7, 8, 20, 28, 38, 39, 40, 41<br>+ US: band 2, 4, 5, 12, 17, 66, 71<br>+ LATAM: band 2, 3, 4, 5, 7, 28<br>+ ROW: band 1, 3, 5, 7, 8, 20, 38, 40</em><br>VoLTE &amp; VoWiFi support<br>Single or Dual SIM (Nano-SIM, dual-standby)</td></tr><tr><td>Screen</td><td>320 x 240 @ 167 PPI<br>2.4 inches QVGA TFT LCD, 16M colors</td></tr><tr><td>Bluetooth</td><td>4.0, A2DP, LE</td></tr><tr><td>Wi-Fi</td><td>802.11b/g/n, 2.4GHz, Hotspot</td></tr><tr><td>Peripherals</td><td>GPS</td></tr><tr><td>Cameras</td><td>Rear: VGA, LED flash</td></tr><tr><td>Dimensions<br>(HWD)</td><td>131.4 * 53 * 13.7 (mm)<br>5.17 * 2.09 * 0.54 (in)</td></tr><tr><td>Weight</td><td>107.4 g (3.70 oz)</td></tr><tr><td>Ports</td><td>- microUSB charging &amp; USB 2.0 data transferring port<br>- 3.5mm headphone jack</td></tr><tr><td>Battery</td><td>Removable Li-Ion 1500mAh (BL-4XL), 5W wired charging</td></tr><tr><td colspan="2"><strong>KaiOS info</strong></td></tr><tr><td>Version</td><td>KaiOS 2.5.4</td></tr><tr><td>WA VoIP</td><td>Supported</td></tr><tr><td>Build no.</td><td>10.00.17.01, 12.00.17.01, 20.00.17.01, 30.00.17.01</td></tr></tbody></table>
 
 ## Before making the decision
-**BEWARE OF COUNTERFEIT DEVICES!** Many KaiOS devices, such as the Nokia 8110 4G, 2720 Flip and 6300 4G are being offered at numerous tech stores and online sites for amazingly low prices; those turn out to be counterfeits and did not bring the experiences that people expected, and you wouldn't be able to get a refund as the store gets away with it.
+**BEWARE OF COUNTERFEIT DEVICES!** Many KaiOS devices, such as the Nokia 8110 4G, 2720 Flip and 6300 4G are being offered at numerous tech stores and online sites for amazingly low prices; those turn out to be counterfeits and don't bring the experiences that people expected, and you wouldn't be able to get a refund as the store gets away with it.
 
 To spot out the counterfeits:
 - Brand-new KaiOS devices, even after their lifespan on the shelf, DON'T cost less than 60% of their original prices.
@@ -25,27 +25,27 @@ To spot out the counterfeits:
   - Build quality is horrific, the battery and SIM cards barely fit in [their trays].
   - It takes only like 10 seconds to boot, shows KaiOS logo briefly, then plays the old Nokia chime.
   - Speaker quality is awful.
-  - The buttons' faces are low quality and aren't flush with the overall surface, some of them are crooked as well.
+  - The buttons' faces are low quality and aren't flush with the overall surface, some of them are crooked.
 - Remove the battery and look for the printed information on the sticker, i.e. if the CODE is 23BTS70**VN**00, it is intended to sold in Vietnam only. You can also look for it in the OS by dialing *#0000#.
 - If the user interface looks off with weird alignments and margins between elements, that's also a clue.
 - Under all circumstances, all KaiOS devices should have services like KaiStore installed by default.
 - Browser is NOT Opera Mini 4.4. KaiOS does NOT run Java apps or MRE apps.
 - If you have access to a computer, try connecting the phone to it and see if the actual phone storage is significantly less than advertised.
 
-Remember, **only buy from trusted, reputable sources**, even if they have higher prices. That higher cost usually guarantees that you're buying a genuine device.
+Remember, **only buy from trusted, reputable sources**, even if they offer higher prices. That higher cost usually guarantees that you're buying a genuine device.
 
 ## Tips and tricks
 - To take a screenshot, press both * and # keys simultaneously.
-- KaiOS accounts are NOT mandatory for the phone' operations or downloading apps from KaiStore, but they can be set up under *Settings > Accounts* if you need them for Anti-Theft features.
+- KaiOS accounts are NOT mandatory for the phone' operations or downloading apps from KaiStore, but they can be set up under *Settings, Accounts* if you need them for Anti-Theft features.
 - If you're bothered by KaiStore's advertising notifications, turn them off in *Settings, Personalization, Notices, App notices, Store, Allow Notices*, and *Store, Options, Settings & Account, Show rich content, Do not show*.
   - To disable KaiAds altogether, put `ssp.kaiads.com` in your Wi-Fi routers' blacklist or [the system's `hosts` file](https://ivan-hc.github.io/bananahackers/ADBlock.html). Note that this may affect KaiStore's ability to install apps such as WhatsApp.
 - Speed Dial is a feature where you can hold down a number key between 2–9 on the homescreen to quickly call an assigned contact. Hold down an unassigned number on the homescreen to set up, or go to *Contacts, Options, Settings, Set Speed Dial Contacts*. You can also change your voicemail number there.
   - *ICE (In Case of Emergency) Contacts, however, is an useless feature on this phone, since there's basically no way to activate it. On the 2720 Flip, you could hold or double-press the side button to trigger SOS Call.*
 - You can set a GIF as your homescreen wallpaper. It's not recommended as it'll speed up the battery drain.
 - If you don't like the default 3-by-3 grid view, *Options > List view/Single view* are available, and you can move the items around.
-- This phone includes a screen reader feature that's hidden by default, possibly because some third-party apps did not label their buttons correctly. To activate the hidden Readout feature, open Browser, then go to https://cyan-2048.github.io/kaios_scripts and use the D-Pad to move the cursor and select *Screen Reader*.
+- This phone includes a screen reader feature that's hidden by default, possibly because some third-party apps did not label their buttons correctly. To activate the hidden Readout feature, open Browser, go to cyan-2048.github.io/kaios_scripts, use the D-Pad to move the cursor and select *Screen Reader*.
 - There's also a hidden call recording feature that has been made available on KaiOS 2.5.2 and later. To toggle the feature, connect the phone to a WebIDE session (see [Sideloading and debugging third-party applications](#sideloading-and-debugging-third-party-applications)), then open *Device Settings* in the right sidebar, search for `callrecording.mode` and set it to either `on` (press D-Pad Left to record), `auto` or `off`.
-  - Alternatively you can also sideload [CrossTweak](https://gitlab.com/suborg/crosstweak) and toggle call recording feature by pressing 3.
+  - Alternatively you can sideload [CrossTweak](https://gitlab.com/suborg/crosstweak) and toggle call recording feature by pressing 3.
 
 ## Known issues
 - The multiple clips holding the back panel can be stressed and quickly broken. Speaker is decent, but muffled on strong bass. *For tactile responses on keypad presses, turn on Keypad vibration under Settings, Device, Accessibility.*
@@ -91,16 +91,17 @@ Remember, **only buy from trusted, reputable sources**, even if they have higher
 
 ## Special boot modes
 - **Recovery mode**: With the device powered off, hold the top Power button and the * key, or type `adb reboot recovery` when connected to a computer. Allows you to factory reset the device by wiping /data and /cache, view boot and kernel logs, and install patches from `adb sideload` interface or SD card.
+- **Fastboot mode**: Only accessible and automatically kick in when /boot is corrupted. Allows you to restore partitions under `fastboot` interface.
 - **EDL mode**: With the device powered off, hold the top Power button and both the * and # keys, or type `adb reboot edl` when connected to a computer. Boots into a black screen, allows you to read and write partitions in low-level with proprietary Qualcomm tools. Remove the battery to exit.
 
 <details>
   <summary>What the heck is EDL mode?</summary>
 
-**Qualcomm Emergency Download mode**, commonly known as EDL mode, is a special engineering interface implemented on devices with Qualcomm chipsets. It lets you do special operations on the phone that only the device manufacturer can do, such as unlocking the bootloader, read and write firmwares on the phone's filesystem or recover from being a dead paperweight. Unlike bootloader or Fastboot mode, system files needed by the EDL mode resides on a separate 'primary bootloader' that aren't affected by software modifications. 
+Qualcomm Emergency Download mode, commonly known as EDL mode, is a special engineering interface implemented on devices with Qualcomm chipsets. It lets you do special operations on the phone that only the device manufacturer can do, such as unlocking the bootloader, read and write firmwares on the phone's filesystem or recover from being a dead paperweight. Unlike bootloader or Fastboot mode, system files needed by the EDL mode resides on a separate 'primary bootloader' that aren't affected by software modifications. 
 
-Aleph Security has a deep-dive blog post into exploiting the nature of EDL mode on Qualcomm-chipset devices that you can read [here](https://alephsecurity.com/2018/01/22/qualcomm-edl-1).
+Aleph Security has a deep-dive blog post into exploiting the nature of EDL mode on Qualcomm-chipset devices that you can read here: https://alephsecurity.com/2018/01/22/qualcomm-edl-1
 
-Booting into this mode, the phone's screen will briefly show the 'enabled by KaiOS' logo, then turn almost black as if it's off, but in fact it's still listening to commands over Qualcomm's proprietary protocol called Sahara (or Firehose on newer devices). With a [suitable digitally-signed programmer in MBN/ELF file format](https://edl.bananahackers.net) and some instruction-bundled tools, the most popular one being QFIL (Qualcomm Flash Image Loader), one can send commands from a computer to the phone over USB.
+Booting into this mode, the phone's screen will briefly show the 'enabled by KaiOS' logo, then turn almost black as if it's off, but in fact it's still listening to commands over Qualcomm's proprietary protocol called Sahara (or Firehose on newer devices). With a suitable digitally-signed programmer in MBN/ELF file format and some instruction-bundled tools, the most popular one being QFIL (Qualcomm Flash Image Loader), one can send commands from a computer to the phone over USB.
 </details>
 
 You can also **force reboot** the phone by holding the top Power button and the # key at any time.
@@ -108,13 +109,13 @@ You can also **force reboot** the phone by holding the top Power button and the 
 EDL loader for the international version of this phone (not TA-1324) can be found on BananaHackers' [EDL archive site](https://edl.bananahackers.net/loaders/8k.mbn) with hardware ID 0x009600e100420029 (a copy is available [here](../main/8k.mbn)). The US version of this phone has been signed with a different PK_HASH and needs a different firehose loader which we currently don't have in archive.
 
 ## Sideloading and debugging third-party applications
-BananaHackers' definitions put this phone and most other KaiOS 2.5.4 devices in the first category, which means that you can install and debug apps from outside sources, but with a few caveats: apps with 'forbidden' permissions, like `embed-apps`, `embed-widgets` and `engmode-extension` cannot be sideloaded, and you cannot debug apps that came with the device using WebIDE's Developer Tools (you can, however, see the system's global warnings and errors with `adb logcat`).
+BananaHackers' definitions put this phone and most other KaiOS 2.5.4 devices in the first category, which means that you can install and debug apps from outside sources, but with a few caveats: apps with 'forbidden' permissions, such as `embed-apps`, `embed-widgets` and `engmode-extension` cannot be sideloaded, and you cannot debug apps that came with the device using WebIDE's Developer Tools (you can, however, see the system's global warnings and errors with `adb logcat`).
 
 For detailed instructions, see [Sideloading and debugging/WebIDE]({% link docs/guides/WebIDE.md %}).
 
-**Do note that OmniSD, one of the methods used for on-device sideloading, and many Gerda-related apps requires the `navigator.mozApps.mgmt.import` API that has been removed from KaiOS 2.5.2.2, and therefore no longer work on this phone.** However, the Privileged factory reset feature that could be used on KaiOS 2.5.2 and older can now be activated after permanent rooting to gain privileged userspace session.
+**Do note that OmniSD, one of the methods used for on-device sideloading, and many Gerda-related apps requires the `navigator.mozApps.mgmt.import` API that has been removed from KaiOS 2.5.2.2, and therefore no longer work on this phone.** However, the Privileged factory reset feature that could be used on KaiOS 2.5.2 and older can now be activated after permanent rooting to gain privileged userspace session (see [Next steps](#next-steps)).
 
-> To remove unwanted apps from the phone, you can use [this fork of Luxferre's AppBuster](https://github.com/minhduc-bui1/AppBuster) which lets you disable any apps you don't need and enable them again if you want.
+To remove unwanted apps from the phone, you can use [this fork of Luxferre's AppBuster](https://github.com/minhduc-bui1/AppBuster) which lets you disable any apps you don't need and enable them again if you want.
 
 ## ROOT: Boot partition modifying (non-US only)
 On KaiOS 2.5.4 devices, such as the 6300 4G and 8000 4G, ADB and WebIDE can be used to install most third-party apps. However, apps with special ‘forbidden’ permissions are not allowed, including most BananaHackers apps with `engmode-extension` like Wallace Toolbox, which can be used to gain exclusive access of the phone. You also cannot make changes to the system. On the 2720 Flip and 800 Tough with KaiOS 2.5.2.2, with HMD/Nokia Mobile changing their release branches from `dev-keys` to `release-keys`, the situation is even worse as you cannot sideload at all. 
@@ -126,17 +127,18 @@ The guide below is based on the main guide from BananaHackers website, but has b
 {: .warning }
 > **DISCLAIMER: This process will void your phone's warranty, disable its ability to receive WhatsApp calls and over-the-air updates, but you can undo this if you save a copy of the original boot partition. However, you might also brick your phone if you make a mistake in the process, so proceed at your own risk and with caution! I won't be responsible for any damages done to your phone by following these.**
 >
-> *Remember, you don't have to root your phone to do things that usually need root access e.g. you can use [this fork of Luxferre's AppBuster](https://github.com/minhduc-bui1/AppBuster) to disable apps from the launcher instead of deleting them with Wallace Toolbox. You can also install [CrossTweak](https://gitlab.com/suborg/crosstweak), a Wallace Toolbox alternative also made by Luxferre that does not need `engmode-extension` and therefore can be easily installed on KaiOS 2.5.4 devices.*
+> Remember, you don't have to root your phone to do things that usually need root access e.g. you can use [this fork of Luxferre's AppBuster](https://github.com/minhduc-bui1/AppBuster) to disable apps from the launcher instead of deleting them with Wallace Toolbox. You can also install [CrossTweak](https://gitlab.com/suborg/crosstweak), a Wallace Toolbox alternative also made by Luxferre that does not need `engmode-extension` and therefore can be easily installed on KaiOS 2.5.4 devices.
 
 ### What we'll need
 - an international non-US version of Nokia 6300 4G (not TA-1324) or Nokia 8000 4G, Nokia 2720 Flip or Nokia 800 Tough;
 - an USB cable capable of data transferring (EDL cables will also do);
 - an Internet connection to download the tools needed;
-- a somewhat-working firehose programmer MBN file for the [8000 4G and 6300 4G](../main/8k.mbn), [2720 Flip](https://edl.bananahackers.net/loader/2720.mbn) or [800 Tough](https://edl.bananahackers.net/loader/800t.mbn);
-- an [image file of Gerda Recovery](../main/recovery-8110.img) (backup: [one](https://cloud.disroot.org/s/3ojAfcF6J2jQrRg/download), [two](https://drive.google.com/open?id=1ot9rQDTYON8mZu57YWDy52brEhK3-PGh)) for the Nokia 8110 4G, since the firehose loader above has a reading bug, we'll use this to access ADB from the recovery mode and get the boot partition from there (not needed for 2720 Flip/800 Tough);
+- a somewhat-working firehose programmer MBN file for the [8000 4G and 6300 4G](https://edl.bananahackers.net/loader/8k.mbn), [2720 Flip](https://edl.bananahackers.net/loader/2720.mbn) or [800 Tough](https://edl.bananahackers.net/loader/800t.mbn);
+- an [image file of Gerda Recovery](https://cloud.disroot.org/s/3ojAfcF6J2jQrRg/download) ([backup](https://drive.google.com/open?id=1ot9rQDTYON8mZu57YWDy52brEhK3-PGh)) for the Nokia 8110 4G, since the firehose loader above has a reading bug, we'll use this to access ADB from the recovery mode and get the boot partition from there (not needed for 2720 Flip/800 Tough);
 - a EDL tools package to read and write system partitions in low-level access (in this guide we'll be using [bkerler's edl.py v3.1](https://github.com/bkerler/edl/releases/tag/3.1) for 8000 4G/6300 4G, [andybalholm's edl](https://github.com/andybalholm/edl) for 2720 Flip/800 Tough)
 
-*andybalholm's EDL cannot be used on 8000 4G and 6300 4G due to some structural changes within the GPT partition table, which will result in an error `AttributeError: 'gpt' object has no attribute 'partentries'. Did you mean: 'num_part_entries'?`. **Do note that the command structures used between bkerler's and andybalholm's are different, which we'll mention below.***
+{: .note }
+> andybalholm's EDL cannot be used on 8000 4G and 6300 4G due to some structural changes within the GPT partition table, which will result in an error `AttributeError: 'gpt' object has no attribute 'partentries'. Did you mean: 'num_part_entries'?`. **Do note that the command structures used between bkerler's and andybalholm's are different, which we'll mention below.**
 
 *We'll be using open-sourced Python scripts from GitHub for the sake of cross-platform usage (and my obsession of open-source tools), instead of QFIL which is proprietary and only supports Windows.*
 
@@ -149,7 +151,7 @@ The guide below is based on the main guide from BananaHackers website, but has b
 *@cyan-2048 confirmed to me that Zadig 2.5 bundled within the EDL package doesn't work, so **DO NOT USE** that. I've also specifically chosen version 2.7 as it works best throughout my testing, and the latest 2.8 version of Zadig tool also has troubles detecting the phone's EDL driver.*
 
 - **macOS & Linux users also need:**
-  - An package manager, such as [Homebrew](https://brew.sh), to quickly set up Python, ADB, `libusb` and configure the environment for EDL tools (setup guide with Homebrew can be found below)
+  - A package manager, such as [Homebrew](https://brew.sh), to quickly set up Python, ADB, `libusb` and configure the environment for EDL tools (setup guide with Homebrew can be found below)
   - *Python 2.7 bundled with macOS 10.8 to 12 is NOT recommended for following this guide.*
 
 *If you're on Linux, Python and ADB can be quickly set up by installing with your built-in package manager. We won't be covering this here, as each Linux distro has its own way of installing from package manager.*
@@ -157,7 +159,7 @@ The guide below is based on the main guide from BananaHackers website, but has b
 - **If you're going the automatic boot partition patching and compilation via Docker route (only recommended for 5-6 year old computers):**
   - Git to clone/download the repository of the patcher tool to your computer ([install guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
   - Docker Compose to provide the environment for the patcher tool to work (included in Docker Desktop, whose download links can be found [here](https://docs.docker.com/compose/install))
-  - (Windows) WSL 2 with [Linux kernel update package](https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package) installed (to install WSL 2 turn on Virtualization in BIOS, then open Command Prompt with administrative rights and type `wsl --install`)
+  - (Windows) WSL2 with [Linux kernel update package](https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package) installed (to install WSL2, turn on Virtualization in BIOS, then open Command Prompt with administrative rights and type `wsl --install`)
 - **If you're going the extracting and manual editing by hand route:**
   - Android Image Kitchen v3.8 ([Windows](https://forum.xda-developers.com/attachments/android-image-kitchen-v3-8-win32-zip.5300919), [macOS/Linux](https://forum.xda-developers.com/attachments/aik-linux-v3-8-all-tar-gz.5300923))
   - (Windows) [Notepad++](https://notepad-plus-plus.org/downloads) to edit the needed files while [preserving line endings](https://www.cs.toronto.edu/~krueger/csc209h/tut/line-endings.html)
@@ -215,7 +217,7 @@ pip3 install pyusb pyserial capstone keystone-engine docopt
 ```
 ![Screenshot of a console window showing the successful process of collecting and downloading dependencies after typing the above command](../../assets/nokia-leo/pythoooon.png)
 
-4. Open the extracted EDL tools folder, go to the Drivers > Windows folder and run `Qualcomm_Diag_QD_Loader_2016_driver.exe` with administrator rights. Proceed with installation and leave everything as default, restart the computer if it prompts you to do so.
+4. Open the extracted EDL tools folder, go to the Windows folder under Drivers and run `Qualcomm_Diag_QD_Loader_2016_driver.exe` with administrator rights. Proceed with installation and leave everything as default, restart the computer if it prompts you to do so.
 ![Screenshot of an installation window for Qualcomm's diagnostic driver, in which two radio buttons are shown labelled 'WWAN-DHCP is not used to get IPAddress' and 'ETHERNET-DHCP is used to get IPAddress' respectively. The first button is selected.](../../assets/nokia-leo/whatever.png)
 
 5. Switch your phone to EDL mode and connect it to your computer.
@@ -225,14 +227,14 @@ pip3 install pyusb pyserial capstone keystone-engine docopt
 In both cases, the phone's screen should blink with a 'enabled by KaiOS' logo then become blank. This is normal behaviour letting you know you're in EDL mode and you can proceed.
 
 {:style="counter-reset:none"}
-6. Run the Zadig tool (use the version downloaded above and NOT the one provided by the EDL package) and select *Options > List All Devices*. In the front dropdown menu, select `QHSUSB__BULK` (your device in EDL mode). In the target driver box (which the green arrow is pointing to), click on the up/down arrows until you see `libusb-win32` and click on Replace Driver.
+6. Run the Zadig tool (use the version downloaded above and NOT the one provided by the EDL package) and select *Options, List All Devices*. In the front dropdown menu, select `QHSUSB__BULK` (your device in EDL mode). In the target driver box (which the green arrow is pointing to), click on the up/down arrows until you see `libusb-win32` and click on Replace Driver.
 ![Screenshot of Zadig program with the Option dropdown menu shown, in which the List All Devices option is highlighted and selected](../../assets/nokia-leo/listall.png)
 ![Screenshot of Zadig's main interface with the front dropdown list shown listing all devices connected to computer, in which the option for QHSUSB_BULK is highlighted](../../assets/nokia-leo/qhsusb.png)
 ![Screenshot of Zadig's main interface with the second label box on the Drivers line, which the green arrow points to, showing 'libusb-win32 (v1.2.6.0)'. Two smaller up/down arrows are shown to the right of that box.](../../assets/nokia-leo/arg.png)
 
 7. If you're installing the driver for the first time, an "USB Device Not Recognised" pop-up may appear. Exit EDL mode by removing and re-inserting the battery, then turn on the phone in EDL mode again.
 
-*As I've said above, the latest 2.8 version of Zadig might have some troubles detecting the phone's EDL driver. If you were using it and the driver installation takes too much time and the tool aborts it, exit Zadig, exit and re-enter EDL mode on the phone, then try to install again. If that still doesn't help, try to [download version 2.7](https://github.com/pbatard/libwdi/releases/tag/v1.4.1) instead.*
+*As I've said above, the latest 2.8 version of Zadig might have some troubles installing the phone's EDL driver. If the driver installation takes too much time and the tool aborts it, exit Zadig, exit and re-enter EDL mode on the phone, then try to install again. If that still doesn't help, try to [download version 2.7](https://github.com/pbatard/libwdi/releases/tag/v1.4.1) instead.*
 
 ### Part 2: Obtaining the boot partition
 #### Nokia 8000 4G and Nokia 6300 4G with bkerler's EDL
@@ -243,18 +245,21 @@ In both cases, the phone's screen should blink with a 'enabled by KaiOS' logo th
 ```
 python edl.py w recovery recovery-8110.img --loader=8k.mbn
 ```
-*If the progress bar stops at 99% and you get this error `'usb.core.USBError: [Errno None] b'libusb0-dll:err [_usb_reap_async] timeout error\n'` or `usb.core.USBError: [Errno 60] Command timed out`, don't panic! This is because the phone doesn't send any indicator information back to the EDL tool when in fact the image has been successfully written. Don't mind the error and proceed with the next step.*
 
+{: .note }
+> If the progress bar stops at 99% and you get this error `'usb.core.USBError: [Errno None] b'libusb0-dll:err [_usb_reap_async] timeout error\n'` or `usb.core.USBError: [Errno 60] Command timed out`, this is because the phone doesn't send any indicator information back to the EDL tool when in fact the image has been successfully written. Don't mind the error and proceed with the next step.
+
+{:style="counter-reset:none"}
 3. When finished, disconnect the phone from your computer and exit EDL mode by removing and re-inserting the battery. 
 
 4. Then, hold down the top Power button and `*` to turn on the phone in recovery mode. Connect the phone to your computer again.
 
 {: .warning }
-> **Be careful not to boot into normal operation mode at this point! As stated above, while SELinux is still in `Enforced` mode, it'll try to revert all system modifications on startup, in this case, the custom recovery image we've just flashed will be overwritten by the stock one. If you accidentally start into normal mode (with the Nokia logo), you'll have to start over from step 1.**
-> 
-> Don't worry if this boots into a white screen, you can still use ADB right after boot. This is because the display driver for the Nokia 8110 4G included in the recovery image are not compatible with the display of 8000 4G/6300 4G.
-> 
-> Check if ADB can recognise the phone by typing `adb devices` into the command-line.
+> Be careful not to boot into normal operation mode at this point! As stated above, while SELinux is still in `Enforced` mode, it'll try to revert all system modifications on startup, in this case, the custom recovery image we've just flashed will be overwritten by the stock one. If you accidentally start into normal mode (with the Nokia logo), you'll have to start over from step 1.
+
+Don't worry if this boots into a white screen, you can still use ADB right after boot. This is because the display driver for the Nokia 8110 4G included in the recovery image are not compatible with the display of 8000 4G/6300 4G.
+
+Check if ADB can recognise the phone by typing `adb devices` into the command-line.
 
 {:style="counter-reset:none"}
 5. Navigate the command-line to the `platform-tools` folder (if needed) and pull the boot image from the phone by typing this command:
@@ -300,8 +305,9 @@ You can disconnect the phone from your computer for now.
 ### Part 3: Modifying the boot partition
 #### Automatic patching with `8k-boot-patcher`
 1. Follow [Docker's tutorial](https://docs.docker.com/compose/install/#scenario-one-install-docker-desktop) on installing Docker Desktop. Once set up, open the program, click Accept on this box and let the Docker Engine start before exiting.
-![Screenshot of a window titled as 'Docker Subscription Service Agreement' which declares that you will have to accept Docker's Subscription Service Agreements, Data Processing Agreement and Data Privacy Policy in order to use the program, and the free scope of it is limited to personal and small business uses. The window also lists the options to view the full agreements, accept them or reject and close the program.](../../assets/nokia-leo/docker_abomination.png)
 
+![Screenshot of a window titled as 'Docker Subscription Service Agreement' which declares that you will have to accept Docker's Subscription Service Agreements, Data Processing Agreement and Data Privacy Policy in order to use the program, and the free scope of it is limited to personal and small business uses. The window also lists the options to view the full agreements, accept them or reject and close the program.](../../assets/nokia-leo/docker_abomination.png)
+{:style="counter-reset:none"}
 2. Clone/download the boot patcher toolkit by typing this into a command-line window. This will download the toolkit and have Docker set it up. Do not omit the dot/period at the end of this command, this tells Docker where our downloaded toolkit are located on the system.
 ```
 git clone https://gitlab.com/suborg/8k-boot-patcher.git && cd 8k-boot-patcher && docker build -t 8kbootpatcher .
@@ -320,9 +326,11 @@ That's it! On your desktop there will be two new image files, the modified `boot
 
 #### Manual patching with Android Image Kitchen
 1. Extract the Android Image Kitchen tools and copy the boot image we've just obtained over to the root of the extracted folder.
-![Screenshot of a list of folders and files contained in the extracted Android Image Kitchen folder](../../assets/nokia-leo/aik.png)
 
+![Screenshot of a list of folders and files contained in the extracted Android Image Kitchen folder](../../assets/nokia-leo/aik.png)
+{:style="counter-reset:none"}
 2. Open the folder in a command-line window and type `unpackimg boot.img`. This will split the image file and unpack the ramdisk to their subdirectories.
+
 ![Screenshot of a Windows Command Prompt window showing some logs of the boot partition extracting process after typing the command above](../../assets/nokia-leo/unpack.png)
 
 {: .caution }
@@ -333,26 +341,32 @@ That's it! On your desktop there will be two new image files, the modified `boot
   - line 7: `ro.secure=1` -> `ro.secure=0`
   - line 8: `security.perf_harden=1` -> `security.perf_harden=0`
   - line 10: `ro.debuggable=0` -> `ro.debuggable=1`
+
 ![Screenshot of the original content of the default.prop file](../../assets/nokia-leo/default_prop.png)
 ![Screenshot of the modified content of the default.prop file](../../assets/nokia-leo/default_prop_edited.png)
+{:style="counter-reset:none"}
+4. Open `ramdisk/init.qcom.early_boot.sh` in Notepad++ and add `setenforce 0` as a new line at the end of the file.
 
-4. Open `ramdisk/init.qcom.early_boot.sh` in Notepad++ and add `setenforce 0` as a new line at the end of the file.<br>
 ![Screenshot of the modified content of the init.qcom.early_boot.sh file](../../assets/nokia-leo/setenforce.png)
-
+{:style="counter-reset:none"}
 5. Go back to the root Android Image Kitchen folder and open `split_img/boot.img-cmdline` in Notepad++. Without adding a new line, scroll to the end of the first line and append `androidboot.selinux=permissive enforcing=0`.
+
 ![Screenshot of the modified content of the boot.img-cmdline file](../../assets/nokia-leo/append.png)
-
+{:style="counter-reset:none"}
 6. Open `ramdisk/init.rc` (NOT `ramdisk/init`) and delete line 393 `setprop selinux.reload_policy 1` or mark a comment as shown. This will ultimately prevent SELinux from overwriting the policy changes we made above.
-![Screenshot of the modified content of the init.rc file, with line 393 marked as comment. This has the same effects as deleting the line altogether.](../../assets/nokia-leo/reload_policy.png)
 
+![Screenshot of the modified content of the init.rc file, with line 393 marked as comment. This has the same effects as deleting the line altogether.](../../assets/nokia-leo/reload_policy.png)
+{:style="counter-reset:none"}
 7. (Optional) If you wish to disable the Low Memory Killer function, now's a good time to do so! In the same `ramdisk/init.rc` file, after line 420, make a new line and add:
 ```
 write /sys/module/lowmemorykiller/parameters/enable_lmk 0
 ```
 Indent the new line to match up with other lines as shown.
-![Screenshot of the modified content of the init.rc file, with line 421 added to disable the Low Memory Killer module](../../assets/nokia-leo/disable_lmk.png)
 
+![Screenshot of the modified content of the init.rc file, with line 421 added to disable the Low Memory Killer module](../../assets/nokia-leo/disable_lmk.png)
+{:style="counter-reset:none"}
 8. And that's a wrap! Open the root Android Image Kitchen folder in a command-line window and type `repackimg` to package our modified boot partition.
+
 ![Screenshot of a Windows Command Prompt window showing some logs of the boot partition repacking process after typing the above command, but has a signing error at the end](../../assets/nokia-leo/repack_unsigned.png)
 
 *If you happen to encounter an error during the signing process, that's likely because the process uses `java` to power the `boot-signer.jar` sequence and you don't have it installed. The image will still be packaged and ready for flashing, but if you're a perfectionist, you can install JRE and try again.*
@@ -385,14 +399,17 @@ python edl.py -w boot boot.img -loader 800t.mbn
 
 3. Restart the phone to normal operation mode by typing `python edl.py reset`. And we're done!
 
-*If you still have the original boot partition and wish to revert all the messes and damages, connect the phone to your computer in EDL mode, move the image file to the EDL tools folder, open a command-line window within it and type these one-line at a time:*
-```
-python edl.py w boot boot.img --loader=8k.mbn
-python edl.py reset
-```
+{: .success }
+> *If you still have the original boot partition and wish to revert all the messes and damages, connect the phone to your computer in EDL mode, move the image file to the EDL tools folder, open a command-line window within it and type these one-line at a time:*
+> ```
+> python edl.py w boot boot.img --loader=8k.mbn
+> python edl.py reset
+> ```
+
 ![Demostration of a command-line window showing the results after typing the first command above](../../assets/nokia-leo/edl_bootog.png)
 
 #### Next steps
+{: .no_toc }
 - Now that you've rooted your phone, to install applications with 'forbidden' permissions, connect it to a WebIDE session, then open Device Preferences by the right pane, search for `devTools.apps.forbiddenPermissions`, clear its value, then either restart the phone or hold the top Power button and choose Memory Cleaner > Deep Clean Memory to restart B2G.
 
 ![Screenshot of a WebIDE window in which the location of Device Preferences is highlighted in the right pane and the value of devTools.apps.forbiddenPermissions has been emptied](../../assets/nokia-leo/devpref.png)
