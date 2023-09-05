@@ -202,10 +202,10 @@ brew install python android-platform-tools libusb && pip3 install pyusb pyserial
 
 #### Windows
 {: .no_toc }
-1. Open the Python installer and proceed with installation. Remember to tick the box next to "Add python.exe to PATH". This would make Python able to be called everywhere in the command-line instead of specifically pointing to its folder, which the next part of the guide won't cover on.<br>
+1. Open the Python installer and proceed with installation. Remember to tick the box next to "Add python.exe to PATH". This would make Python able to be called everywhere in the command-line instead of specifically pointing to its folder, which the next part of the guide won't cover on.
 ![Screenshot of an installation window for Python 3.9 showing two options, 'Install Now' and 'Customize installation', with the checkbox for 'Add Python 3.9 to PATH' being selected](../../assets/nokia-leo/python.png)
 
-2. On Windows 10/11, by default, typing the `python` or `python3` aliases within Command Prompt will call the Microsoft Store version of Python, which we don't have installed. To override this default into calling the local version of Python, head over to Settings > Apps > Apps & features > App execution aliases and toggle off both App Installer (python.exe) and App Installer (python3.exe).<br>
+2. On Windows 10/11, by default, typing the `python` or `python3` aliases within Command Prompt will call the Microsoft Store version of Python, which we don't have installed. To override this default into calling the local version of Python, head over to Settings > Apps > Apps & features > App execution aliases and toggle off both App Installer (python.exe) and App Installer (python3.exe).
 ![Screenshot of the Apps & features page in Windows 10's Settings app, of which the App execution aliases link is located under the Apps & features section](../../assets/nokia-leo/settings_alias.png)
 ![Screenshot of the App execution alias page, where the toggles for App Installer (python.exe) and App Installer (python3.exe) are both turned off. Description says Apps can declare a name used to run the app from a command prompt. If multiple apps use the same name, choose which one to use](../../assets/nokia-leo/alias_off.png)
 
@@ -299,7 +299,7 @@ You can disconnect the phone from your computer for now.
 
 ### Part 3: Modifying the boot partition
 #### Automatic patching with `8k-boot-patcher`
-1. Follow [Docker's tutorial](https://docs.docker.com/compose/install/#scenario-one-install-docker-desktop) on installing Docker Desktop. Once set up, open the program, click Accept on this box and let the Docker Engine start before exiting.<br>
+1. Follow [Docker's tutorial](https://docs.docker.com/compose/install/#scenario-one-install-docker-desktop) on installing Docker Desktop. Once set up, open the program, click Accept on this box and let the Docker Engine start before exiting.
 ![Screenshot of a window titled as 'Docker Subscription Service Agreement' which declares that you will have to accept Docker's Subscription Service Agreements, Data Processing Agreement and Data Privacy Policy in order to use the program, and the free scope of it is limited to personal and small business uses. The window also lists the options to view the full agreements, accept them or reject and close the program.](../../assets/nokia-leo/docker_abomination.png)
 
 2. Clone/download the boot patcher toolkit by typing this into a command-line window. This will download the toolkit and have Docker set it up. Do not omit the dot/period at the end of this command, this tells Docker where our downloaded toolkit are located on the system.
@@ -319,7 +319,7 @@ That's it! On your desktop there will be two new image files, the modified `boot
 ![Screenshot of boot.img and boot-orig.img files as shown on desktop](../../assets/nokia-leo/after_patch.png)
 
 #### Manual patching with Android Image Kitchen
-1. Extract the Android Image Kitchen tools and copy the boot image we've just obtained over to the root of the extracted folder.<br>
+1. Extract the Android Image Kitchen tools and copy the boot image we've just obtained over to the root of the extracted folder.
 ![Screenshot of a list of folders and files contained in the extracted Android Image Kitchen folder](../../assets/nokia-leo/aik.png)
 
 2. Open the folder in a command-line window and type `unpackimg boot.img`. This will split the image file and unpack the ramdisk to their subdirectories.
@@ -332,24 +332,24 @@ That's it! On your desktop there will be two new image files, the modified `boot
 3. Let the editing begin! First, open `ramdisk/default.prop` using Notepad++ and change:
   - line 7: `ro.secure=1` -> `ro.secure=0`
   - line 8: `security.perf_harden=1` -> `security.perf_harden=0`
-  - line 10: `ro.debuggable=0` -> `ro.debuggable=1`<br>
+  - line 10: `ro.debuggable=0` -> `ro.debuggable=1`
 ![Screenshot of the original content of the default.prop file](../../assets/nokia-leo/default_prop.png)
 ![Screenshot of the modified content of the default.prop file](../../assets/nokia-leo/default_prop_edited.png)
 
 4. Open `ramdisk/init.qcom.early_boot.sh` in Notepad++ and add `setenforce 0` as a new line at the end of the file.<br>
 ![Screenshot of the modified content of the init.qcom.early_boot.sh file](../../assets/nokia-leo/setenforce.png)
 
-5. Go back to the root Android Image Kitchen folder and open `split_img/boot.img-cmdline` in Notepad++. Without adding a new line, scroll to the end of the first line and append `androidboot.selinux=permissive enforcing=0`.<br>
+5. Go back to the root Android Image Kitchen folder and open `split_img/boot.img-cmdline` in Notepad++. Without adding a new line, scroll to the end of the first line and append `androidboot.selinux=permissive enforcing=0`.
 ![Screenshot of the modified content of the boot.img-cmdline file](../../assets/nokia-leo/append.png)
 
-6. Open `ramdisk/init.rc` (NOT `ramdisk/init`) and delete line 393 `setprop selinux.reload_policy 1` or mark a comment as shown. This will ultimately prevent SELinux from overwriting the policy changes we made above.<br>
+6. Open `ramdisk/init.rc` (NOT `ramdisk/init`) and delete line 393 `setprop selinux.reload_policy 1` or mark a comment as shown. This will ultimately prevent SELinux from overwriting the policy changes we made above.
 ![Screenshot of the modified content of the init.rc file, with line 393 marked as comment. This has the same effects as deleting the line altogether.](../../assets/nokia-leo/reload_policy.png)
 
 7. (Optional) If you wish to disable the Low Memory Killer function, now's a good time to do so! In the same `ramdisk/init.rc` file, after line 420, make a new line and add:
 ```
 write /sys/module/lowmemorykiller/parameters/enable_lmk 0
 ```
-Indent the new line to match up with other lines as shown.<br>
+Indent the new line to match up with other lines as shown.
 ![Screenshot of the modified content of the init.rc file, with line 421 added to disable the Low Memory Killer module](../../assets/nokia-leo/disable_lmk.png)
 
 8. And that's a wrap! Open the root Android Image Kitchen folder in a command-line window and type `repackimg` to package our modified boot partition.
