@@ -251,12 +251,10 @@ python edl.py w recovery recovery-8110.img --loader=8k.mbn
 3. When finished, disconnect the phone from your computer and exit EDL mode by removing and re-inserting the battery. 
 
 4. Then, hold down the top Power button and `*` to turn on the phone in recovery mode. Connect the phone to your computer again.
-<br><br>
-**Be careful not to boot into normal operation mode at this point! As stated above, while SELinux is still in `Enforced` mode, it'll try to revert all system modifications on startup, in this case, the custom recovery image we've just flashed will be overwritten by the stock one. If you accidentally start into normal mode (with the Nokia logo), you'll have to start over from step 1.**
-<br><br>
-Don't worry if this boots into a white screen, you can still use ADB right after boot. This is because the display driver for the Nokia 8110 4G included in the recovery image are not compatible with the display of 8000 4G/6300 4G.
-<br><br>
-Check if ADB can recognise the phone by typing `adb devices` into the command-line.
+  {: .caution }
+  > **Be careful not to boot into normal operation mode at this point! As stated above, while SELinux is still in `Enforced` mode, it'll try to revert all system modifications on startup, in this case, the custom recovery image we've just flashed will be overwritten by the stock one. If you accidentally start into normal mode (with the Nokia logo), you'll have to start over from step 1.**
+  > Don't worry if this boots into a white screen, you can still use ADB right after boot. This is because the display driver for the Nokia 8110 4G included in the recovery image are not compatible with the display of 8000 4G/6300 4G.
+  > Check if ADB can recognise the phone by typing `adb devices` into the command-line.
 
 5. Navigate the command-line to the `platform-tools` folder (if needed) and pull the boot image from the phone by typing this command:
 ```
@@ -276,8 +274,7 @@ Unlike the 6300 4G and 8000 4G, our phones' EDL loader properly works with both 
 1. Switch your phone to EDL mode and connect it to your computer.
   - From the turned on state, turn on debugging mode on your phone by dialing `*#*#33284#*#*`, connect it to your computer and type `adb reboot edl` in a command-line window.
   - From the turned off state, hold down both side volume keys (2720 Flip) or both D-Pad Up and Down keys (800 Tough) at the same time while inserting the USB cable to the phone.
-<br><br>
-In both cases, the phone's screen should blink with a 'Powered by KaiOS' logo then become blank. This is normal behaviour letting you know you're in EDL mode and you can proceed.
+  - In both cases, the phone's screen should blink with a 'Powered by KaiOS' logo then become blank. This is normal behaviour letting you know you're in EDL mode and you can proceed.
 
 2. Open the EDL tools folder in a command-line window. Extract the boot partition of the phone by typing one of these commands depend on which file you have:
 ```
@@ -300,7 +297,6 @@ You can disconnect the phone from your computer for now.
 ### Part 3: Modifying the boot partition
 #### Automatic patching with `8k-boot-patcher`
 1. Follow [Docker's tutorial](https://docs.docker.com/compose/install/#scenario-one-install-docker-desktop) on installing Docker Desktop. Once set up, open the program, click Accept on this box and let the Docker Engine start before exiting.
-
 ![Screenshot of a window titled as 'Docker Subscription Service Agreement' which declares that you will have to accept Docker's Subscription Service Agreements, Data Processing Agreement and Data Privacy Policy in order to use the program, and the free scope of it is limited to personal and small business uses. The window also lists the options to view the full agreements, accept them or reject and close the program.](../../assets/nokia-leo/docker_abomination.png)
 
 2. Clone/download the boot patcher toolkit by typing this into a command-line window. This will download the toolkit and have Docker set it up. Do not omit the dot/period at the end of this command, this tells Docker where our downloaded toolkit are located on the system.
@@ -321,34 +317,27 @@ That's it! On your desktop there will be two new image files, the modified `boot
 
 #### Manual patching with Android Image Kitchen
 1. Extract the Android Image Kitchen tools and copy the boot image we've just obtained over to the root of the extracted folder.
-
 ![Screenshot of a list of folders and files contained in the extracted Android Image Kitchen folder](../../assets/nokia-leo/aik.png)
 
 2. Open the folder in a command-line window and type `unpackimg boot.img`. This will split the image file and unpack the ramdisk to their subdirectories.
-
 ![Screenshot of a Windows Command Prompt window showing some logs of the boot partition extracting process after typing the command above](../../assets/nokia-leo/unpack.png)
 
 **Be sure to edit the files correctly, else the phone won't boot!**
 
 3. Let the editing begin! First, open `ramdisk/default.prop` using Notepad++ and change:
-
-- line 7: `ro.secure=1` -> `ro.secure=0`
-- line 8: `security.perf_harden=1` -> `security.perf_harden=0`
-- line 10: `ro.debuggable=0` -> `ro.debuggable=1`
-
+  - line 7: `ro.secure=1` -> `ro.secure=0`
+  - line 8: `security.perf_harden=1` -> `security.perf_harden=0`
+  - line 10: `ro.debuggable=0` -> `ro.debuggable=1`
 ![Screenshot of the original content of the default.prop file](../../assets/nokia-leo/default_prop.png)
 ![Screenshot of the modified content of the default.prop file](../../assets/nokia-leo/default_prop_edited.png)
 
 4. Open `ramdisk/init.qcom.early_boot.sh` in Notepad++ and add `setenforce 0` as a new line at the end of the file.
-
 ![Screenshot of the modified content of the init.qcom.early_boot.sh file](../../assets/nokia-leo/setenforce.png)
 
 5. Go back to the root Android Image Kitchen folder and open `split_img/boot.img-cmdline` in Notepad++. Without adding a new line, scroll to the end of the first line and append `androidboot.selinux=permissive enforcing=0`.
-
 ![Screenshot of the modified content of the boot.img-cmdline file](../../assets/nokia-leo/append.png)
 
 6. Open `ramdisk/init.rc` (NOT `ramdisk/init`) and delete line 393 `setprop selinux.reload_policy 1` or mark a comment as shown. This will ultimately prevent SELinux from overwriting the policy changes we made above. 
-
 ![Screenshot of the modified content of the init.rc file, with line 393 marked as comment. This has the same effects as deleting the line altogether.](../../assets/nokia-leo/reload_policy.png)
 
 > Psst, if you wish to disable the Low Memory Killer function, now's a good time to do so! In the same `ramdisk/init.rc` file, after line 420, make a new line and add:
@@ -356,11 +345,9 @@ That's it! On your desktop there will be two new image files, the modified `boot
 > write /sys/module/lowmemorykiller/parameters/enable_lmk 0
 > ```
 > Indent the new line to match up with other lines as shown. 
-
 ![Screenshot of the modified content of the init.rc file, with line 421 added to disable the Low Memory Killer module](../../assets/nokia-leo/disable_lmk.png)
 
 7. And that's a wrap! Open the root Android Image Kitchen folder in a command-line window and type `repackimg` to package our modified boot partition.
-
 ![Screenshot of a Windows Command Prompt window showing some logs of the boot partition repacking process after typing the above command, but has a signing error at the end](../../assets/nokia-leo/repack_unsigned.png)
 
 *If you happen to encounter an error during the signing process, that's likely because the process uses `java` to power the `boot-signer.jar` sequence and you don't have it installed. The image will still be packaged and ready for flashing, but if you're a perfectionist, you can install JRE and try again.*
@@ -390,7 +377,7 @@ python edl.py -w boot boot.img -loader 2720.mbn
 python edl.py -w boot boot.img -loader 800t.mbn
 ```
 
-*Again, if the progress bar stops at 99% and you get a timeout error, this is because the phone doesn't send any indicator information back to the EDL tool when in fact the image has been successfully written. Don't mind the error and go on with the next step.*
+  - *Again, if the progress bar stops at 99% and you get a timeout error, this is because the phone doesn't send any indicator information back to the EDL tool when in fact the image has been successfully written. Don't mind the error and go on with the next step.*
 
 3. Restart the phone to normal operation mode by typing `python edl.py reset`. And we're done!
 
@@ -403,9 +390,7 @@ python edl.py reset
 
 #### Next steps
 - Now that you've rooted your phone, to install applications with 'forbidden' permissions, connect it to a WebIDE session, then open Device Preferences by the right pane, search for `devTools.apps.forbiddenPermissions`, clear its value, then either restart the phone or hold the top Power button and choose Memory Cleaner > Deep Clean Memory to restart B2G.
-
 ![Screenshot of a WebIDE window in which the location of Device Preferences is highlighted in the right pane and the value of devTools.apps.forbiddenPermissions has been emptied](../../assets/nokia-leo/devpref.png)
-
 - If you wish to retain privileged permissions after restoring the phone to its unrooted state, before doing so, back up all data, sideload Luxferre's [CrossTweak](https://gitlab.com/suborg/crosstweak) then press # to perform a privileged factory reset — this will wipe all data of the phone and let you set up with a privileged session. This session will last until an OTA update overrides or you choose to factory reset normally yourself.
 - After rooting, you can spoof SELinux's Enforced status for WhatsApp VoIP by typing these commands one-by-one into the rooted ADB shell. This will last until a restart.
 ```
