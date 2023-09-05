@@ -51,7 +51,7 @@ Remember, **only buy from trusted, reputable sources**, even if they offer highe
 - The multiple clips holding the back panel can be stressed and quickly broken. Speaker is decent, but muffled on strong bass. *For tactile responses on keypad presses, turn on Keypad vibration under Settings, Device, Accessibility.*
   - *Note that phone shutting itself down or not receiving any charges often come down to loose or dirty battery connectors or charging port and not software problem. Happened to me once, got the phone checked and repaired for less than $10.*
 - **[MAJOR]** Battery can drain heavily (from 5–7 days of 4G standby to 18 hours, or 2 hours in active usage) if you leave Wi-Fi or mobile data on at all time, e.g. to be immediately notified of incoming WhatsApp messages ⇒ workaround: turn them off if you don't plan to use Internet connection, and only turn them on periodically to check for notifications.
-- **[MAJOR]** Keypad frequently registering multiple or no keystrokes instead of a single-press, because of keypad design and keypress timeout interval being too short in `keyboard.gaiamobile.org` ⇒ solution: follow this [BananaHackers' guide on fixing the keypad speed](https://ivan-hc.github.io/bananahackers/fix-the-keypad-speed.html)
+- **[MAJOR]** Keypad frequently registering multiple or no keystrokes instead of a single-press, because of keypad design and keypress timeout interval being too short in `keyboard.gaiamobile.org`. [BananaHackers' guide on fixing the keypad speed](https://ivan-hc.github.io/bananahackers/fix-the-keypad-speed.html) may help
 - **[MAJOR]** A-GPS failing to lock your current position on 4G LTE, possibly due to interferences with TDD bands ⇒ workaround: change your A-GPS APN settings under *Settings, Mobile network & data, APN settings* or switch to 2G/3G for the phone to retrieve GPS information properly (*Settings, Mobile network & data, Carrier - SIMx, Network type, 3G/2G*). Might be major issue for those in the US where 2G/3G has been shut down.
 - **[MAJOR]** B2G takes up large chunk of memory, and RAM optimizations leading to the phone joining Doze deep sleep immediately and aggressive task killing after a few minutes, making opening or exiting apps horribly slow, and notifications—including incoming WhatsApp calls—being delayed.
   - Wi-Fi hotspot feature will stop also transmitting data packets with your other devices when you put the phone into sleep.
@@ -63,7 +63,7 @@ Remember, **only buy from trusted, reputable sources**, even if they offer highe
 ### KaiOS-specific
 - If you're setting up the phone for the first time with no SIM card, pre-installed apps such as WhatsApp, Facebook and Google apps may not appear in the app list or in KaiStore. After popping in a SIM, those apps will show up as normal.
   - *KaiStore will show up in all circumstances, regardless of whether there's a SIM card inserted or not.*
-- The 8000 4G and 6300 4G runs KaiOS 2.5, which itself is based on Gecko 48 from 2016, meaning without optimizations and new web technologies, some websites like Instagram and Uber just fall apart and the overall performance is unbearable.
+- This phone runs KaiOS 2.5, which itself is based on Gecko 48 from 2016, meaning without optimizations and new web technologies, some websites like Instagram and Uber just fall apart and the overall performance is unbearable.
   - No built-in Widevine DRM decoders, which means the phone is NOT capable of playing DRM-protected content from e.g. Spotify
 - **[MAJOR]** Some built-in apps, such as Call logs, Contacts or Music, are written in a way that is performance-intensive and not optimized for the phone, causing slow rendering and system lags if you store a large number of contacts (technically infinite but 100 recommended), call logs (max 40), music files or other items in a list. 
   - *Performance issues has been addressed on later versions, for now you should opt for alternatives such as [arma7x's K-Music](https://github.com/arma7x/kaimusic) in KaiStore if possible.*
@@ -85,13 +85,13 @@ Remember, **only buy from trusted, reputable sources**, even if they offer highe
   - On a related note, you cannot sign into another device, pair with those interfaces and then sign into the KaiOS version of WhatsApp. Attempting to do so will result in the renewal of the decryption keys and all other devices being forced to log off automatically.
 
 ## Secret codes
-- `*#*#33284*#*#`: Toggle debugging mode, allow the phone to be accessed with ADB and DevTools. A bug icon will appear in the status bar letting you know debugging mode is on. This mode can also be turned on under *Settings > Device > Developer > Debugger > ADB and DevTools*.
-- `*#06#`: Display the IMEI(s).
+- `*#*#33284*#*#`: Toggle debugging mode, allowing the phone to be accessed with ADB and DevTools. A bug icon will appear in the status bar letting you know debugging mode is on. This can also be turned on under *Settings, Device, Developer, Debugger, ADB and DevTools*.
+- `*#06#`: Display the hidden International Mobile Equipment Identity numbers or IMEI(s). Do not show them to anyone else: they're crucial for calling functions on the phone.
 - `*#0000#`: Display device information, such as firmware version, build date, model number, variant and CUID.
 
 ## Special boot modes
 - **Recovery mode**: With the device powered off, hold the top Power button and the * key, or type `adb reboot recovery` when connected to a computer. Allows you to factory reset the device by wiping /data and /cache, view boot and kernel logs, and install patches from `adb sideload` interface or SD card.
-- **Fastboot mode**: Only accessible and automatically kick in when /boot is corrupted. Allows you to restore partitions under `fastboot` interface.
+- **Fastboot mode**: Only accessible and automatically kick in when /recovery is corrupted. Allows you to restore partitions under `fastboot` interface.
 - **EDL mode**: With the device powered off, hold the top Power button and both the * and # keys, or type `adb reboot edl` when connected to a computer. Boots into a black screen, allows you to read and write partitions in low-level with proprietary Qualcomm tools. Remove the battery to exit.
 
 <details>
@@ -106,7 +106,7 @@ Booting into this mode, the phone's screen will briefly show the 'enabled by Kai
 
 You can also **force reboot** the phone by holding the top Power button and the # key at any time.
 
-EDL loader for the international version of this phone (not TA-1324) can be found on BananaHackers' [EDL archive site](https://edl.bananahackers.net/loaders/8k.mbn) with hardware ID 0x009600e100420029 (a copy is available [here](../main/8k.mbn)). The US version of this phone has been signed with a different PK_HASH and needs a different firehose loader which we currently don't have in archive.
+EDL programmer for the international version of this phone (not TA-1324) can be found on BananaHackers' [EDL archive site](https://edl.bananahackers.net/loaders/8k.mbn) with hardware ID 0x009600e100420029 (a copy is available [here](../main/8k.mbn)). The US version of this phone has been signed with a different PK_HASH and needs a different firehose loader which we currently don't have in archive.
 
 ## Sideloading and debugging third-party applications
 BananaHackers' definitions put this phone and most other KaiOS 2.5.4 devices in the first category, which means that you can install and debug apps from outside sources, but with a few caveats: apps with 'forbidden' permissions, such as `embed-apps`, `embed-widgets` and `engmode-extension` cannot be sideloaded, and you cannot debug apps that came with the device using WebIDE's Developer Tools (you can, however, see the system's global warnings and errors with `adb logcat`).
@@ -428,7 +428,7 @@ mount -o bind /data/enforce /sys/fs/selinux/enforce
 ```
 
 ## Source code
-HMD Global/Nokia Mobile has published the device's source code for its Linux 4.9 kernel, B2G and certain third-party libraries used in this phone, which can be downloaded directly from [here](https://nokiaphones-opensource.azureedge.net/download/phones/Nokia_6300_4G_20.00.17.01_OSS.tar.gz). An archive of which is also available under the `leo-v20` branch of this repository.
+HMD Global/Nokia Mobile has published the device's source code for its Linux 4.9 kernel, B2G and certain third-party libraries used in this phone, which can be downloaded directly from [here](https://nokiaphones-opensource.azureedge.net/download/phones/Nokia_6300_4G_20.00.17.01_OSS.tar.gz).
 
 Note that the source code released does not contain proprietary parts from other parties like Qualcomm.
 
