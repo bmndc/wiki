@@ -307,6 +307,7 @@ You can disconnect the phone from your computer for now.
 1. Follow [Docker's tutorial](https://docs.docker.com/compose/install/#scenario-one-install-docker-desktop) on installing Docker Desktop. Once set up, open the program, click Accept on this box and let the Docker Engine start before exiting.
 
 ![Screenshot of a window titled as 'Docker Subscription Service Agreement' which declares that you will have to accept Docker's Subscription Service Agreements, Data Processing Agreement and Data Privacy Policy in order to use the program, and the free scope of it is limited to personal and small business uses. The window also lists the options to view the full agreements, accept them or reject and close the program.](../../assets/nokia-leo/docker_abomination.png)
+
 {:style="counter-reset:none"}
 2. Clone/download the boot patcher toolkit by typing this into a command-line window. This will download the toolkit and have Docker set it up. Do not omit the dot/period at the end of this command, this tells Docker where our downloaded toolkit are located on the system.
 ```
@@ -328,6 +329,7 @@ That's it! On your desktop there will be two new image files, the modified `boot
 1. Extract the Android Image Kitchen tools and copy the boot image we've just obtained over to the root of the extracted folder.
 
 ![Screenshot of a list of folders and files contained in the extracted Android Image Kitchen folder](../../assets/nokia-leo/aik.png)
+
 {:style="counter-reset:none"}
 2. Open the folder in a command-line window and type `unpackimg boot.img`. This will split the image file and unpack the ramdisk to their subdirectories.
 
@@ -344,18 +346,22 @@ That's it! On your desktop there will be two new image files, the modified `boot
 
 ![Screenshot of the original content of the default.prop file](../../assets/nokia-leo/default_prop.png)
 ![Screenshot of the modified content of the default.prop file](../../assets/nokia-leo/default_prop_edited.png)
+
 {:style="counter-reset:none"}
 4. Open `ramdisk/init.qcom.early_boot.sh` in Notepad++ and add `setenforce 0` as a new line at the end of the file.
 
 ![Screenshot of the modified content of the init.qcom.early_boot.sh file](../../assets/nokia-leo/setenforce.png)
+
 {:style="counter-reset:none"}
 5. Go back to the root Android Image Kitchen folder and open `split_img/boot.img-cmdline` in Notepad++. Without adding a new line, scroll to the end of the first line and append `androidboot.selinux=permissive enforcing=0`.
 
 ![Screenshot of the modified content of the boot.img-cmdline file](../../assets/nokia-leo/append.png)
+
 {:style="counter-reset:none"}
 6. Open `ramdisk/init.rc` (NOT `ramdisk/init`) and delete line 393 `setprop selinux.reload_policy 1` or mark a comment as shown. This will ultimately prevent SELinux from overwriting the policy changes we made above.
 
 ![Screenshot of the modified content of the init.rc file, with line 393 marked as comment. This has the same effects as deleting the line altogether.](../../assets/nokia-leo/reload_policy.png)
+
 {:style="counter-reset:none"}
 7. (Optional) If you wish to disable the Low Memory Killer function, now's a good time to do so! In the same `ramdisk/init.rc` file, after line 420, make a new line and add:
 ```
@@ -364,6 +370,7 @@ write /sys/module/lowmemorykiller/parameters/enable_lmk 0
 Indent the new line to match up with other lines as shown.
 
 ![Screenshot of the modified content of the init.rc file, with line 421 added to disable the Low Memory Killer module](../../assets/nokia-leo/disable_lmk.png)
+
 {:style="counter-reset:none"}
 8. And that's a wrap! Open the root Android Image Kitchen folder in a command-line window and type `repackimg` to package our modified boot partition.
 
@@ -399,12 +406,11 @@ python edl.py -w boot boot.img -loader 800t.mbn
 
 3. Restart the phone to normal operation mode by typing `python edl.py reset`. And we're done!
 
-{: .success }
-> *If you still have the original boot partition and wish to revert all the messes and damages, connect the phone to your computer in EDL mode, move the image file to the EDL tools folder, open a command-line window within it and type these one-line at a time:*
-> ```
-> python edl.py w boot boot.img --loader=8k.mbn
-> python edl.py reset
-> ```
+*If you still have the original boot partition and wish to revert all the messes and damages, connect the phone to your computer in EDL mode, move the image file to the EDL tools folder, open a command-line window within it and type these one-line at a time:*
+```
+python edl.py w boot boot.img --loader=8k.mbn
+python edl.py reset
+```
 
 ![Demostration of a command-line window showing the results after typing the first command above](../../assets/nokia-leo/edl_bootog.png)
 
