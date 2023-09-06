@@ -26,6 +26,7 @@ has_toc: false
 | CAT B35 | 2.5.1 | ⚠️ | Requires extracting using EDL and editing ADB hex on data partition |
 | Energizer E241s | 2.5.1.2 | ✅ |  |
 | Energizer E242s | 2.5.3.2 | 🔒 | Credits to u/CaramelSpoonful on Reddit for confirming |
+| Energizer E280s | 2.5.3.2 | ✅ | Credits to u/gogolplex-pt on Reddit for confirming |
 | Energizer E282sc | 2.5.3.2 | 🔒 | Credits to u/nicalejo on Reddit for confirming |
 | Alcatel Go Flip 1/2 (4044v) | 1.0 | ✅ | After turning on debugging mode, dial ##3424# to enable serial port |
 | Alcatel Go Flip 3 | 2.5.2 | 🔒 |  |
