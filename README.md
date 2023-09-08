@@ -17,3 +17,19 @@ A backup of all KaiOS apps available in KaiStore and JioStore in case they go do
 - Snake
 - Whatsapp
 - Youtube
+- 5 Slots Wild Casino
+- Blocks And Lines
+- Bubble Sooter Lab
+- Bunny In Carrot Maze
+- Crazy Pill Survival
+- Did you know
+- Filecoin Wallet
+- Fill In Crosswords
+- Mafia Gangster Brawl
+- Memories Of The Dead
+- Pirate Maze Island
+- Roulette
+- Santa Catching Gifts
+- Scary Cave Survival
+- Slitherlink
+- Truth Or Dare
