@@ -8,6 +8,8 @@ last_modified_date: 2023-08-25
 # Nokia 6300 4G (nokia-leo)
 {: .no_toc }
 
+<details markdown="block">
+  <summary>View device specification table</summary>
 <table>
   <thead><tr><th colspan="2">Nokia 6300 4G (nokia-leo)</th></tr></thead>
   <tbody>
@@ -34,6 +36,7 @@ last_modified_date: 2023-08-25
     <tr><td>Build no.</td><td>10.00.17.01, 12.00.17.01, 20.00.17.01, 30.00.17.01</td></tr>
   </tbody>
 </table>
+</details>
 
 Table of Contents
 {: .text-delta }

@@ -9,14 +9,14 @@ logo: "logo.png"
 aux_links:
   BananaHackers Store: https://store.bananahackers.net
   GitHub: https://github.com/minhduc-bui1/wiki
+  Reddit: https://reddit.com/r/KaiOS
+  Discord: https://discord.gg/rQ93zEu
 
 aux_links_new_tab: true
 
 nav_external_links:
-  - title: r/KaiOS on Reddit
-    url: https://reddit.com/r/KaiOS
-  - title: Join our Discord chat
-    url: https://discord.gg/rQ93zEu
+  - title: Go back to old BH Wiki
+    url: https://wiki.bananahackers.net
 
 back_to_top: true
 back_to_top_text: "Back to top"

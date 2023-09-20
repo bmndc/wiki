@@ -7,6 +7,8 @@ nav_order: 6
 # Nokia 2780 Flip (nokia-weeknd)
 {: .no_toc }
 
+<details markdown="block">
+  <summary>View device specification table</summary>
 <table>
   <thead><tr><th colspan="2">Nokia 2780 Flip 4G (nokia-weeknd)</th></tr></thead>
   <tbody>
@@ -34,3 +36,4 @@ nav_order: 6
     <tr><td>Build no.</td><td>Unknown</td></tr>
   </tbody>
 </table>
+</details>

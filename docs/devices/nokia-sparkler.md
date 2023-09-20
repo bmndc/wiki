@@ -7,6 +7,8 @@ nav_order: 4
 # Nokia 8000 4G (nokia-sparkler)
 {: .no_toc }
 
+<details markdown="block">
+  <summary>View device specification table</summary>
 <table>
   <thead><tr><th colspan="2">Nokia 8000 4G (nokia-sparkler)</th></tr></thead>
   <tbody>
@@ -33,3 +35,4 @@ nav_order: 4
     <tr><td>Build no.</td><td>10.00.17.01, 12.00.17.01, 20.00.17.01, 30.00.17.01</td></tr>
   </tbody>
 </table>
+</details>

@@ -7,6 +7,8 @@ nav_order: 3
 # Nokia 800 Tough (nokia-coconut)
 {: .no_toc }
 
+<details markdown="block">
+  <summary>View device specification table</summary>
 <table>
   <thead><tr><th colspan="2">Nokia 800 Tough (nokia-coconut)</th></tr></thead>
   <tbody>
@@ -34,3 +36,4 @@ nav_order: 3
     <tr><td>Build no.</td><td>12.00.17.01, 21.00.17.01, 22.00.17.01, 30.00.17.05, 40.00.17.01</td></tr>
   </tbody>
 </table>
+</details>
