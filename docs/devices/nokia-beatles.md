@@ -3,18 +3,40 @@ title: Nokia 2720 Flip
 parent: Devices
 layout: default
 nav_order: 2
+last_modified_date: 2023-08-26
 ---
 # Nokia 2720 Flip (nokia-beatles)
 {: .no_toc }
 
 <details markdown="block">
   <summary dir="rtl">View device specification table</summary>
-<table><thead><tr><th colspan="2">Nokia 2720 Flip (nokia-beatles)</th></tr></thead><tbody><tr><td>Released</td><td>5 September 2019</td></tr><tr><td>Model</td><td>TA-1168, TA-1170, TA-1173, TA-1175</td></tr><tr><td colspan="2">Specifications</td></tr><tr><td>SoC</td><td>Qualcomm MSM8905 Snapdragon 205<br>(2 x 1.1GHz Cortex-A7)</td></tr><tr><td>RAM</td><td>512MB LPDDR2/3</td></tr><tr><td>GPU</td><td>Adreno 304</td></tr><tr><td>Storage</td><td>4GB eMMC 4.5 (+ up to 32GB microSDHC card)</td></tr><tr><td>Network</td><td>2G GSM, 3G UMTS, 4G LTE Cat4 150/50Mbps<br><em>+ EU: band 1, 3, 5, 7, 8, 20<br>+ MENA, APAC, GCR: band 1, 3, 5, 7, 8, 20, 28, 38/41 (120MHz), 39, 40</em><br>VoLTE/VoWiFi support<br>Single or Dual-SIM (Nano-SIM, dual-standby)</td></tr><tr><td>Screen</td><td>Main: 320 x 240 @ 143 PPI, 2.8 inches QVGA TFT LCD 256K colors<br>External: 240 x 240 @ 261 PPI, 1.3 inches TFT LCD</td></tr><tr><td>Bluetooth</td><td>4.1, A2DP, LE</td></tr><tr><td>Wi-Fi</td><td>802.11b/g/n, 2.4GHz, Hotspot</td></tr><tr><td>Peripherals</td><td>- GPS &amp; GLONASS</td></tr><tr><td>Cameras</td><td>Rear: 2MP, LED flash</td></tr><tr><td>Dimensions<br>(HWD)</td><td>Open: 192.7 * 54.5 * 11.6 (mm) 7.59 * 2.15 * 0.46 (in)<br>Closed: 104.8 * 54.5 * 18.7 (mm)</td></tr><tr><td>Weight</td><td>118 g (4.16 oz)</td></tr><tr><td>Ports</td><td>- microUSB charging &amp; USB 2.0 data transferring port<br>- 3.5mm headphone jack</td></tr><tr><td>Battery</td><td>Removable Li-Ion 1500mAh (BL-6A/BV-6A), 5W wired charging<br>(up to 43 days of GSM standby advertised)</td></tr><tr><td colspan="2"><strong>KaiOS info</strong></td></tr><tr><td>Version</td><td>KaiOS 2.5.2, upgradable to KaiOS 2.5.2.2</td></tr><tr><td>WA VoIP</td><td>Supported (30.00.17.05 onwards)</td></tr><tr><td>Build no.</td><td>12.00.17.01, 21.00.17.01, 22.00.17.01, 30.00.17.05, 40.00.17.01</td></tr></tbody></table>
+<table>
+  <thead><tr><th colspan="2">Nokia 2720 Flip (nokia-beatles)</th></tr></thead>
+  <tbody>
+    <tr><td>Released</td><td>5 September 2019</td></tr>
+    <tr><td>Model</td><td>TA-1168, TA-1170, TA-1173, TA-1175</td></tr>
+  <tr><td colspan="2">Specifications</td></tr>
+    <tr><td>SoC</td><td>Qualcomm MSM8905 Snapdragon 205<br>(2 x 1.1GHz Cortex-A7)</td></tr>
+    <tr><td>RAM</td><td>512MB LPDDR2/3</td></tr>
+    <tr><td>GPU</td><td>Adreno 304</td></tr>
+    <tr><td>Storage</td><td>4GB eMMC 4.5 (+ up to 32GB microSDHC card)</td></tr>
+    <tr><td>Network</td><td>2G GSM, 3G UMTS, 4G LTE Cat4 150/50Mbps<br><em>+ EU: band 1, 3, 5, 7, 8, 20<br>+ MENA, APAC, GCR: band 1, 3, 5, 7, 8, 20, 28, 38/41 (120MHz), 39, 40</em><br>VoLTE/VoWiFi support<br>Single or Dual-SIM (Nano-SIM, dual-standby)</td></tr>
+    <tr><td>Screen</td><td>Main: 320 x 240 @ 143 PPI, 2.8 inches QVGA TFT LCD 256K colors<br>External: 240 x 240 @ 261 PPI, 1.3 inches TFT LCD</td></tr>
+    <tr><td>Bluetooth</td><td>4.1, A2DP, LE</td></tr>
+    <tr><td>Wi-Fi</td><td>802.11b/g/n, 2.4GHz, Hotspot</td></tr>
+    <tr><td>Peripherals</td><td>GPS, GLONASS</td></tr>
+    <tr><td>Cameras</td><td>Rear: 2MP, LED flash</td></tr>
+    <tr><td>Dimensions<br>(HWD)</td><td>Open: 192.7 * 54.5 * 11.6 (mm) 7.59 * 2.15 * 0.46 (in)<br>Closed: 104.8 * 54.5 * 18.7 (mm)</td></tr>
+    <tr><td>Weight</td><td>118 g (4.16 oz)</td></tr>
+    <tr><td>Ports</td><td>- microUSB charging &amp; USB 2.0 data transferring port<br>- 3.5mm headphone jack</td></tr>
+    <tr><td>Battery</td><td>Removable Li-Ion 1500mAh (BL-6A/BV-6A), 5W wired charging<br>(up to 43 days of GSM standby advertised)</td></tr>
+  <tr><td colspan="2"><strong>KaiOS info</strong></td></tr>
+    <tr><td>Version</td><td>KaiOS 2.5.2, upgradable to KaiOS 2.5.2.2</td></tr>
+    <tr><td>WA VoIP</td><td>Supported (30.00.17.05 onwards)</td></tr>
+    <tr><td>Build no.</td><td>12.00.17.01, 21.00.17.01, 22.00.17.01, 30.00.17.05, 40.00.17.01</td></tr>
+  </tbody>
+</table>
 </details>
-
-![Image of two variants of the 2720 Flips on a white surface: the left closed one comes in White, and the right opened one showing the apps list comes in Black.](../../assets/nokia-beatles/banner.jpg)
-
-*[Photo by Chaim Gartenberg for The Verge](https://www.theverge.com/circuitbreaker/2019/9/5/20850793/nokia-2720-flip-phone-hmd-800-rugged-110-feature-phones-ifa-2019)*
 
 Table of Contents
 {: .text-delta }
@@ -40,6 +62,10 @@ Overall plastic build material and hinge design are also hardware issues to cons
 - [Nokia 2720 Flip, first thoughts](https://www.reddit.com/r/dumbphones/comments/uzo9xu/nokia_2720_flip_first_thoughts/) on r/dumbphones
 - [Nokia 2720 Flip (2019) reviews and some hacks](https://www.reddit.com/r/KaiOS/comments/lp0y2e/nokia_2720_flip_2019_review_and_some_hacks/)on r/KaiOS
 - [Thinking out on buying a Nokia 2720 flip for using it as a daily driver](https://www.reddit.com/r/KaiOS/comments/k3w5d2/thinking_out_on_buying_a_nokia_2720_flip_for/) on r/KaiOS
+
+![Image of two variants of the 2720 Flips on a white surface: the left closed one comes in White, and the right opened one showing the apps list comes in Black.](../../assets/nokia-beatles/banner.jpg)
+
+*[Photo by Chaim Gartenberg for The Verge](https://www.theverge.com/circuitbreaker/2019/9/5/20850793/nokia-2720-flip-phone-hmd-800-rugged-110-feature-phones-ifa-2019)*
 
 ## Before making the decision
 **BEWARE OF COUNTERFEIT DEVICES!** Many KaiOS devices, such as the Nokia 8110 4G, 2720 Flip and 6300 4G are being offered at numerous tech stores and online sites for amazingly low prices; those turn out to be counterfeits and don't bring the experiences that people expected, and you wouldn't be able to get a refund as the store gets away with it.
