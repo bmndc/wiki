@@ -7,23 +7,17 @@ has_toc: false
 ---
 # Devices
 
-{: .note }
-> - ✅ = debug-enabled out-of-the-box: open the phone's Browser, go to https://w2d.bananahackers.net and select *Launch Developer menu, Debugger, ADB and DevTools*
-> - ⚠️ = needs additional work for debugging to work, see the phone's dedicated page for more information
-> - 🔒 = currently debug-locked
-> - ❓ = unknown (contribute by making a pull request, posting on Reddit or BananaHackers' Google Groups)
-
-| Model name | KaiOS version | Debugging status | Note |
+| Model name | KaiOS version | DBG | Note |
 |:--|:--|:-:|:--|
-| Nokia 8110 4G | 2.5.1 | ✅ |  |
-| Nokia 2720 Flip | 2.5.2.2 | ⚠️ | Debug-enabled on 2.5.2, requires permanent root via boot partition modifying on 2.5.2.2 |
-| Nokia 800 Tough | 2.5.2.2 | ⚠️ | Debug-enabled on 2.5.2, requires permanent root via boot partition modifying on 2.5.2.2 |
-| Nokia 8000 4G | 2.5.4 | ✅ | No engmode-extension apps, requires boot partition patching to root |
-| Nokia 6300 4G | 2.5.4 | ✅ | No engmode-extension apps, requires boot partition patching to root<br>(excl. TA-1324 not rootable due to different PK_HASH ⇒ no substitute loader) |
+| [Nokia 8110 4G]({% link docs/devices/nokia-argon.md %}) | 2.5.1 | ✅ |  |
+| [Nokia 2720 Flip]({% link docs/devices/nokia-beatles.md %}) | 2.5.2.2 | ⚠️ | Debug-enabled on 2.5.2, requires permanent root via boot partition modifying on 2.5.2.2 |
+| [Nokia 800 Tough]({% link docs/devices/nokia-coconut.md %}) | 2.5.2.2 | ⚠️ | Debug-enabled on 2.5.2, requires permanent root via boot partition modifying on 2.5.2.2 |
+| [Nokia 8000 4G]({% link docs/devices/nokia-sparkler.md %}) | 2.5.4 | ✅ | No engmode-extension apps, requires boot partition patching to root |
+| [Nokia 6300 4G]({% link docs/devices/nokia-leo.md %}) | 2.5.4 | ✅ | No engmode-extension apps, requires boot partition patching to root<br>(excl. TA-1324 not rootable due to different PK_HASH ⇒ no substitute loader) |
 | Nokia 2720 V Flip | 2.5.4 | 🔒 | Rooting procedures should be the same as 8000 4G/6300 4G, but phone rejects patched boot image |
 | Nokia 2760 Flip | 3.1 | 🔒 | ADB reports as unauthorized |
-| Nokia 2780 Flip | 3.1 | ⚠️ | Custom firmware & manual injection to sideload, no debugging. ADB reports as unauthorized |
-| CAT B35 | 2.5.1 | ⚠️ | Requires extracting using EDL and editing ADB hex on data partition |
+| [Nokia 2780 Flip]({% link docs/devices/nokia-weeknd.md %}) | 3.1 | ⚠️ | Custom firmware & manual injection to sideload, no debugging. ADB reports as unauthorized |
+| [CAT B35]({% link docs/devices/cat-b35.md %}) | 2.5.1 | ⚠️ | Requires extracting using EDL and editing ADB hex on data partition |
 | Energizer E241s | 2.5.1.2 | ✅ |  |
 | Energizer E242s | 2.5.3.2 | 🔒 | Credits to u/CaramelSpoonful on Reddit for confirming |
 | Energizer E280s | 2.5.3.2 | ✅ | Credits to u/gogolplex-pt on Reddit for confirming |
