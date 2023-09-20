@@ -9,12 +9,24 @@ logo: "logo.png"
 aux_links:
   BananaHackers Store: https://store.bananahackers.net
   GitHub: https://github.com/minhduc-bui1/wiki
+  
+aux_links_new_tab: true
 
 nav_external_links:
   - title: r/KaiOS on Reddit
     url: https://reddit.com/r/KaiOS
   - title: Join our Discord chat
     url: https://discord.gg/rQ93zEu
+
+last_edit_timestamp: true
+last_edit_time_format: "Page last edited on %b %e %Y at %R"
+
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/minhduc-bui1/wiki"
+gh_edit_branch: "main"
+gh_edit_source: docs
+gh_edit_view_mode: "tree"
 
 callouts:
   warning:
