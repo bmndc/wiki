@@ -9,7 +9,7 @@ logo: "logo.png"
 aux_links:
   BananaHackers Store: https://store.bananahackers.net
   GitHub: https://github.com/minhduc-bui1/wiki
-  
+
 aux_links_new_tab: true
 
 nav_external_links:
@@ -18,11 +18,14 @@ nav_external_links:
   - title: Join our Discord chat
     url: https://discord.gg/rQ93zEu
 
+back_to_top: true
+back_to_top_text: "Back to top"
+
 last_edit_timestamp: true
-last_edit_time_format: "Page last edited on %b %e %Y at %R"
+last_edit_time_format: "%B %e, %Y"
 
 gh_edit_link: true
-gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_link_text: "Edit this entry on GitHub"
 gh_edit_repository: "https://github.com/minhduc-bui1/wiki"
 gh_edit_branch: "main"
 gh_edit_source: docs
