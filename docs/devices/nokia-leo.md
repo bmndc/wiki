@@ -9,7 +9,7 @@ last_modified_date: 2023-08-25
 {: .no_toc }
 
 <details markdown="block">
-  <summary>View device specification table</summary>
+  <summary dir="rtl">View device specification table</summary>
 <table>
   <thead><tr><th colspan="2">Nokia 6300 4G (nokia-leo)</th></tr></thead>
   <tbody>

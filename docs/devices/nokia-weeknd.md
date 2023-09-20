@@ -8,7 +8,7 @@ nav_order: 6
 {: .no_toc }
 
 <details markdown="block">
-  <summary>View device specification table</summary>
+  <summary dir="rtl">View device specification table</summary>
 <table>
   <thead><tr><th colspan="2">Nokia 2780 Flip 4G (nokia-weeknd)</th></tr></thead>
   <tbody>

@@ -8,7 +8,7 @@ nav_order: 4
 {: .no_toc }
 
 <details markdown="block">
-  <summary>View device specification table</summary>
+  <summary dir="rtl">View device specification table</summary>
 <table>
   <thead><tr><th colspan="2">Nokia 8000 4G (nokia-sparkler)</th></tr></thead>
   <tbody>
