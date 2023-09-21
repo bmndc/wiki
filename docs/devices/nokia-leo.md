@@ -118,7 +118,7 @@ Remember, **only buy from trusted, reputable sources**, even if they offer highe
   - This can also be turned on under *Settings, Device, Developer, Debugger, ADB and DevTools*.
 - `*#06#`: Display the hidden International Mobile Equipment Identity numbers or IMEI(s). Do not show them to anyone else: they're crucial for calling functions on the phone.
 - `*#0000#`: Display device information, such as firmware version, build date, model number, variant and CUID.
-- `*#33#` (call): Check the Call barring service status from carrier for blocking or whitelisting calls, whether incoming or outgoing, domestic or international. Requires a 4-digit passcode to use. 
+- `*#33#` (call): Check the [Call barring](https://www.communityphone.org/blogs/call-barring) service status from carrier for blocking or whitelisting calls, whether incoming or outgoing, domestic or international. Requires a 4-digit passcode to use. 
   - To toggle the function, go to *Settings, Network & Connectivity, Calling, Call barring*.
 - `*#43#` (call): Check the [Call waiting](https://en.wikipedia.org/wiki/Call_waiting) service status from carrier. 
   - To toggle the function, go to *Settings, Network & Connectivity, Calling, Call waiting*.

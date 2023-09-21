@@ -64,7 +64,7 @@ Table of Contents
 | MTN Smart 3G | 2.5.1.2 | ❓ |  |
 | Multilaser/ObaPhone ZAPP | 2.5.1.1 | ✅ |  |
 | Multilaser ZAPP II 3G | 2.5.1.2 | ❓ |  |
-| BKAV C85 | 2.5.x | ❓ |  |
+| BKAV C85 | 2.5.1.1 [?] | ❓ | *If you're having this phone, please hit me up.* |
 | Viettel V6504 | 2.5.3.2 | ⚠️ | Press and hold 2 on boot to enter KaiOS Recovery for injecting apps |
 | Itel it9200 4G | 2.5.1.2 | ❓ |  |
 | Itel it9300 | 2.5.1.1 | ❓ |  |
