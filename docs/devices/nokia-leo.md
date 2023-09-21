@@ -117,10 +117,30 @@ Remember, **only buy from trusted, reputable sources**, even if they offer highe
 - `*#*#33284*#*#`: Toggle debugging mode, allowing the phone to be accessed with ADB and DevTools. A bug icon will appear in the status bar letting you know debugging mode is on. This can also be turned on under *Settings, Device, Developer, Debugger, ADB and DevTools*.
 - `*#06#`: Display the hidden International Mobile Equipment Identity numbers or IMEI(s). Do not show them to anyone else: they're crucial for calling functions on the phone.
 - `*#0000#`: Display device information, such as firmware version, build date, model number, variant and CUID.
+- `*#33#` (call): Check the Call barring service status from carrier for blocking or whitelisting calls, whether incoming or outgoing, domestic or international. Requires a 4-digit passcode to use. To toggle the function, go to *Settings, Network & Connectivity, Calling, Call barring*.
+- `*#43#` (call): Check the [Call waiting](https://en.wikipedia.org/wiki/Call_waiting) service status from carrier. To toggle the function, go to *Settings, Network & Connectivity, Calling, Call waiting*.
+- `*#*#372733#*#*`: Open KaiOS MMI Test, an internal tool to test hardware performance of a KaiOS device through an automatic routine or manually by hand, including LCD backlight, T9 keyboard, camera, LED flash, RTC, speaker, microphone, vibrator, 3.5mm audio jack, SIM trays, Wi-Fi, Bluetooth, NFC, microSD and microUSB slots etc.
+  - Throughout the manual speaker test, you'll hear some English and Chinese dialog from a female speaker, which transcribes to: *Hello. Please dial 110 for police, 119 for fire, 120 for ambulance, 122 for traffic accidents, and dial area code before 112 for six full obstacles.* [?]
+
+#### Codes that don't work
+{: .no_toc }
+Most of these codes requires `userdebug` or `eng` versions to work.
+- `*#07#`: Check the `ro.sar.enabled` property, if enabled check the current SAR level and display SAR-related health and safety information.
+- `*#1219#`: Clear all userspace customizations, presumably for store display.
+- `*#091#` (on)/`*#092#` (off): Toggle auto-answering on incoming call. This can be turned on via Device Settings interface on WebIDE.
+- `*#2886#`: Should also open KaiOS MMI Test interface.
+- `*#8378269#`/`*#*#2637643#*#*`: Open Testbox engineering menu with predecessor Firefox OS design, usually used by OEMs to test various hardware of the phone.
+- `###2324#`: Toggle Qualcomm diagnostic mode for fixing null/invalid IMEI or baseband via QPST.
+- `*#*#212018#*#*`: Toggle privileged access (including rooted ADB shell) to the phone.
+- `*#7223#`: Display internal firmware build and boot image versions.
+- `*#*#0574#*#*`: Open LogManager utility.
+- `*#573564#`: Open T2M Log (jrdlog), a brief LogManager interface.
+- `*#0606#`: Display the MEID(s), all zeroes.
+- `*#1314#`: Switch the `auto.send.crash.sms` property, whose purpose is still unknown.
 
 ## Special boot modes
 - **Recovery mode**: With the device powered off, hold the top Power button and the * key, or type `adb reboot recovery` when connected to a computer. Allows you to factory reset the device by wiping /data and /cache, view boot and kernel logs, and install patches from `adb sideload` interface or SD card.
-- **Fastboot mode**: Only accessible and automatically kick in when /recovery is corrupted. Allows you to restore partitions under `fastboot` interface.
+- **Fastboot mode**: Only accessible and automatically kick in when both /boot and /recovery is corrupted. Allows you to restore partitions under `fastboot` interface.
 - **EDL mode**: With the device powered off, hold the top Power button and both the * and # keys, or type `adb reboot edl` when connected to a computer. Boots into a black screen, allows you to read and write partitions in low-level with proprietary Qualcomm tools. Remove the battery to exit.
 
 <details>

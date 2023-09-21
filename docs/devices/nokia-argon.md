@@ -106,7 +106,7 @@ Remember, **only buy from trusted, reputable sources**, even if they offer highe
 - `#573564#`: Open T2M Log, a cut LogManager interface.
 - `#091#` (on)/`*#092#` (off): Toggle auto-answering on incoming call.
 
-#### Codes that doesn't work
+#### Codes that don't work
 {: .no_toc }
 - `#1219#`: Should remove all user customizations (for display in store?)
 - `#07#`: Should display SAR-related information.
