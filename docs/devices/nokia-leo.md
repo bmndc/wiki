@@ -116,6 +116,7 @@ Remember, **only buy from trusted, reputable sources**, even if they offer highe
 ## Secret codes
 - `*#*#33284#*#*`: Toggle debugging mode, allowing the phone to be accessed with ADB and DevTools. A bug icon will appear in the status bar letting you know debugging mode is on. 
   - This can also be turned on under *Settings, Device, Developer, Debugger, ADB and DevTools*.
+  - Tip: You can save these codes as contacts for quick dialing later. When the phone suggests a saved code, you'll have to press Call to activate the code's function.
 - `*#06#`: Display the hidden International Mobile Equipment Identity numbers or IMEI(s). Do not show them to anyone else: they're crucial for calling functions on the phone.
 - `*#0000#`: Display device information, such as firmware version, build date, model number, variant and CUID.
 - `*#33#` (call): Check the [Call barring](https://www.communityphone.org/blogs/call-barring) service status from carrier for blocking or whitelisting calls, whether incoming or outgoing, domestic or international. Requires a 4-digit passcode to use. 

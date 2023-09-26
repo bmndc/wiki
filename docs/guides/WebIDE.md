@@ -3,6 +3,7 @@ title: ADB and WebIDE
 parent: Sideloading and debugging
 layout: default
 nav_order: 1
+last_modified_date: 2023-09-26
 ---
 # ADB and WebIDE
 {:.no_toc}
@@ -25,6 +26,9 @@ Table of Contents
 ## Sideloading 101
 *Need a video tutorial? If you're on Linux, KaiOS Technologies officially made one for their own WebIDE client KaiOSRT which can be found [here](https://www.youtube.com/watch?v=wI-HW2cLrew). Alternatively, there's also one on BananaHackers' YouTube channel [here](https://www.youtube.com/watch?v=SoKD7IBTvM4).*
 
+### Toggle debugging mode on your phone
+Follow these steps to allow your phone's low-level to be accessed from your computer.
+
 1. Check whether your phone can be debugged and if there are any special notes to follow in the [Devices page]({% link docs/devices/devices.md %}).
 
 *Some devices may have specific codes that can be dialed right from the home screen to quickly activate debugging mode, i.e. `*#*#33284#*#*` for Nokia devices, and both `*#*#33284#*#*` and `*#*#0574#*#*` for Energizers and some other devices. More details of this can be found on the [Devices page]({% link docs/devices/devices.md %}).*
@@ -34,21 +38,22 @@ Table of Contents
 
 3. In the newly opened Developer menu, select the first `Debugger` option, then select `ADB and DevTools` in the dropdown menu. You should see a bug icon in the status bar letting you know ~~your phone has bugs inside~~ you're in debugging mode.
 
-<img width=350 style="margin-top:20px" alt="Demostration of the W2D website opened in KaiOS browser, with a huge Launch developer menu button shown in front" src="../../assets/webide/w2d.jpeg">
-<img width=350 style="margin-top:20px" alt="Demostration of the Debugger menu with three options Disabled, ADB only and ADB and DevTools shown. The last is highlighted and selected. An icon in shape of a bug can be seen in the status bar" src="../../assets/webide/developer_menu.jpeg">
+<img width=300 style="margin-top:20px" alt="Demostration of the W2D website opened in KaiOS browser, with a huge Launch developer menu button shown in front" src="../../assets/webide/w2d.jpeg">
+<img width=300 style="margin-top:20px" alt="Demostration of the Debugger menu with three options Disabled, ADB only and ADB and DevTools shown. The last is highlighted and selected. An icon in shape of a bug can be seen in the status bar" src="../../assets/webide/developer_menu.jpeg">
 
 {:style="counter-reset:none"}
 4. Connect the phone to your computer with the USB cable.
 
-<img width=350 style="margin-top:20px" alt="Demostration of the Storage page within Settings where the USB Storage option is highlighted and shown as Enabled. An icon in shape of the USB logo can be seen in the status bar" src="../../assets/webide/usb_storage.jpeg">
+<img width=300 style="margin-top:20px" alt="Demostration of the Storage page within Settings where the USB Storage option is highlighted and shown as Enabled. An icon in shape of the USB logo can be seen in the status bar" src="../../assets/webide/usb_storage.jpeg">
 
 If you're connecting to a Linux-based PC, you may need to go to Settings > Storage and turn on USB Storage for `udev` to properly register your phone as an USB peripheral. An icon in the status bar will appear indicating storage access via USB.
 
+### Set up ADB and WebIDE on your computer
 > Now, if your operating system has a package manager, you can utilize that to quickly install and set up ADB:
 > * Windows: `choco install adb` 
 > (`winget` unfortunately [prohibits installing executables with symlinks](https://github.com/microsoft/winget-pkgs/issues/4082))
 > * macOS: `brew install android-platform-tools`
-> * Linux (Debian/Ubuntu): `sudo apt-get install adb`
+> * Linux (Debian/Ubuntu): `sudo apt-get install adb fastboot`
 > * Linux (Fedora): `sudo dnf install android-tools`
 > * Linux (Arch): `sudo pacman -S android-tools`
 > 
@@ -61,14 +66,18 @@ If you're connecting to a Linux-based PC, you may need to go to Settings > Stora
 ![Screenshot of SDK term agreement pop-up](../../assets/webide/sdk_download.png)
 
 {:style="counter-reset:none"}
-6. Extract the downloaded archive to a folder (double-click the file on macOS/Linux, *7-Zip > Extract into {folder-name}* on Windows), navigate to its `platform-tools` root and open a command-line window within that.
+6. Extract the downloaded archive to a folder (double-click the file on macOS, right-click and select *Extract here* on Linux, *7-Zip > Extract here* on Windows), navigate to its `platform-tools` root if needed and open a command-line window within that.
 
 7. Type `adb devices` to start the ADB server. If a `device` shows, that means your phone is being detected by ADB and you're good to go, otherwise double-check.
 
-Demostration of a Windows Terminal window showing the result after typing the command above, listing '1a2b3c4d device' as one of the devices attached (/development/webide/adb_devices.png)
-
-> For the sake of simplicity, I've moved the archive to the desktop and extract its content there. When I open the Command Prompt on my Windows machine, I just had to type `cd Desktop\platform-tools`, followed by `adb devices`.
-
+Note that if you're unable to run `adb`, you may need to make it an executable: `chmod +x ./adb`
+```
+$ adb devices
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+List of devices attached
+1a2b3c4d	device
+```
 *Tip: If you've downloaded the SDK package from Android Developers' website, for quicker access next time, include the extracted ADB folder in PATH. We won't cover this here as this would be a lengthy process. This will be automatically handled if you've installed ADB via package manager.*
 
 {:style="counter-reset:none"}
@@ -84,30 +93,32 @@ Demostration of a Windows Terminal window showing the result after typing the co
 
 *Tip: For quicker access to WebIDE, press its shortcut `Shift` + `F8` while you're in the browser.*
 
+### Connect your phone to WebIDE
 {:style="counter-reset:none"}
 10. Your phone's name should already appear in the right pane. Click it to connect and skip to step 12. If you don't see any, type this into the command-line window:
 ```
-adb forward tcp:6000 localfilesystem:/data/local/debugger-socket
+$ adb forward tcp:6000 localfilesystem:/data/local/debugger-socket
+6000
 ```
-Demostration of WebIDE interface, with the device's name as the first option under USB Devices section in the right pane (/development/webide/device_name.png)
 
-Demostration of a Windows Terminal window showing the '6000' result after typing the command above (/development/webide/adb_forward.png)
+![Screenshot of WebIDE interface, with the device's name as the first option under USB Devices section in the right pane](/development/webide/device_name.png)
 
 {:style="counter-reset:none"}
 11. In WebIDE, click Remote Runtime, leave it as default at `localhost:6000` and press OK. If you still cannot connect your phone to WebIDE, double-check if you missed any step.
 
-Demostration of WebIDE interface with Remote Runtime pop-up shown after pressing the option in the right pane. The pop-up has 'localhost:6300' as the content of the input box, with two buttons to confirm or close. (/development/webide/localhost_6000.png)
+![Screenshot of WebIDE interface with Remote Runtime pop-up shown after pressing the option in the right pane. The pop-up has 'localhost:6000' as the content of the input box, with two buttons to confirm or close.](/development/webide/localhost_6000.png)
 
 If you're using other means to access WebIDE such as Firefox v59 or Pale Moon <28.6.1, you may now see a warning header about mismatched build date. You can safely ignore it as WebIDE was mainly designed to support Firefox OS device builds released alongside that Firefox/Pale Moon versions.
 
+### Deploying apps to your phone
 {:style="counter-reset:none"}
 12. To sideload an app, download it and extract its ZIP content (if you see an OmniSD-packaged `application.zip` you may need to extract once more). Select Open Packaged Apps in WebIDE's left sidebar and navigate to the root of the app folder you just extracted.
 
-Demostration of WebIDE interface with a device connected. The Open Packaged Apps is being highlighted as the second option in the left pane from top to bottom (/development/webide/open_packaged_apps.png)
+![Screenshot of WebIDE interface with a device connected. The Open Packaged Apps is being highlighted as the second option in the left pane from top to bottom](/development/webide/open_packaged_apps.png)
 
 {:style="counter-reset:none"}
 13. Once you've got the app loaded, press the triangle Install and Run in the top bar to sideload!
 
-Demostration of WebIDE interface with an app selected. The triangle Install and Run button (first one left to right) is being highlighted on the top pane (/development/webide/install_and_run.png)
+![Screenshot of WebIDE interface with an app selected. The triangle Install and Run button (first one left to right) is being highlighted on the top pane](/development/webide/install_and_run.png)
 
 > If you happen to encounter an issue in a sideload app and want to debug, click the wrench to open the Developer Tools.
