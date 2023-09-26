@@ -26,9 +26,6 @@ Table of Contents
 ## Sideloading 101
 *Need a video tutorial? If you're on Linux, KaiOS Technologies officially made one for their own WebIDE client KaiOSRT which can be found [here](https://www.youtube.com/watch?v=wI-HW2cLrew). Alternatively, there's also one on BananaHackers' YouTube channel [here](https://www.youtube.com/watch?v=SoKD7IBTvM4).*
 
-### Toggle debugging mode on your phone
-Follow these steps to allow your phone's low-level to be accessed from your computer.
-
 1. Check whether your phone can be debugged and if there are any special notes to follow in the [Devices page]({% link docs/devices/devices.md %}).
 
 *Some devices may have specific codes that can be dialed right from the home screen to quickly activate debugging mode, i.e. `*#*#33284#*#*` for Nokia devices, and both `*#*#33284#*#*` and `*#*#0574#*#*` for Energizers and some other devices. More details of this can be found on the [Devices page]({% link docs/devices/devices.md %}).*
@@ -48,7 +45,6 @@ Follow these steps to allow your phone's low-level to be accessed from your comp
 
 If you're connecting to a Linux-based PC, you may need to go to Settings > Storage and turn on USB Storage for `udev` to properly register your phone as an USB peripheral. An icon in the status bar will appear indicating storage access via USB.
 
-### Set up ADB and WebIDE on your computer
 > Now, if your operating system has a package manager, you can utilize that to quickly install and set up ADB:
 > * Windows: `choco install adb` 
 > (`winget` unfortunately [prohibits installing executables with symlinks](https://github.com/microsoft/winget-pkgs/issues/4082))
@@ -83,7 +79,7 @@ List of devices attached
 {:style="counter-reset:none"}
 8. We'll use [Waterfox Classic](https://classic.waterfox.net) for WebIDE (Firefox v59, Pale Moon <28.6.1 and command-line tools will also do the job just fine, see below). To download, head to the browser's homepage, download and install the version correspond to your OS.
 
-![Screenshot of Waterfox Classic browser's homepage with blue download buttons for three operating systems at the middle of the page](../assets/webide/waterfox_classic.png)
+![Screenshot of Waterfox Classic browser's homepage with blue download buttons for three operating systems at the middle of the page](../../assets/webide/waterfox_classic.png)
 
 {:style="counter-reset:none"}
 9. Open the browser and press the hamburger menu button at the top right of the toolbar, and click the Developer entry. Then click WebIDE to open it.
@@ -93,7 +89,6 @@ List of devices attached
 
 *Tip: For quicker access to WebIDE, press its shortcut `Shift` + `F8` while you're in the browser.*
 
-### Connect your phone to WebIDE
 {:style="counter-reset:none"}
 10. Your phone's name should already appear in the right pane. Click it to connect and skip to step 12. If you don't see any, type this into the command-line window:
 ```
@@ -110,7 +105,6 @@ $ adb forward tcp:6000 localfilesystem:/data/local/debugger-socket
 
 If you're using other means to access WebIDE such as Firefox v59 or Pale Moon <28.6.1, you may now see a warning header about mismatched build date. You can safely ignore it as WebIDE was mainly designed to support Firefox OS device builds released alongside that Firefox/Pale Moon versions.
 
-### Deploying apps to your phone
 {:style="counter-reset:none"}
 12. To sideload an app, download it and extract its ZIP content (if you see an OmniSD-packaged `application.zip` you may need to extract once more). Select Open Packaged Apps in WebIDE's left sidebar and navigate to the root of the app folder you just extracted.
 
