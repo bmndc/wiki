@@ -114,7 +114,7 @@ Remember, **only buy from trusted, reputable sources**, even if they offer highe
   - On a related note, you cannot sign into another device, pair with those interfaces and then sign into the KaiOS version of WhatsApp. Attempting to do so will result in the renewal of the decryption keys and all other devices being forced to log off automatically.
 
 ## Secret codes
-- `*#*#33284*#*#`: Toggle debugging mode, allowing the phone to be accessed with ADB and DevTools. A bug icon will appear in the status bar letting you know debugging mode is on. 
+- `*#*#33284#*#*`: Toggle debugging mode, allowing the phone to be accessed with ADB and DevTools. A bug icon will appear in the status bar letting you know debugging mode is on. 
   - This can also be turned on under *Settings, Device, Developer, Debugger, ADB and DevTools*.
 - `*#06#`: Display the hidden International Mobile Equipment Identity numbers or IMEI(s). Do not show them to anyone else: they're crucial for calling functions on the phone.
 - `*#0000#`: Display device information, such as firmware version, build date, model number, variant and CUID.
@@ -191,8 +191,7 @@ The guide below is based on the main guide from BananaHackers website, but has b
 - an [image file of Gerda Recovery](https://cloud.disroot.org/s/3ojAfcF6J2jQrRg/download) ([backup](https://drive.google.com/open?id=1ot9rQDTYON8mZu57YWDy52brEhK3-PGh)) for the Nokia 8110 4G, since the firehose loader above has a reading bug, we'll use this to access ADB from the recovery mode and get the boot partition from there (not needed for 2720 Flip/800 Tough);
 - a EDL tools package to read and write system partitions in low-level access (in this guide we'll be using [bkerler's edl.py v3.1](https://github.com/bkerler/edl/releases/tag/3.1) for 8000 4G/6300 4G, [andybalholm's edl](https://github.com/andybalholm/edl) for 2720 Flip/800 Tough)
 
-{: .note }
-> andybalholm's EDL cannot be used on 8000 4G and 6300 4G due to some structural changes within the GPT partition table, which will result in an error `AttributeError: 'gpt' object has no attribute 'partentries'. Did you mean: 'num_part_entries'?`. **Do note that the command structures used between bkerler's and andybalholm's are different, which we'll mention below.**
+andybalholm's EDL cannot be used on 8000 4G and 6300 4G due to some structural changes within the GPT partition table, which will result in an error `AttributeError: 'gpt' object has no attribute 'partentries'. Did you mean: 'num_part_entries'?`. **Do note that the command structures used between bkerler's and andybalholm's are different, which we'll mention below.**
 
 *We'll be using open-sourced Python scripts from GitHub for the sake of cross-platform usage (and my obsession of open-source tools), instead of QFIL which is proprietary and only supports Windows.*
 
@@ -300,8 +299,7 @@ In both cases, the phone's screen should blink with a 'enabled by KaiOS' logo th
 python edl.py w recovery recovery-8110.img --loader=8k.mbn
 ```
 
-{: .note }
-> If the progress bar stops at 99% and you get this error `'usb.core.USBError: [Errno None] b'libusb0-dll:err [_usb_reap_async] timeout error\n'` or `usb.core.USBError: [Errno 60] Command timed out`, this is because the phone doesn't send any indicator information back to the EDL tool when in fact the image has been successfully written. Don't mind the error and proceed with the next step.
+*If the progress bar stops at 99% and you get this error `'usb.core.USBError: [Errno None] b'libusb0-dll:err [_usb_reap_async] timeout error\n'` or `usb.core.USBError: [Errno 60] Command timed out`, this is because the phone doesn't send any indicator information back to the EDL tool when in fact the image has been successfully written. Don't mind the error and proceed with the next step.*
 
 {:style="counter-reset:none"}
 3. When finished, disconnect the phone from your computer and exit EDL mode by removing and re-inserting the battery. 

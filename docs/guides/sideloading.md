@@ -10,4 +10,4 @@ According to How-To Geek, sideloading is 'the practice of installing software on
 
 This is where Android Debug Bridge (ADB) and WebIDE comes in. Every electronic device has some special protocols for developers and engineers to communicate and do special operations, like sideloading apps, and KaiOS devices are no different. ADB and WebIDE are handy tools for engineers to decode those protocols.
 
-There are also other alternative methods to choose from.
+There are also alternative methods to choose from.
