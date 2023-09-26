@@ -101,12 +101,12 @@ $ adb forward tcp:6000 localfilesystem:/data/local/debugger-socket
 6000
 ```
 
-![Screenshot of WebIDE interface, with the device's name as the first option under USB Devices section in the right pane](/development/webide/device_name.png)
+![Screenshot of WebIDE interface, with the device's name as the first option under USB Devices section in the right pane](../../assets/webide/device_name.jpeg)
 
 {:style="counter-reset:none"}
 11. In WebIDE, click Remote Runtime, leave it as default at `localhost:6000` and press OK. If you still cannot connect your phone to WebIDE, double-check if you missed any step.
 
-![Screenshot of WebIDE interface with Remote Runtime pop-up shown after pressing the option in the right pane. The pop-up has 'localhost:6000' as the content of the input box, with two buttons to confirm or close.](/development/webide/localhost_6000.png)
+![Screenshot of WebIDE interface with Remote Runtime pop-up shown after pressing the option in the right pane. The pop-up has 'localhost:6000' as the content of the input box, with two buttons to confirm or close.](../../assets/webide/localhost_6000.png)
 
 If you're using other means to access WebIDE such as Firefox v59 or Pale Moon <28.6.1, you may now see a warning header about mismatched build date. You can safely ignore it as WebIDE was mainly designed to support Firefox OS device builds released alongside that Firefox/Pale Moon versions.
 
@@ -114,11 +114,11 @@ If you're using other means to access WebIDE such as Firefox v59 or Pale Moon <2
 {:style="counter-reset:none"}
 12. To sideload an app, download it and extract its ZIP content (if you see an OmniSD-packaged `application.zip` you may need to extract once more). Select Open Packaged Apps in WebIDE's left sidebar and navigate to the root of the app folder you just extracted.
 
-![Screenshot of WebIDE interface with a device connected. The Open Packaged Apps is being highlighted as the second option in the left pane from top to bottom](/development/webide/open_packaged_apps.png)
+![Screenshot of WebIDE interface with a device connected. The Open Packaged Apps is being highlighted as the second option in the left pane from top to bottom](../../assets/webide/open_packaged_apps.png)
 
 {:style="counter-reset:none"}
 13. Once you've got the app loaded, press the triangle Install and Run in the top bar to sideload!
 
-![Screenshot of WebIDE interface with an app selected. The triangle Install and Run button (first one left to right) is being highlighted on the top pane](/development/webide/install_and_run.png)
+![Screenshot of WebIDE interface with an app selected. The triangle Install and Run button (first one left to right) is being highlighted on the top pane](../../assets/webide/install_and_run.png)
 
 > If you happen to encounter an issue in a sideload app and want to debug, click the wrench to open the Developer Tools.
