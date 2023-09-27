@@ -13,6 +13,7 @@ Table of Contents
 - TOC
 {:toc}
 
+## Quick reference table
 - A green tick (✅) indicates that this device is debug-enabled out-of-box. To enable debugging mode, go to w2d.bananahackers.net on the device's Browser, click on *Launch Developer menu* and toggle *ADB and DevTools* under *Debugger*. Some devices also have a dedicated code for quick toggling debugging mode, with `*#*#33284#*#*` being the most common.
   - Check out the dedicated [Sideloading and debugging]({% link docs/guides/sideloading.md %}) section for more information on methods of installing and debugging third-party apps.
 - A warning symbol (⚠️) means that this device needs additional steps prior to activate debugging capability, such as editing some system files or at worst requiring permanent root access. Read the notes and the device's dedicated page for information and guides.

@@ -4,6 +4,13 @@ layout: default
 nav_order: 7
 ---
 # Launch hidden settings
+{:.no_toc}
+
+Table of Contents
+{:.text-delta}
+- TOC
+{:toc}
+
 Note that for the buttons on this page to function, you need to open this page in the built-in Browser app on your KaiOS device.
 
 ## W2D KaiOS Jailbreak
@@ -99,16 +106,16 @@ jtd.addEvent(setADBport, 'click', function(){
   };
   for(var key in propSet) {
     masterExt.setPropertyValue(key, propSet[key])
-  }
+  };
   window.alert('ADB port has been set to 5555.')
 }
 });
 </script>
 
 ## Readout (not recommended)
-This button below will attempt to open the hidden Readout screen reader menu in Settings, which is hidden on many devices because it simply is unusable outside of KaiOS's built-in apps.
+This button below will attempt to open the hidden Readout screen reader menu in Settings, which is hidden on many devices because it is unusable outside of KaiOS's built-in apps. Note that on most devices, the page will be blank. 
 
-On devices with dedicated volume buttons, you can quickly toggle on/off this feature by repeatedly pressing Volume up and Volume down.
+On devices with dedicated volume buttons, you can quickly toggle on/off this feature by repeatedly pressing Volume up and Volume down. You can also toggle the feature under Device Settings in WebIDE.
 
 <button class="btn js-readout">Launch Readout menu</button>
 
@@ -142,6 +149,3 @@ jtd.addEvent(screenReader, 'click', function(){
   }
 });
 </script>
-
-## External links
-For more of these links, see https://cyan-2048.github.io/kaios_scripts.
