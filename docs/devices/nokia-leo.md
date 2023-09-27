@@ -43,6 +43,8 @@ Table of Contents
 - TOC
 {:toc}
 
+<img width=500 style="float-right" src="../../assets/nokia-leo/nokia_6300_4G-emotional-Range.png">
+
 ## Before making the decision
 **BEWARE OF COUNTERFEIT DEVICES!** Many KaiOS devices, such as the Nokia 8110 4G, 2720 Flip and 6300 4G are being offered at numerous tech stores and online sites for amazingly low prices; those turn out to be counterfeits and don't bring the experiences that people expected, and you wouldn't be able to get a refund as the store gets away with it.
 
