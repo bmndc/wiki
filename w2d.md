@@ -2,6 +2,7 @@
 title: W2D Jailbreak & Hotspot
 layout: default
 nav_order: 7
+last_modified_date: 2023-09-27
 ---
 # Launch hidden settings
 {:.no_toc}

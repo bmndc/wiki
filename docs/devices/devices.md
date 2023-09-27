@@ -4,6 +4,7 @@ layout: default
 nav_order: 2
 has_children: true
 has_toc: false
+last_modified_date: 2023-09-27
 ---
 # Devices
 {: .no_toc }
@@ -65,6 +66,7 @@ Table of Contents
 | MTN Smart 3G | 2.5.1.2 | ❓ |  |
 | Multilaser/ObaPhone ZAPP | 2.5.1.1 | ✅ |  |
 | Multilaser ZAPP II 3G | 2.5.1.2 | ❓ |  |
+| TTfone TT240 | 2.5.x | ❓ |  |
 | BKAV C85 | 2.5.1.1 [?] | ❓ | *If you're having this phone, please hit me up.* |
 | Viettel V6504 | 2.5.3.2 | ⚠️ | Press and hold 2 on boot to enter KaiOS Recovery for injecting apps |
 | Itel it9200 4G | 2.5.1.2 | ❓ |  |
