@@ -265,8 +265,8 @@ brew install python android-platform-tools libusb && pip3 install pyusb pyserial
 {:style="counter-reset:none"}
 2. On Windows 10/11, by default, typing the `python` or `python3` aliases within Command Prompt will call the Microsoft Store version of Python, which we don't have installed. To override this default into calling the local version of Python, head over to Settings > Apps > Apps & features > App execution aliases and toggle off both App Installer (python.exe) and App Installer (python3.exe).
 
-<img width=605 alt="Screenshot of the Apps & features page in Windows 10's Settings app, of which the App execution aliases link is located under the Apps & features section" src="../../assets/nokia-leo/settings_alias.png">
-<img width=375 alt="Screenshot of the App execution alias page, where the toggles for App Installer (python.exe) and App Installer (python3.exe) are both turned off. Description says Apps can declare a name used to run the app from a command prompt. If multiple apps use the same name, choose which one to use" src="../../assets/nokia-leo/alias_off.png">
+<img width=612 alt="Screenshot of the Apps & features page in Windows 10's Settings app, of which the App execution aliases link is located under the Apps & features section" src="../../assets/nokia-leo/settings_alias.png">
+<img width=385 alt="Screenshot of the App execution alias page, where the toggles for App Installer (python.exe) and App Installer (python3.exe) are both turned off. Description says Apps can declare a name used to run the app from a command prompt. If multiple apps use the same name, choose which one to use" src="../../assets/nokia-leo/alias_off.png">
 
 {:style="counter-reset:none"}
 3. Open Command Prompt with administrator privileges and run this command:
