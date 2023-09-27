@@ -1,5 +1,5 @@
 ---
-title: W2D KaiOS Jailbreak
+title: W2D Jailbreak & Hotspot
 layout: default
 nav_order: 7
 ---
@@ -108,12 +108,11 @@ jtd.addEvent(setADBport, 'click', function(){
     masterExt.setPropertyValue(key, propSet[key])
   };
   window.alert('ADB port has been set to 5555.')
-}
 });
 </script>
 
 ## Readout (not recommended)
-This button below will attempt to open the hidden Readout screen reader menu in Settings, which is hidden on many devices because it is unusable outside of KaiOS's built-in apps. Note that on most devices, the page will be blank. 
+This button below will attempt to open the hidden Readout screen reader menu in Settings, which is hidden on many devices because it is unusable outside of KaiOS's built-in apps. Note that on most devices, the menu will be blank. 
 
 On devices with dedicated volume buttons, you can quickly toggle on/off this feature by repeatedly pressing Volume up and Volume down. You can also toggle the feature under Device Settings in WebIDE.
 
@@ -149,3 +148,5 @@ jtd.addEvent(screenReader, 'click', function(){
   }
 });
 </script>
+
+*For list of all hidden settings accessible via mozActivity, check out [Cyan's dedicated website](https://cyan-2048.github.io/kaios_scripts).*
