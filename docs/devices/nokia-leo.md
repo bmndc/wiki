@@ -38,7 +38,7 @@ last_modified_date: 2023-09-21
 </table>
 </details>
 
-<img width=350 style="float:right" src="../../assets/nokia-leo/nokia_6300_4G-emotional-Range.png">
+<img width=400 style="float:right" src="../../assets/nokia-leo/nokia_6300_4G-emotional-Range.png">
 
 Table of Contents
 {: .text-delta }
