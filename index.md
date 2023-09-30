@@ -5,7 +5,7 @@ nav_order: 1
 last_modified_date: 2023-09-30
 ---
 
-# Welcome to BananaHackers Wiki!
+# Welcome to KaiOS Wiki!
 {:.no_toc}
 
 This is a fork of [BananaHackers Wiki hosted on Wiki.js](https://wiki.bananahackers.net), hosted on GitHub Pages for accessibility.

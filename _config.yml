@@ -1,10 +1,10 @@
-title: BananaHackers Wiki
+title: KaiOS Wiki
 description: BananaHackers Wiki hosted on GitHub Pages
 theme: just-the-docs
 color_scheme: bananahackers
 
 url: https://minhduc-bui1.github.io/wiki
-logo: "logo.png"
+#logo: "logo.png"
 
 aux_links:
   BananaHackers Store: https://store.bananahackers.net
