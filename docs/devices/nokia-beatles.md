@@ -38,12 +38,12 @@ last_modified_date: 2023-08-26
 </table>
 </details>
 
+<img width=350 style="float:right" src="../../assets/nokia-beatles/nokia_2720-emotional.png">
+
 Table of Contents
 {: .text-delta }
 - TOC
 {:toc}
-
-<img width=350 style="float:right" src="../../assets/nokia-beatles/nokia_2720-emotional.png">
 
 Announced at IFA 2019 together with the rugged [Nokia 800 Tough](https://wiki.bananahackers.net/devices/nokia-800-tough), the budget Nokia 110, Nokia 6.2 and Nokia 7.2, the Nokia 2720 Flip is the second KaiOS phone to be released under the HMD-era as a successor to the bananaphone [Nokia 8110 4G](https://wiki.bananahackers.net/devices/nokia-8110-4g). This phone brings back the flip design inspired by the original Nokia 2720 Fold (2007) that many people loved, mixing it with 4G LTE connectivity and access to modern services such as WhatsApp, Facebook, Twitter, Google Maps and YouTube.
 
