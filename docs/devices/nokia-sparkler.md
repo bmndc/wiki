@@ -37,7 +37,7 @@ nav_order: 4
 </table>
 </details>
 
-<img width=450 style="float:right" src="../../assets/nokia-sparkler/nokia_8000_4G-emotional-Range.png">
+<img width=460 style="float:right" src="../../assets/nokia-sparkler/nokia_8000_4G-emotional-Range.png">
 
 Table of Contents
 {: .text-delta }

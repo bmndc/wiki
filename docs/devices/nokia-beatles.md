@@ -38,7 +38,7 @@ last_modified_date: 2023-08-26
 </table>
 </details>
 
-<img width=450 style="float:right" src="../../assets/nokia-beatles/nokia_2720-emotional.png">
+<img width=460 style="float:right" src="../../assets/nokia-beatles/nokia_2720-emotional.png">
 
 Table of Contents
 {: .text-delta }
