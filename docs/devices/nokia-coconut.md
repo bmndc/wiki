@@ -38,4 +38,3 @@ nav_order: 3
 </table>
 </details>
 
-<img width=350 style="float:right" src="../../assets/nokia-sparkler/nokia_8000_4G-emotional-Range.png">

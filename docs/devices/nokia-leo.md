@@ -376,12 +376,15 @@ You can disconnect the phone from your computer for now.
 ```
 git clone https://gitlab.com/suborg/8k-boot-patcher.git && cd 8k-boot-patcher && docker build -t 8kbootpatcher .
 ```
+
 ![Screenshot of a macOS Terminal window showing some logs in purple text after typing the command above](../../assets/nokia-leo/docker_build.png)
 
+{:style="counter-reset:none"}
 3. Copy the `boot.img` file we've just pulled from our phone to the desktop and do not change its name. Type this into the command-line to run the modifying process:
 ```
 docker run --rm -it -v ~/Desktop:/image 8kbootpatcher
 ```
+
 ![Screenshot of a macOS Terminal window listing a list of processed files after typing the command above](../../assets/nokia-leo/docker_patch.png)
 
 That's it! On your desktop there will be two new image files, the modified `boot.img` and the original `boot-orig.img`. You can now head to [part 4](#part-4-flashing-the-modified-boot-partition).
@@ -496,11 +499,9 @@ HMD Global/Nokia Mobile has published the device's source code for its Linux 4.9
 Note that the source code released does not contain proprietary parts from other parties like Qualcomm.
 
 ## External links
-- [Nokia 8000 4G product page](https://www.nokia.com/phones/en_int/nokia-8000-4g) on Nokia Mobile's website
 - [Nokia 6300 4G product page](https://www.nokia.com/phones/en_int/nokia-6300-4g) on Nokia Mobile's website
 - [Discussion: Nokia 6300 4G and Nokia 8000 4G](https://4pda.to/forum/index.php?showtopic=1009510) on 4PDA Forum (Russian)
 - [Nokia 8000 4G and Nokia 6300 4G general discussion thread](https://groups.google.com/g/bananahackers/c/jxEC3RVMYvI) on BananaHackers Google Groups
 - [Nokia 8000 4G rooting research thread](https://groups.google.com/g/bananahackers/c/8lCqP15zHXg) on BananaHackers Google Groups
-- [Nokia 8000 4G (nokia-sparkler)](https://wiki.postmarketos.org/wiki/Nokia_8000_4G_(nokia-sparkler)) on postmarketOS Wiki
 - [Nokia 6300 4G (nokia-leo)](https://wiki.postmarketos.org/wiki/Nokia_6300_4G_(nokia-leo)) on postmarketOS Wiki
 - [Affe Null's Bananian project repository](https://git.abscue.de/bananian/bananian), a Debian port for KaiOS devices

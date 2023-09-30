@@ -36,3 +36,25 @@ nav_order: 4
   </tbody>
 </table>
 </details>
+
+<img width=350 style="float:right" src="../../assets/nokia-sparkler/nokia_8000_4G-emotional-Range.png">
+
+Table of Contents
+{: .text-delta }
+- TOC
+{:toc}
+
+As this device is almost identical to the Nokia 6300 4G, everything you need to know about this phone, including special codes, boot modes and rooting guide are located in the [Nokia 6300 4G]({% link docs/devices/nokia-leo.md %}) page.
+
+## Source code
+HMD Global/Nokia Mobile has published the device's source code for its Linux 4.9 kernel, B2G and certain third-party libraries used in this phone, which can be downloaded directly from [here](https://nokiaphones-opensource.azureedge.net/download/phones/Nokia_8000_4G_20.00.17.01_OSS.tar.gz).
+
+Note that the source code released does not contain proprietary parts from other parties like Qualcomm.
+
+## External links
+- [Nokia 8000 4G product page](https://www.nokia.com/phones/en_int/nokia-8000-4g) on Nokia Mobile's website
+- [Discussion: Nokia 6300 4G and Nokia 8000 4G](https://4pda.to/forum/index.php?showtopic=1009510) on 4PDA Forum (Russian)
+- [Nokia 8000 4G and Nokia 6300 4G general discussion thread](https://groups.google.com/g/bananahackers/c/jxEC3RVMYvI) on BananaHackers Google Groups
+- [Nokia 8000 4G rooting research thread](https://groups.google.com/g/bananahackers/c/8lCqP15zHXg) on BananaHackers Google Groups
+- [Nokia 8000 4G (nokia-sparkler)](https://wiki.postmarketos.org/wiki/Nokia_8000_4G_(nokia-sparkler)) on postmarketOS Wiki
+- [Affe Null's Bananian project repository](https://git.abscue.de/bananian/bananian), a Debian port for KaiOS devices
