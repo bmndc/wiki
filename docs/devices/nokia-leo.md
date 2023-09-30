@@ -3,7 +3,7 @@ title: Nokia 6300 4G
 parent: Devices
 layout: default
 nav_order: 5
-last_modified_date: 2023-09-21
+last_modified_date: 2023-09-30
 ---
 # Nokia 6300 4G (nokia-leo)
 {: .no_toc }
@@ -47,6 +47,11 @@ Table of Contents
 
 ## Before making the decision
 **BEWARE OF COUNTERFEIT DEVICES!** Many KaiOS devices, such as the Nokia 8110 4G, 2720 Flip and 6300 4G are being offered at numerous tech stores and online sites for amazingly low prices; those turn out to be counterfeits and don't bring the experiences that people expected, and you wouldn't be able to get a refund as the store gets away with it.
+
+<img height=300 src="../../assets/fake/leo_discord_230613.jpg">
+<img height=300 src="../../assets/fake/leo_reddit_15z7b07.jpg" href="https://www.reddit.com/r/dumbphones/comments/15z7b07/problems_with_nokia_6300_4g">
+<img height=300 src="../../assets/fake/leo_reddit_z5u8e0.jpg" href="https://www.reddit.com/r/KaiOS/comments/z5u8e0/nokia_6300_4g_ta1287_in_on_tmobile_us_things_dont">
+<img height=300 src="../../assets/fake/leo_reddit_12cjnlc.jpg" href="https://www.reddit.com/r/KaiOS/comments/12cjnlc/is_my_kaios_device_fake_nokia_6300">
 
 To spot out the counterfeits:
 - Brand-new KaiOS devices, even after their lifespan on the shelf, DON'T cost less than 60% of their original prices.
@@ -128,8 +133,8 @@ Remember, **only buy from trusted, reputable sources**, even if they offer highe
 - `*#*#372733#*#*`: Open KaiOS MMI Test, an internal tool to test hardware performance of a KaiOS device through an automatic routine or manually by hand, including LCD backlight, T9 keyboard, camera, LED flash, RTC, speaker, microphone, vibrator, 3.5mm audio jack, SIM trays, Wi-Fi, Bluetooth, NFC, microSD and microUSB slots etc.
   - Throughout the manual speaker test, you'll hear some English and Chinese dialog from a female speaker, which transcribes to: *Hello. Please dial 110 for police, 119 for fire, 120 for ambulance, 122 for traffic accidents, and dial area code before 112 for six full obstacles.* [?]
 
-#### Codes that don't work
-{: .no_toc }
+Codes that don't work
+{:.text-delta}
 Most of these codes requires `userdebug` or `eng` versions to work.
 - `*#07#`: Check the `ro.sar.enabled` property, if enabled check the current SAR level and display SAR-related health and safety information.
 - `*#1219#`: Clear all userspace customizations, presumably for store display.
@@ -164,6 +169,11 @@ Booting into this mode, the phone's screen will briefly show the 'enabled by Kai
 You can also **force reboot** the phone by holding the top Power button and the # key at any time.
 
 EDL programmer for the international version of this phone (not TA-1324) can be found on BananaHackers' [EDL archive site](https://edl.bananahackers.net/loaders/8k.mbn) with hardware ID 0x009600e100420029 (a copy is available [here](../main/8k.mbn)). The US version of this phone has been signed with a different PK_HASH and needs a different firehose loader which we currently don't have in archive.
+
+### UART debugging testpoint
+As discovered by atipls on Discord, on the mainboard of the 6300 4G, there are 3 UART testing points: RX, TX and GND just above the SIM2 slot. Shorting TX and GND takes you to Fastboot and Linux terminal interface.
+
+![Mainboard of a TA-1307 Nokia 6300 4G, with the red arrow pointing to three gold contacts in the middle of the board, those being the UART testpoints in the order of RX, TX and ground](../../assets/nokia-leo/testpoint.png)
 
 ## Sideloading and debugging third-party applications
 BananaHackers' definitions put this phone and most other KaiOS 2.5.4 devices in the first category, which means that you can install and debug apps from outside sources, but with a few caveats: apps with 'forbidden' permissions, such as `embed-apps`, `embed-widgets` and `engmode-extension` cannot be sideloaded, and you cannot debug apps that came with the device using WebIDE's Developer Tools (you can, however, see the system's global warnings and errors with `adb logcat`).
