@@ -45,8 +45,8 @@ Table of Contents
 {:toc}
 
 ![The yellow Nokia 8110 4G is standing upright at the center of a pixelated world. Around it are ad banners for the apps available on the phone. Texts on the upper left say: Nokia 8110, Reloaded For the originals, with Nokia logo at the bottom right.](../../assets/nokia-argon/banner.png)
-
 *Illustration by eBoy. Creative Director: [Tim van der Mee](https://timvandermee.com/Nokia-8110-Reloaded)*
+{:.fs-2}
 
 ## Before making the decision
 **BEWARE OF COUNTERFEIT DEVICES!** Many KaiOS devices, such as the Nokia 8110 4G, 2720 Flip and 6300 4G are being offered at numerous tech stores and online sites for amazingly low prices; those turn out to be counterfeits and don't bring the experiences that people expected, and you wouldn't be able to get a refund as the store gets away with it.
