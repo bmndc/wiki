@@ -48,10 +48,10 @@ Table of Contents
 ## Before making the decision
 **BEWARE OF COUNTERFEIT DEVICES!** Many KaiOS devices, such as the Nokia 8110 4G, 2720 Flip and 6300 4G are being offered at numerous tech stores and online sites for amazingly low prices; those turn out to be counterfeits and don't bring the experiences that people expected, and you wouldn't be able to get a refund as the store gets away with it.
 
-<img height=300 src="../../assets/fake/leo_discord_230613.jpg">
-<img height=300 src="../../assets/fake/leo_reddit_15z7b07.jpg" href="https://www.reddit.com/r/dumbphones/comments/15z7b07/problems_with_nokia_6300_4g">
-<img height=300 src="../../assets/fake/leo_reddit_z5u8e0.jpg" href="https://www.reddit.com/r/KaiOS/comments/z5u8e0/nokia_6300_4g_ta1287_in_on_tmobile_us_things_dont">
-<img height=300 src="../../assets/fake/leo_reddit_12cjnlc.jpg" href="https://www.reddit.com/r/KaiOS/comments/12cjnlc/is_my_kaios_device_fake_nokia_6300">
+<img width=161 src="../../assets/fake/leo_discord_230613.jpg">
+<img width=222 src="../../assets/fake/leo_reddit_15z7b07.jpg">
+<img width=297 src="../../assets/fake/leo_reddit_z5u8e0.jpg">
+<img width=299 src="../../assets/fake/leo_reddit_12cjnlc.jpg">
 
 To spot out the counterfeits:
 - Brand-new KaiOS devices, even after their lifespan on the shelf, DON'T cost less than 60% of their original prices.
