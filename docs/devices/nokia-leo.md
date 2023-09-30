@@ -267,8 +267,8 @@ brew install python android-platform-tools libusb && pip3 install pyusb pyserial
 {:style="counter-reset:none"}
 2. On Windows 10/11, by default, typing the `python` or `python3` aliases within Command Prompt will call the Microsoft Store version of Python, which we don't have installed. To override this default into calling the local version of Python, head over to Settings > Apps > Apps & features > App execution aliases and toggle off both App Installer (python.exe) and App Installer (python3.exe).
 
-<img width=615 alt="Screenshot of the Apps & features page in Windows 10's Settings app, of which the App execution aliases link is located under the Apps & features section" src="../../assets/nokia-leo/settings_alias.png">
-<img width=380 alt="Screenshot of the App execution alias page, where the toggles for App Installer (python.exe) and App Installer (python3.exe) are both turned off. Description says Apps can declare a name used to run the app from a command prompt. If multiple apps use the same name, choose which one to use" src="../../assets/nokia-leo/alias_off.png">
+<img width=613 alt="Screenshot of the Apps & features page in Windows 10's Settings app, of which the App execution aliases link is located under the Apps & features section" src="../../assets/nokia-leo/settings_alias.png">
+<img width=375 alt="Screenshot of the App execution alias page, where the toggles for App Installer (python.exe) and App Installer (python3.exe) are both turned off. Description says Apps can declare a name used to run the app from a command prompt. If multiple apps use the same name, choose which one to use" src="../../assets/nokia-leo/alias_off.png">
 
 {:style="counter-reset:none"}
 3. Open Command Prompt with administrator privileges and run this command:
@@ -410,8 +410,8 @@ That's it! On your desktop there will be two new image files, the modified `boot
   - line 8: `security.perf_harden=1` -> `security.perf_harden=0`
   - line 10: `ro.debuggable=0` -> `ro.debuggable=1`
 
-![Screenshot of the original content of the default.prop file](../../assets/nokia-leo/default_prop.png)
-![Screenshot of the modified content of the default.prop file](../../assets/nokia-leo/default_prop_edited.png)
+<img width="494" src="../../assets/nokia-leo/default_prop.png" alt="Screenshot of the original content of the default.prop file">
+<img width="494" src="../../assets/nokia-leo/default_prop_edited.png" alt="Screenshot of the modified content of the default.prop file">
 
 {:style="counter-reset:none"}
 4. Open `ramdisk/init.qcom.early_boot.sh` in Notepad++ and add `setenforce 0` as a new line at the end of the file.
