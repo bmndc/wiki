@@ -14,7 +14,7 @@ last_modified_date: 2023-09-21
   <thead><tr><th colspan="2">Nokia 6300 4G (nokia-leo)</th></tr></thead>
   <tbody>
     <tr><td>Released</td><td>13 November 2020</td></tr>
-    <tr><td>Model</td><td>TA-1286, TA-1287, TA-1291, TA-1294, TA-1324</td></tr>
+    <tr><td>Model</td><td>TA-1286, TA-1287, TA-1291, TA-1294, TA-1307, TA-1324</td></tr>
   <tr><td colspan="2"><strong>Specifications</strong></td></tr>
     <tr><td>SoC</td><td>Qualcomm MSM8909 Snapdragon 210<br>(4 x 1.1GHz Cortex-A7)</td></tr>
     <tr><td>RAM</td><td>512MB LPDDR2/3</td></tr>

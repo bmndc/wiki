@@ -23,7 +23,7 @@ Table of Contents
 
 *I'd like to thank the team at [PhoneCopy](https://www.phonecopy.com/en/phones/os/KaiOS) for collecting KaiOS phones' information and making this table possible! Not sponsored, but definitely check them out.*
 
-| Model name | Version | DBG | Note |
+| Model name | KaiOS version | Debugging status | Note |
 |:--|:--|:-:|:--|
 | [Nokia 8110 4G]({% link docs/devices/nokia-argon.md %}) | 2.5.1<br>17.00.17.01 | ✅ |  |
 | [Nokia 2720 Flip]({% link docs/devices/nokia-beatles.md %}) | 2.5.2.2<br>40.00.17.02 | ⚠️ | Debug-enabled on 2.5.2, requires permanent root via boot partition modifying on 2.5.2.2 |
@@ -48,7 +48,7 @@ Table of Contents
 | Alcatel Go Flip 3 (4052w) | 2.5.2 | 🔒 |  |
 | Alcatel Go Flip 4 (4056w) | 3.0 | 🔒 | ADB reports as unauthorized.<br>Credits to u/tbrrss on Reddit for confirming |
 | Alcatel SMARTFLIP (4052r) | 2.5.2 | ❓ |  |
-| Alcatel MyFlip (A405DL) | 2.5.x | ❓ |  |
+| Alcatel MyFlip (A405DL) | 2.5.x | ⚠️ | Requires extracting using EDL and editing ADB hex on data partition |
 | Alcatel MyFlip 2 (A406DL) | 2.5.4 | ✅ | No engmode-extension apps, no rooting |
 | AT&T Cingular Flip IV (U102AA) | 2.5.3.1 | ✅ | No rooting (confirmed on 2.5.3) |
 | AT&T Cingular Flex | 2.5.4 | ✅ | No engmode-extension apps, no rooting |
@@ -67,8 +67,8 @@ Table of Contents
 | Multilaser/ObaPhone ZAPP | 2.5.1.1 | ✅ |  |
 | Multilaser ZAPP II 3G | 2.5.1.2 | ❓ |  |
 | TTfone TT240 | 2.5.x | ❓ |  |
-| BKAV C85 | 2.5.1.1 [?] | ❓ | *If you're having this phone, please hit me up.* |
-| Viettel V6504 | 2.5.3.2 | ⚠️ | Press and hold 2 on boot to enter KaiOS Recovery for injecting apps |
+| BKAV C85 | 2.5.1.1 [?] | ❓ |  |
+| Viettel V6504 | 2.5.3.2 | ❓ | Press and hold 2 on boot to enter Recovery mode |
 | Itel it9200 4G | 2.5.1.2 | ❓ |  |
 | Itel it9300 | 2.5.1.1 | ❓ |  |
 
