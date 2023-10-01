@@ -48,7 +48,7 @@ Table of Contents
 *Illustration by eBoy. Creative Director: [Tim van der Mee](https://timvandermee.com/Nokia-8110-Reloaded)*
 {:.fs-2}
 
-## Before making the decision
+## Don't buy a counterfeit
 **BEWARE OF COUNTERFEIT DEVICES!** Many KaiOS devices, such as the Nokia 8110 4G, 2720 Flip and 6300 4G are being offered at numerous tech stores and online sites for amazingly low prices; those turn out to be counterfeits and don't bring the experiences that people expected, and you wouldn't be able to get a refund as the store gets away with it.
 
 To spot out the counterfeits:

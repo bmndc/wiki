@@ -45,7 +45,7 @@ Table of Contents
 - TOC
 {:toc}
 
-## Before making the decision
+## Don't buy a counterfeit
 **BEWARE OF COUNTERFEIT DEVICES!** Many KaiOS devices, such as the Nokia 8110 4G, 2720 Flip and 6300 4G are being offered at numerous tech stores and online sites for amazingly low prices; those turn out to be counterfeits and don't bring the experiences that people expected, and you wouldn't be able to get a refund as the store gets away with it.
 
 ![Multiple images of fake Nokia 6300 4G devices](../../assets/nokia-leo/leo_counterfeit.png)
@@ -66,6 +66,15 @@ To spot out the counterfeits:
 - If you have access to a computer, try connecting the phone to it and see if the actual phone storage is significantly less than advertised.
 
 Remember, **only buy from trusted, reputable sources**, even if they offer higher prices. That higher cost usually guarantees that you're buying a genuine device.
+
+### Differences between NA and international variants
+
+"Buying Western-customized products will always give you the best quality possible" is unfortunately unwise when it comes to consumer electronic devices, including mobile phones, and the 6300 4G isn't an exception. If you're planning to buy the TA-1324 variant of this phone, you should expect:
+- No cellular access: From the dawn of mobile phone technologies, for national security reasons, the US has been using different cellular technologies from the rest of the world with little to no compatibility. With 4G LTE, the US variant receives different bands with little overlaps on international variants' bands, primarily band 7 (see the device specification table above). As a result, without roaming, making or receiving calls and texts on the US variant outside the country becomes much difficult.
+- Restricted device settings, notably device languages and T9 languages, as the phone software is customized to meet the FCC's regulations. On the NA 6300 4G, the only languages available are English (US), español (US), Français (CA) and Português (BR). 
+- This also means that device security is more tightened: NA 6300 4G currently cannot be rooted due to different hash signature used for EDL handshake (see details below).
+
+Don't buy the NA variant of 6300 4G unless you know what you're doing. Seek the availability of the phone in the nearest place or neighbour countries from where you are.
 
 ## Tips and tricks
 - To take a screenshot, press both * and # keys simultaneously.
@@ -165,7 +174,7 @@ Booting into this mode, the phone's screen will briefly show the 'enabled by Kai
 
 You can also **force reboot** the phone by holding the top Power button and the # key at any time.
 
-EDL programmer for the international version of this phone (not TA-1324) can be found on BananaHackers' [EDL archive site](https://edl.bananahackers.net/loaders/8k.mbn) with hardware ID 0x009600e100420029 (a copy is available [here](../main/8k.mbn)). The US version of this phone has been signed with a different PK_HASH and needs a different firehose loader which we currently don't have in archive.
+EDL programmer for the international version of this phone (not TA-1324) can be found on BananaHackers' [EDL archive site](https://edl.bananahackers.net/loaders/8k.mbn) with hardware ID 0x009600e100420029 (a copy is available [here](../main/8k.mbn)). The NA version of this phone has been signed with a different PK_HASH and needs a different firehose loader which we currently don't have in archive.
 
 ### UART debugging testpoint
 As discovered by atipls on Discord, on the mainboard of the 6300 4G, there are 3 UART testing points: RX, TX and GND just above the SIM2 slot. Shorting TX and GND takes you to Fastboot and Linux terminal interface.
@@ -181,7 +190,7 @@ For detailed instructions, see [Sideloading and debugging/WebIDE]({% link docs/g
 
 To remove unwanted apps from the phone, you can use [this fork of Luxferre's AppBuster](https://github.com/minhduc-bui1/AppBuster) which lets you disable any apps you don't need and enable them again if you want.
 
-## ROOT: Boot partition modifying (non-US only)
+## ROOT: Boot partition modifying (non-NA only)
 On KaiOS 2.5.4 devices, such as the 6300 4G and 8000 4G, ADB and WebIDE can be used to install most third-party apps. However, apps with special ‘forbidden’ permissions are not allowed, including most BananaHackers apps with `engmode-extension` like Wallace Toolbox, which can be used to gain exclusive access of the phone. You also cannot make changes to the system. On the 2720 Flip and 800 Tough with KaiOS 2.5.2.2, with HMD/Nokia Mobile changing their release branches from `dev-keys` to `release-keys`, the situation is even worse as you cannot sideload at all. 
 
 This is because in order for WhatsApp's VoIP feature to work on these KaiOS versions, a security module called SELinux is now set to be `Enforced` which checks and reverts system modifications on boot. To get total read-write access to the devices, you'll now have to permanently root them by setting SELinux to `Permissive` mode.
@@ -194,7 +203,7 @@ The guide below is based on the main guide from BananaHackers website, but has b
 > Remember, you don't have to root your phone to do things that usually need root access e.g. you can use [this fork of Luxferre's AppBuster](https://github.com/minhduc-bui1/AppBuster) to disable apps from the launcher instead of deleting them with Wallace Toolbox. You can also install [CrossTweak](https://gitlab.com/suborg/crosstweak), a Wallace Toolbox alternative also made by Luxferre that does not need `engmode-extension` and therefore can be easily installed on KaiOS 2.5.4 devices.
 
 ### What we'll need
-- an international non-US version of Nokia 6300 4G (not TA-1324) or Nokia 8000 4G, Nokia 2720 Flip or Nokia 800 Tough;
+- an international non-NA version of Nokia 6300 4G (not TA-1324) or Nokia 8000 4G, Nokia 2720 Flip or Nokia 800 Tough;
 - an USB cable capable of data transferring (EDL cables will also do);
 - an Internet connection to download the tools needed;
 - a somewhat-working firehose programmer MBN file for the [8000 4G and 6300 4G](https://edl.bananahackers.net/loader/8k.mbn), [2720 Flip](https://edl.bananahackers.net/loader/2720.mbn) or [800 Tough](https://edl.bananahackers.net/loader/800t.mbn);
