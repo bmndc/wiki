@@ -23,7 +23,7 @@ Table of Contents
 
 *I'd like to thank the team at [PhoneCopy](https://www.phonecopy.com/en/phones/os/KaiOS) for collecting KaiOS phones' information and making this table possible! Not sponsored, but definitely check them out.*
 
-| Model name | KaiOS version | Debugging status | Note |
+| Model name | Version | Debugging status | Note |
 |:--|:--|:-:|:--|
 | [Nokia 8110 4G]({% link docs/devices/nokia-argon.md %}) | 2.5.1<br>17.00.17.01 | ✅ |  |
 | [Nokia 2720 Flip]({% link docs/devices/nokia-beatles.md %}) | 2.5.2.2<br>40.00.17.02 | ⚠️ | Debug-enabled on 2.5.2, requires permanent root via boot partition modifying on 2.5.2.2 |
@@ -34,8 +34,8 @@ Table of Contents
 | Nokia 2760 Flip | 3.1 | 🔒 | ADB reports as unauthorized |
 | [Nokia 2780 Flip]({% link docs/devices/nokia-weeknd.md %}) | 3.1 | ⚠️ | Custom firmware & manual injection to sideload, no debugging. ADB reports as unauthorized |
 | [CAT B35]({% link docs/devices/cat-b35.md %}) | 2.5.1 | ⚠️ | Requires extracting using EDL and editing ADB hex on data partition |
-| Doro 7050 | 2.5.x | ❓ |  |
-| Doro 7060 | 2.5.1 | ❓ |  |
+| Doro 7050<br>(DFC-0180) | 2.5 | ⚠️ | No KaiStore. Power + Vol- to boot into FFBM, 'adb shell start b2g', use W2D to turn on debugging mode. Wallace Toolbox for permanent dev menu |
+| Doro 7060/7070<br>(DFC-0190) | 2.5.1 | ⚠️ | No KaiStore. Power + Vol- to boot into FFBM, 'adb shell start b2g', use W2D to turn on debugging mode. Wallace Toolbox for permanent dev menu |
 | Energizer E241 | 2.5.1.1 | ❓ |  |
 | Energizer E241s | 2.5.1.2 | ✅ |  |
 | Energizer E242s | 2.5.3.2 | 🔒 | Credits to u/CaramelSpoonful on Reddit for confirming |
