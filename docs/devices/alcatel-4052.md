@@ -5,6 +5,7 @@ layout: default
 nav_order: 9
 ---
 # Alcatel Go Flip 3 (4052woz)
+{: .no_toc }
 *also known as Alcatel SMARTFLIP (4052rc)*
 
 <details markdown="block">
@@ -14,7 +15,7 @@ nav_order: 9
   <tbody>
     <tr><td>Announced</td><td>17–19 September 2019</td></tr>
     <tr><td>Released</td><td>27 September 2019</td></tr>
-    <tr><td>Model</td><td>4052r (AT&T), 4052w (T-Mobile), 4052c (Cricket), 4052z (Metro by T-Mo), 4052o (Rogers/Canada)</td></tr>
+    <tr><td>[Model]</td><td>4052r (AT&T), 4052w (T-Mobile), 4052c (Cricket), 4052z (Metro by T-Mo), 4052o (Rogers/Canada)</td></tr>
   <tr><td colspan="2"><strong>Specifications</strong></td></tr>
     <tr><td>SoC</td><td>Qualcomm MSM8909 Snapdragon 210<br>(4 x 1.1GHz Cortex-A7)</td></tr>
     <tr><td>RAM</td><td>512MB LPDDR3</td></tr>
@@ -38,3 +39,5 @@ nav_order: 9
   </tbody>
 </table>
 </details>
+
+[Model]: https://www.reddit.com/r/dumbphones/comments/lu36eh/alcatel_go_flip_3_4052_o_variant

@@ -39,7 +39,7 @@ nav_order: 1
 </table>
 </details>
 
-<img width=460 style="float:right" src="../../assets/nokia-argon/nokia_8110-emotional.png">
+<img style="float:right" src="../../assets/nokia-argon/nokia_8110-emotional.png">
 
 Table of Contents
 {: .text-delta }
