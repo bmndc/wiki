@@ -14,13 +14,13 @@ nav_order: 9
   <tbody>
     <tr><td>Announced</td><td>17–19 September 2019</td></tr>
     <tr><td>Released</td><td>27 September 2019</td></tr>
-    <tr><td>Model</td><td>4052r (AT&T), 4052w (T-Mobile), 4052c (Cricket), 4052z (Metro by T-Mo), 4052o (unknown)</td></tr>
+    <tr><td>Model</td><td>4052r (AT&T), 4052w (T-Mobile), 4052c (Cricket), 4052z (Metro by T-Mo), 4052o (Rogers/Canada)</td></tr>
   <tr><td colspan="2"><strong>Specifications</strong></td></tr>
     <tr><td>SoC</td><td>Qualcomm MSM8909 Snapdragon 210<br>(4 x 1.1GHz Cortex-A7)</td></tr>
     <tr><td>RAM</td><td>512MB LPDDR3</td></tr>
     <tr><td>GPU</td><td>Adreno 304</td></tr>
     <tr><td>Storage</td><td>4GB (+ up to 32GB microSDHC card)</td></tr>
-    <tr><td>Network</td><td>2G GSM, 3G UMTS, 4G LTE<br><em>+ 4052rc: band 2, 4, 5, 12 (MFBI), 14<br>+ 4052woz: band 2, 4, 5, 12, 25, 26, 41 (HPUE), 66, 71</em><br>VoLTE support with HD Voice support (all models), VoWiFi support (4052woz only)<br>Single SIM (Nano-SIM)</td></tr>
+    <tr><td>Network</td><td>2G GSM, 3G UMTS, 4G LTE<br><em>+ 4052rc: band 2, 4, 5, 12 (MFBI), 14<br>+ 4052woz: band 2, 4, 5, 12, 25, 26, 41 (HPUE), 66, 71</em><br>VoLTE support with HD Voice (all models), VoWiFi support (4052woz only)<br>Single SIM (Nano-SIM)</td></tr>
     <tr><td>Screen</td><td>Main: 320 * 240 (143 PPI), 2.8 inches TN TFT LCD<br>External: 128 * 128 (125 PPI), 1.44 inches TN TFT LCD</td></tr>
     <tr><td>Bluetooth</td><td>4.1/4.2, A2DP</td></tr>
     <tr><td>Wi-Fi</td><td>802.11b/g/n, 2.4GHz, Hotspot (up to 8 devices)</td></tr>
