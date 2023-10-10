@@ -4,7 +4,7 @@ theme: just-the-docs
 color_scheme: bananahackers
 
 url: https://minhduc-bui1.github.io/wiki
-#logo: "logo.png"
+logo: "/assets/banana.png"
 
 aux_links:
   BananaHackers Store: https://store.bananahackers.net
@@ -21,7 +21,7 @@ nav_external_links:
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: Contents of this Site is written from BananaHackers.net and is now licensed under <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0\">CC BY-NC 4.0</a>, quoted media are subject to their own licenses. This site uses Just the Docs which is licensed under <a href=\"https://github.com/just-the-docs/just-the-docs/blob/main/LICENSE.txt\">MIT</a>. However, building a site completely copying off this site in any forms is not allowed without my explicit permission.
+footer_content: Contents of this Site is written from BananaHackers.net and is now licensed under <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0\">CC BY-NC 4.0</a>, quoted media are subject to their own licenses. This site uses Just the Docs which is licensed under <a href=\"https://github.com/just-the-docs/just-the-docs/blob/main/LICENSE.txt\">MIT</a>. Logo by <a href=\"https://www.flaticon.com/free-icons/banana\">Vitaly Gorbachev</a> from Flaticons. However, building a site completely copying off this site in any forms is not allowed without my explicit permission.
 
 last_edit_timestamp: true
 last_edit_time_format: "%B %e, %Y"
