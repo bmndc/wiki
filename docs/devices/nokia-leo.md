@@ -45,7 +45,7 @@ Table of Contents
 - TOC
 {:toc}
 
-<iframe src="https://www.youtube-nocookie.com/embed/TUSGsV1aEns?si=EMytlTgxQLY4tqEH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="992" height="558" src="https://www.youtube-nocookie.com/embed/TUSGsV1aEns?si=EMytlTgxQLY4tqEH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 *Review video by one of our friends José Briones. Note: YouTube won't store any of your data unless you click on the player.*
 {:.fs-2}
 
