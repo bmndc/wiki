@@ -33,7 +33,7 @@ nav_order: 6
   <tr><td colspan="2"><strong>KaiOS info</strong></td></tr>
     <tr><td>Version</td><td>KaiOS 3.1</td></tr>
     <tr><td>WA VoIP</td><td>Not available</td></tr>
-    <tr><td>Build no.</td><td>Unknown</td></tr>
+    <tr><td>Build no.</td><td>N/A</td></tr>
   </tbody>
 </table>
 </details>
