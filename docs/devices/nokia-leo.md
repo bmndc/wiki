@@ -45,7 +45,9 @@ Table of Contents
 - TOC
 {:toc}
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TUSGsV1aEns?si=EMytlTgxQLY4tqEH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/TUSGsV1aEns?si=EMytlTgxQLY4tqEH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+*Review video by one of our friends José Briones. Note: YouTube won't store any of your data unless you click on the player.*
+{:.fs-2}
 
 ## Don't buy a counterfeit
 **BEWARE OF COUNTERFEIT DEVICES!** Many KaiOS devices, such as the Nokia 8110 4G, 2720 Flip and 6300 4G are being offered at numerous tech stores and online sites for amazingly low prices; those turn out to be counterfeits and don't bring the experiences that people expected, and you wouldn't be able to get a refund as the store gets away with it.
