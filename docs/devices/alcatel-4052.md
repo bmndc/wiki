@@ -56,7 +56,7 @@ Note that despite having different names and multiple variants being released un
 ## Secret codes
 *Tip: You can save these codes as contacts for quick dialing later. When the phone suggests a saved code, you'll have to press Call to activate the code's function.*
 
-Big thanks to [u/dhruvkar on Reddit](https://www.reddit.com/r/KaiOS/comments/hav4qp/comment/fv5lw7p/?context=3) for pulling the system apps on his Go Flip 3 and documenting this list of secret codes. Note that some codes here may not work in normal userspace: if you happen to also have a Go Flip 3 or SMARTFLIP and stumble when dialing any of these codes, please let me know!
+Big thanks to [u/dhruvkar on Reddit](https://www.reddit.com/r/KaiOS/comments/hav4qp/comment/fv5lw7p/?context=3) for pulling the system apps on his SMARTFLIP and documenting this list of secret codes. Note that some codes here may not work in normal userspace: if you happen to also have a Go Flip 3 or SMARTFLIP and stumble when dialing any of these codes, please let me know!
 
 - `*#*#33284#*#*`: Toggle debugging mode, allowing the phone to be accessed with ADB (more on this later). A bug will appear in the status bar letting you know debugging mode is on.
 - `*#*#28865625#*#*`: Display a pop-up allowing you to enter Device unlock code to free the phone from network restrictions.
@@ -66,8 +66,8 @@ Big thanks to [u/dhruvkar on Reddit](https://www.reddit.com/r/KaiOS/comments/hav
 - `##6343#`: Display the Mobile Equipment Identifier (MEID) number to uniquely identify a specific cell phone on CDMA networks.
 - `*#07#`: Open More information page under Settings, Device, Device information.
 - `*#16#`: Check the `ro.sar.enabled` property, if enabled check the current SAR level and display SAR-related health and safety information.
-- `*#33#` (call): Check the [Call barring](https://www.communityphone.org/blogs/call-barring) service status from carrier for blocking or whitelisting calls, whether incoming or outgoing, domestic or international. Requires a 4-digit passcode to use. To toggle the function, go to Settings, Network & Connectivity, Calling, Call barring.
-- `*#43#` (call): Check the [Call waiting](https://en.wikipedia.org/wiki/Call_waiting) service status from carrier. To toggle the function, go to Settings, Network & Connectivity, Calling, Call waiting.
+- `*#33#` (call): Check the [Call barring](https://www.communityphone.org/blogs/call-barring) service status from carrier for blocking or whitelisting calls, whether incoming or outgoing, domestic or international. Requires a 4-digit passcode to use. To toggle, go to Settings, Network & Connectivity, Calling, Call barring.
+- `*#43#` (call): Check the [Call waiting](https://en.wikipedia.org/wiki/Call_waiting) service status from carrier. To toggle, go to Settings, Network & Connectivity, Calling, Call waiting.
 - `*#2886#`: Open KaiOS MMI Test, an internal tool to test hardware performance of a KaiOS device through an automatic routine or manually by hand, including LCD backlight, T9 keyboard, camera, LED flash, RTC, speaker, microphone, vibrator, 3.5mm audio jack, SIM trays, Wi-Fi, Bluetooth, NFC, microSD and microUSB slots etc.
 - `*#3228#`: Display internal version numbers of system partitions such as /boot, /system, /recovery, /modem and the bootloader.
 - `*#4636#`: Display the production code, hardware revision and software build number.
