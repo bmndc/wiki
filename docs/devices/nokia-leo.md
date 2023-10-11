@@ -131,15 +131,14 @@ Don't buy the NA variant of 6300 4G unless you know what you're doing. Seek the 
   - On a related note, you cannot sign into another device, pair with those interfaces and then sign into the KaiOS version of WhatsApp. Attempting to do so will result in the renewal of the decryption keys and all other devices being forced to log off automatically.
 
 ## Secret codes
-- `*#*#33284#*#*`: Toggle debugging mode, allowing the phone to be accessed with ADB and DevTools. A bug icon will appear in the status bar letting you know debugging mode is on. 
-  - This can also be turned on under *Settings, Device, Developer, Debugger, ADB and DevTools*.
-  - Tip: You can save these codes as contacts for quick dialing later. When the phone suggests a saved code, you'll have to press Call to activate the code's function.
-- `*#06#`: Display the hidden International Mobile Equipment Identity numbers or IMEI(s). Do not show them to anyone else: they're crucial for calling functions on the phone.
+*Tip: You can save these codes as contacts for quick dialing later. When the phone suggests a saved code, you'll have to press Call to activate the code's function.*
+
+- `*#*#33284#*#*`: Toggle debugging mode, allowing the phone to be accessed with ADB and DevTools. A bug icon will appear in the status bar letting you know debugging mode is on. This can also be turned on under Settings, Device, Developer, Debugger, ADB and DevTools.
+- `*#06#`: Display the hidden International Mobile Equipment Identity numbers or IMEI(s) to uniquely identify a specific cell phone on GSM networks. Do not show them to anyone else: they're crucial for calling functions on the phone.
+- `*#0606#` (TA-1324 only): Display the Mobile Equipment Identifier numbers or MEID(s) to uniquely identify a specific cell phone on CDMA networks. On international models the MEIDs would be all zeroes, and thus this secret code doesn't apply.
 - `*#0000#`: Display device information, such as firmware version, build date, model number, variant and CUID.
-- `*#33#` (call): Check the [Call barring](https://www.communityphone.org/blogs/call-barring) service status from carrier for blocking or whitelisting calls, whether incoming or outgoing, domestic or international. Requires a 4-digit passcode to use. 
-  - To toggle the function, go to *Settings, Network & Connectivity, Calling, Call barring*.
-- `*#43#` (call): Check the [Call waiting](https://en.wikipedia.org/wiki/Call_waiting) service status from carrier. 
-  - To toggle the function, go to *Settings, Network & Connectivity, Calling, Call waiting*.
+- `*#33#` (call): Check the [Call barring](https://www.communityphone.org/blogs/call-barring) service status from carrier for blocking or whitelisting calls, whether incoming or outgoing, domestic or international. Requires a 4-digit passcode to use. To toggle the function, go to Settings, Network & Connectivity, Calling, Call barring.
+- `*#43#` (call): Check the [Call waiting](https://en.wikipedia.org/wiki/Call_waiting) service status from carrier. To toggle the function, go to Settings, Network & Connectivity, Calling, Call waiting.
 - `*#*#372733#*#*`: Open KaiOS MMI Test, an internal tool to test hardware performance of a KaiOS device through an automatic routine or manually by hand, including LCD backlight, T9 keyboard, camera, LED flash, RTC, speaker, microphone, vibrator, 3.5mm audio jack, SIM trays, Wi-Fi, Bluetooth, NFC, microSD and microUSB slots etc.
   - Throughout the manual speaker test, you'll hear some English and Chinese dialog from a female speaker, which transcribes to: *Hello. Please dial 110 for police, 119 for fire, 120 for ambulance, 122 for traffic accidents, and dial area code before 112 for six full obstacles.* [?]
 
@@ -148,17 +147,14 @@ Codes that don't work
 Most of these codes requires `userdebug` or `eng` versions to work.
 - `*#07#`: Check the `ro.sar.enabled` property, if enabled check the current SAR level and display SAR-related health and safety information.
 - `*#1219#`: Clear all userspace customizations, presumably for store display.
-- `*#091#` (on)/`*#092#` (off): Toggle auto-answering on incoming call. 
-  - This can be turned on via Device Settings interface in WebIDE.
+- `*#091#` (on)/`*#092#` (off): Toggle auto-answering on incoming call. This can be turned on via Device Settings interface in WebIDE.
 - `*#2886#`: Should also open KaiOS MMI Test interface.
-- `*#8378269#`/`*#*#2637643#*#*`: Open Testbox engineering menu with predecessor Firefox OS design, usually used by OEMs to test various hardware of the phone.
-  - This menu can be manually opened using Luxferre's [CrossTweak](https://gitlab.com/luxferre/crosstweak).
-- `###2324#`: Toggle Qualcomm diagnostic mode for fixing null/invalid IMEI or baseband via QPST.
+- `*#8378269#`/`*#*#2637643#*#*`: Open Testbox engineering menu with predecessor Firefox OS design, usually used by OEMs to test various hardware of the phone. This menu can be manually opened using Luxferre's [CrossTweak](https://gitlab.com/luxferre/crosstweak).
+- `###2324#`: Open a menu, allowing to toggle Qualcomm diagnostic mode for fixing null/invalid IMEI or baseband via QPST.
 - `*#*#212018#*#*`: Toggle privileged access (including rooted ADB shell) to the phone.
 - `*#7223#`: Display internal firmware build and boot image versions.
-- `*#*#0574#*#*`: Open LogManager utility.
+- `*#*#0574#*#*`: Open LogManager utility which allows you to fully enable ADB and DevTools on Spreadtrum devices.
 - `*#573564#`: Open T2M Log (jrdlog), a brief LogManager interface.
-- `*#0606#`: Display the MEID(s), all zeroes.
 - `*#1314#`: Switch the `auto.send.crash.sms` property, whose purpose is still unknown.
 
 ## Special boot modes
