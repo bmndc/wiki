@@ -15,7 +15,7 @@ nav_order: 9
   <tbody>
     <tr><td>Announced</td><td>17–19 September 2019</td></tr>
     <tr><td>Released</td><td>27 September 2019</td></tr>
-    <tr><td>[Model](https://www.reddit.com/r/dumbphones/comments/lu36eh/alcatel_go_flip_3_4052_o_variant/)</td><td>4052r (AT&T), 4052w (T-Mobile), 4052c (Cricket), 4052z (Metro by T-Mo), 4052o (Rogers/Canada)</td></tr>
+    <tr><td>Model</td><td>4052r (AT&T), 4052w (T-Mobile), 4052c (Cricket), 4052z (Metro by T-Mo), 4052o (Rogers/Canada)</td></tr>
   <tr><td colspan="2"><strong>Specifications</strong></td></tr>
     <tr><td>SoC</td><td>Qualcomm MSM8909 Snapdragon 210<br>(4 x 1.1GHz Cortex-A7)</td></tr>
     <tr><td>RAM</td><td>512MB LPDDR3</td></tr>
@@ -47,7 +47,7 @@ Table of Contents
 
 In mid-September 2019, after a series of trial models, Alcatel launched "two" new flip phones in the US market, in partnership with T-Mobile and AT&T. Both the Alcatel Go Flip 3 and the Alcatel SMARTFLIP are affordable devices that support 4G LTE connectivity on each network. Running on the same KaiOS 2.5.2 as the internationally-acclaimed Nokia 2720 Flip, people in the US can now enjoy some of the best KaiOS features such as WhatsApp messaging and voice dictation with a simplified version of Google Assistant.
 
-Note that despite having different names and multiple variants being released under different carriers, all variants are basically the same device, with the receiving LTE bands tailored to each of the carriers.
+Note that despite having different names and [multiple variants being released under different carriers](https://www.reddit.com/r/dumbphones/comments/lu36eh/alcatel_go_flip_3_4052_o_variant/), all variants are basically the same device, with the receiving LTE bands tailored to each of the carriers.
 
 ## Tips and tricks
 - To take a screenshot, press both * and # keys simultaneously.
