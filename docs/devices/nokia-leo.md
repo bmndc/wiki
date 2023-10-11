@@ -72,7 +72,6 @@ To spot out the counterfeits:
 Remember, **only buy from trusted, reputable sources**, even if they offer higher prices. That higher cost usually guarantees that you're buying a genuine device.
 
 ### Differences between NA and international variants
-
 "Buying Western-customized products will always give you the best quality possible" is unfortunately unwise when it comes to consumer electronic devices, including mobile phones, and the 6300 4G isn't an exception. If you're planning to buy the TA-1324 variant of this phone, you should expect:
 - No cellular access: From the dawn of mobile phone technologies, for national security reasons, the US has been using different cellular technologies from the rest of the world with little to no compatibility. With 4G LTE, the US variant receives different bands with little overlaps on international variants' bands, primarily band 7 (see the device specification table above). As a result, without roaming, making or receiving calls and texts on the US variant outside the country becomes much difficult.
 - Restricted device settings, notably device languages and T9 languages, as the phone software is customized to meet the FCC's regulations. On the NA 6300 4G, the only languages available are English (US), español (US), Français (CA) and Português (BR). 
