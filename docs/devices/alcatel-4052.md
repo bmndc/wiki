@@ -15,7 +15,7 @@ nav_order: 9
   <tbody>
     <tr><td>Announced</td><td>17–19 September 2019</td></tr>
     <tr><td>Released</td><td>27 September 2019</td></tr>
-    <tr><td>[Model]</td><td>4052r (AT&T), 4052w (T-Mobile), 4052c (Cricket), 4052z (Metro by T-Mo), 4052o (Rogers/Canada)</td></tr>
+    <tr><td>Model</td><td>4052r (AT&T), 4052w (T-Mobile), 4052c (Cricket), 4052z (Metro by T-Mo), 4052o (Rogers/Canada)</td></tr>
   <tr><td colspan="2"><strong>Specifications</strong></td></tr>
     <tr><td>SoC</td><td>Qualcomm MSM8909 Snapdragon 210<br>(4 x 1.1GHz Cortex-A7)</td></tr>
     <tr><td>RAM</td><td>512MB LPDDR3</td></tr>
@@ -40,4 +40,15 @@ nav_order: 9
 </table>
 </details>
 
-[Model]: https://www.reddit.com/r/dumbphones/comments/lu36eh/alcatel_go_flip_3_4052_o_variant
+Table of Contents
+{: .text-delta }
+- TOC
+{:toc}
+
+## Tips and tricks
+- To take a screenshot, press both * and # keys simultaneously.
+- This phone includes a screen reader feature that's hidden by default, possibly because some third-party apps did not label their buttons correctly. To toggle the hidden Readout feature, press both the volume keys repeatedly until you hear a robotic sound.
+
+## Secret boot modes
+- **Recovery mode**: With the device powered off, hold the Power/End call button and the Volume up key.
+- **EDL mode**: With the device powered off, hold the Power/End call button and both the volume keys, then hold Volume up to enter Download mode upon confirmation. Allows you to read and write partitions in low-level with proprietary Qualcomm tools. Remove the battery to exit.

@@ -138,9 +138,9 @@ Remember, **only buy from trusted, reputable sources**, even if they offer highe
 - `*#0000#`: Display device information, such as firmware version, build date, model number, variant and CUID.
 
 ## Special boot modes
-- **Recovery mode**: With the device powered off, hold the top Power button and the Volume up key, or type `adb reboot recovery` when connected to a computer. Allows you to factory reset the device by wiping /data and /cache, view boot and kernel logs, and install patches from `adb sideload` interface or SD card.
+- **Recovery mode**: With the device powered off, hold the Power/End call button and the Volume up key, or type `adb reboot recovery` when connected to a computer. Allows you to factory reset the device by wiping /data and /cache, view boot and kernel logs, and install patches from `adb sideload` interface or SD card.
 - **Fastboot mode**: Only accessible and automatically kick in when /recovery is corrupted. Allows you to restore partitions under `fastboot` interface.
-- **EDL mode**: With the device powered off, hold the top Power button and both the volume keys, or type `adb reboot edl` when connected to a computer. Boots into a black screen, allows you to read and write partitions in low-level with proprietary Qualcomm tools. Remove the battery to exit.
+- **EDL mode**: With the device powered off, hold the Power/End call button and both the volume keys, or type `adb reboot edl` when connected to a computer. Boots into a black screen, allows you to read and write partitions in low-level with proprietary Qualcomm tools. Remove the battery to exit.
 
 EDL programmer for this phone can be found on BananaHackers' [EDL archive site](https://edl.bananahackers.net/loaders/2720.mbn) with hardware ID 0x009600e100420029.
 
