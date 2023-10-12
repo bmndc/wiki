@@ -8,15 +8,11 @@ has_children: true
 
 *A gameplay screenshot from Christian Waadt's Airship Combat 3D.*
 {:.fs-2 .text-right}
-<img class="alright" src="../../assets/desert-225x300.png">
+<img class="d-block alright" src="../../assets/desert-225x300.png">
 <style>
   .alright {
-    @media (min-width:500px) {
-      width: 320px;
-      float: right;
-      padding-left: 15px;
-      padding-bottom: 15px
-    }
+    @media (min-width:1100px) { width: 320px; float: right; padding-left: 15px; padding-bottom: 15px }
+    @media (min-width:360px) { margin:auto; width: 50vw }
     width: 100vw
   }
 </style>
