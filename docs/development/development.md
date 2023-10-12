@@ -7,10 +7,19 @@ has_children: true
 # Developer resources
 
 *A gameplay screenshot from Christian Waadt's Airship Combat 3D.*
-{:.fs-2 .text-right .p-0}
-@media (min-width: 500px) {
-  <img width=320 style="float:right;padding-left:15px;padding-bottom:15px" src="../../assets/desert-225x300.png">
-}
+{:.fs-2 .text-right}
+<img class="alright" src="../../assets/desert-225x300.png">
+<style>
+  .alright {
+    @media (min-width:500px) {
+      width: 320px;
+      float: right;
+      padding-left: 15px;
+      padding-bottom: 15px
+    }
+    width: 100vw
+  }
+</style>
 
 Are you tired of the same old apps on KaiStore and BananaHackers Store? Do you have a creative idea for a KaiOS app but don’t know how to make it happen? This is the place where you can find useful documentation to help you learn how to develop apps for the platform *(thanks Bing AI!)*
 
