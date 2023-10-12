@@ -9,7 +9,7 @@ has_children: true
 *A gameplay screenshot from Christian Waadt's Airship Combat 3D.*
 {:.fs-2 .text-right .p-0}
 <picture>
-  <source srcset="../../assets/desert-225x300.png" width=460 media="(max-width: 500px)">
+  <source srcset="../../assets/desert-225x300.png" width="100%" style="padding-bottom:15px" media="(max-width: 500px)">
   <img style="float:right;padding-left:26px" src="../../assets/desert-225x300.png">
 </picture>
 
