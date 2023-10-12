@@ -45,29 +45,7 @@ Table of Contents
 - TOC
 {:toc}
 
-<style>
-.video-holder {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-  overflow: hidden;
-}
-.video-holder iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-</style>
-<div class="video-holder">
-  <iframe width="560"
-          height="315" 
-          src="https://www.youtube-nocookie.com/embed/TUSGsV1aEns" 
-          frameborder="0" 
-          allowfullscreen></iframe>
-</div>
+{% include youtube-fw.html id='TUSGsV1aEns' %}
 *Review video by one of our friends José Briones. Note: YouTube won't store any of your data unless you click on the player.*
 {:.fs-2}
 
