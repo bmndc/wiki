@@ -45,7 +45,7 @@ Table of Contents
 - TOC
 {:toc}
 
-{% include yt_embed_fw.html id='TUSGsV1aEns' %}
+<div style="width: 853px; margin: 20px 0 30px; max-width: 100%; text-align: center;"><div style="position: relative; overflow: hidden; margin: 0 auto; padding-bottom: 56.25%;"><iframe width="853" height="480" src="https://www.youtube-nocookie.com/embed/TUSGsV1aEns" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div></div>
 *Review video by one of our friends José Briones. Note: YouTube won't store any of your data unless you click on the player.*
 {:.fs-2}
 
