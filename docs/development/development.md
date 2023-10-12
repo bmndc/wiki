@@ -10,7 +10,7 @@ has_children: true
 {:.fs-2 .text-right .p-0}
 <picture>
   <source srcset="../../assets/desert-225x300.png" width="100%" style="padding-bottom:15px" media="(max-width: 500px)">
-  <img style="float:right;padding-left:26px" src="../../assets/desert-225x300.png">
+  <img width=320 style="float:right;padding-left:15px;padding-bottom:15px" src="../../assets/desert-225x300.png">
 </picture>
 
 Are you tired of the same old apps on KaiStore and BananaHackers Store? Do you have a creative idea for a KaiOS app but don’t know how to make it happen? This is the place where you can find useful documentation to help you learn how to develop apps for the platform *(thanks Bing AI!)*
