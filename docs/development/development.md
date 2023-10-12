@@ -12,8 +12,8 @@ has_children: true
 <style>
   .alright {
     @media (min-width:1100px) { width: 320px; float: right; padding-left: 15px; padding-bottom: 15px }
-    @media (min-width:360px) { margin:auto; width: 50vw }
-    width: 100vw
+    @media (max-width:360px) { width: 100vw }
+    margin: auto; width: 50vw
   }
 </style>
 
