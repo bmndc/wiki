@@ -2,7 +2,8 @@
 title: Alcatel GF3/SMARTFLIP
 parent: Devices
 layout: default
-nav_order: 9
+nav_exclude: true
+last_modified_date: 2023-10-11
 ---
 # Alcatel Go Flip 3 (4052woz)
 {: .no_toc }

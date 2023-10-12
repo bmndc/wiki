@@ -2,8 +2,8 @@
 title: Nokia 2720 Flip
 parent: Devices
 layout: default
-nav_order: 2
-last_modified_date: 2023-08-26
+nav_exclude: true
+last_modified_date: 2023-10-11
 ---
 # Nokia 2720 Flip (nokia-beatles)
 {: .no_toc }

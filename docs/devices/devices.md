@@ -4,7 +4,7 @@ layout: default
 nav_order: 2
 has_children: true
 has_toc: false
-last_modified_date: 2023-09-27
+last_modified_date: 2023-10-10
 ---
 # Devices
 {: .no_toc }

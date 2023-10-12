@@ -2,8 +2,8 @@
 title: Nokia 6300 4G
 parent: Devices
 layout: default
-nav_order: 5
-last_modified_date: 2023-09-30
+nav_exclude: true
+last_modified_date: 2023-10-10
 ---
 # Nokia 6300 4G (nokia-leo)
 {: .no_toc }

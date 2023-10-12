@@ -2,7 +2,7 @@
 title: Nokia 800 Tough
 parent: Devices
 layout: default
-nav_order: 3
+nav_exclude: true
 ---
 # Nokia 800 Tough (nokia-coconut)
 {: .no_toc }
