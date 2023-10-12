@@ -15,7 +15,7 @@ has_children: true
     @media (min-width:1100px) { width: 270px; height: 480px; float: right; padding-left: 30px }
     margin: auto; width: 50vw 
   }
-  .ac3d p { margin: 0, padding: 0 }
+  .ac3d p { margin: 0; padding: 0 }
 </style>
 
 Are you tired of the same old apps on KaiStore and BananaHackers Store? Do you have a creative idea for a KaiOS app but don’t know how to make it happen? This is the place where you can find useful documentation to help you learn how to develop apps for the platform *(thanks Bing AI!)*
