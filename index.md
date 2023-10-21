@@ -8,6 +8,10 @@ last_modified_date: 2023-09-30
 # Welcome to KaiOS Wiki!
 {:.no_toc}
 
+![The yellow Nokia 8110 4G is standing upright at the center of a pixelated world. Around it are ad banners for the apps available on the phone. Texts on the upper left say: Nokia 8110, Reloaded For the originals, with Nokia logo at the bottom right.](../../assets/nokia-argon/banner.png)
+*Illustration by eBoy. Creative Director: [Tim van der Mee](https://timvandermee.com/Nokia-8110-Reloaded)*
+{:.fs-2 .text-right}
+
 This is a fork of [BananaHackers Wiki hosted on Wiki.js](https://wiki.bananahackers.net), hosted on GitHub Pages for accessibility.
 
 You may want to:

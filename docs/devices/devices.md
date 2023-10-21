@@ -35,7 +35,7 @@ Table of Contents
 | [Nokia 2780 Flip]({% link docs/devices/nokia-weeknd.md %}) | 3.1 | ⚠️ | Custom firmware & manual injection to sideload, no debugging. ADB reports as unauthorized |
 | [CAT B35]({% link docs/devices/cat-b35.md %}) | 2.5.1 | ⚠️ | Requires extracting using EDL and editing ADB hex on data partition |
 | Doro 7050 | 2.5 | ⚠️ | No KaiStore. Power + Vol- to boot into FFBM, 'adb shell start b2g', use W2D to turn on debugging mode. Wallace Toolbox for permanent dev menu |
-| Doro 7060/7070 | 2.5.1 | ⚠️ | No KaiStore. Power + Vol- to boot into FFBM, 'adb shell start b2g', use W2D to turn on debugging mode. Wallace Toolbox for permanent dev menu |
+| [Doro 7060/7070]({% link docs/devices/doro-7060.md %}) | 2.5.1 | ⚠️ | No KaiStore. Power + Vol- to boot into FFBM, 'adb shell start b2g', use W2D to turn on debugging mode. Wallace Toolbox for permanent dev menu |
 | Energizer E241 | 2.5.1.1 | ❓ |  |
 | Energizer E241s | 2.5.1.2 | ✅ |  |
 | Energizer E242s | 2.5.3.2 | 🔒 | Credits to u/CaramelSpoonful on Reddit for confirming |
@@ -45,7 +45,7 @@ Table of Contents
 | Alcatel 3078 3G | 2.5.1.1 | ❓ |  |
 | Alcatel 3088X | 2.5.1.1 | ✅ | W2D for debug mode |
 | Alcatel Go Flip 1/2 (4044v) | 1.0 | ✅ | After turning on debugging mode, dial ##3424# to enable serial port |
-| Alcatel Go Flip 3/<br>Alcatel SMARTFLIP | 2.5.2 | 🔒 |  |
+| [Alcatel Go Flip 3/<br>Alcatel SMARTFLIP]({% link docs/devices/alcatel-4052.md %}) | 2.5.2 | 🔒 |  |
 | Alcatel Go Flip 4 (4056w) | 3.0 | 🔒 | ADB reports as unauthorized.<br>Credits to u/tbrrss on Reddit for confirming |
 | Alcatel MyFlip (A405DL) | 2.5.x | ⚠️ | Requires extracting using EDL and editing ADB hex on data partition |
 | Alcatel MyFlip 2 (A406DL) | 2.5.4 | ✅ | No engmode-extension apps, no rooting |
