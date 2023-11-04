@@ -6,6 +6,7 @@ has_children: true
 has_toc: false
 last_modified_date: 2023-10-10
 ---
+![A row of various KaiOS phones](../../assets/Devices-Lineup-211130-2t.png)
 # Devices
 {: .no_toc }
 
@@ -13,8 +14,6 @@ Table of Contents
 {: .text-delta }
 - TOC
 {:toc}
-
-![A row of various KaiOS phones](../../assets/Devices-Lineup-211130-2.png)
 
 ## Quick reference table
 - A green tick (✅) indicates that this device is debug-enabled out-of-box. To enable debugging mode, go to w2d.bananahackers.net on the device's Browser, click on *Launch Developer menu* and toggle *ADB and DevTools* under *Debugger*. Some devices also have a dedicated code for quick toggling debugging mode, with `*#*#33284#*#*` being the most common.
