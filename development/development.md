@@ -7,7 +7,7 @@ has_children: true
 # Developer resources
 
 <div class="ac3d">
-  <img width="100%" src="../../assets/desert-225x300.png">
+  <img width="100%" src="../assets/desert-225x300.png">
   <p class="fs-2"><em>A gameplay screenshot from Christian Waadt's Airship Combat 3D</em></p>
 </div>
 <style>
@@ -51,5 +51,5 @@ Before you start developing KaiOS apps:
 ## Testing your app (KaiOS 2.5)
 - Include your app details in a good [manifest.webapp](https://wiki.bananahackers.net/development/manifest)
 - [Martin Kaptein's guide to sideloading apps on KaiOS](https://kaptein.me/blog/sideloading-and-deploying-apps-to-kai-os/) ([video by KaiOS Technologies](https://www.youtube.com/watch?v=wI-HW2cLrew))
-  - Looking for a beginner-friendly version of this guide? [Sideloading and debugging/ADB and WebIDE]({% link docs/guides/WebIDE.md %})
+  - Looking for a beginner-friendly version of this guide? [Sideloading and debugging/ADB and WebIDE]({% link development/WebIDE.md %})
 - [Debugging service workers on KaiOS](https://wiki.bananahackers.net/development/debugging-service-workers-on-kaios)
