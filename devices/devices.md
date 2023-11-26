@@ -6,7 +6,7 @@ has_children: true
 has_toc: false
 last_modified_date: 2023-10-10
 ---
-![A row of various KaiOS phones](../../assets/Devices-Lineup-211130-2t.png)
+![A row of various KaiOS phones](../assets/Devices-Lineup-211130-2t.png)
 # Devices
 {: .no_toc }
 
@@ -17,26 +17,26 @@ Table of Contents
 
 ## Quick reference table
 - A green tick (✅) indicates that this device is debug-enabled out-of-box. To enable debugging mode, go to w2d.bananahackers.net on the device's Browser, click on *Launch Developer menu* and toggle *ADB and DevTools* under *Debugger*. Some devices also have a dedicated code for quick toggling debugging mode, with `*#*#33284#*#*` being the most common.
-  - Check out the dedicated [Sideloading and debugging]({% link docs/guides/sideloading.md %}) section for more information on methods of installing and debugging third-party apps.
+  - Check out the dedicated [Sideloading and debugging]({% link sideloading/sideloading.md %}) section for more information on methods of installing and debugging third-party apps.
 - A warning symbol (⚠️) means that this device needs additional steps prior to activate debugging capability, such as editing some system files or at worst requiring permanent root access. Read the notes and the device's dedicated page for information and guides.
-- A lock (🔒) means that this device is, sadly, currently unable to be debugged using most of the known methods. [Not all hope is lost, though.]({% link docs/guides/recovery-inject.md %})
+- A lock (🔒) means that this device is, sadly, currently unable to be debugged using most of the known methods. [Not all hope is lost, though.]({% link sideloading/recovery-inject.md %})
 - A question mark (❓) means that this device is untested. We cannot get our hands on all available KaiOS devices to test them out, and we need your help! If you want to contribute to this table, post your discoveries on [r/KaiOS subreddit](https://reddit.com/r/KaiOS), [BananaHackers Google Groups](https://groups.google.com/g/bananahackers) or hit me up on [GitHub](https://github.com/minhduc-bui1/wiki/issues/new/choose)!
 
 *I'd like to thank the team at [PhoneCopy](https://www.phonecopy.com/en/phones/os/KaiOS) for collecting KaiOS phones' information and making this table possible! Not sponsored, but definitely check them out.*
 
 | Model name | Version | Debugging status | Note |
 |:--|:--|:-:|:--|
-| [Nokia 8110 4G]({% link docs/devices/nokia-argon.md %}) | 2.5.1<br>17.00.17.01 | ✅ |  |
-| [Nokia 2720 Flip]({% link docs/devices/nokia-beatles.md %}) | 2.5.2.2<br>40.00.17.02 | ⚠️ | Debug-enabled on 2.5.2, requires permanent root via boot partition modifying on 2.5.2.2 |
-| [Nokia 800 Tough]({% link docs/devices/nokia-coconut.md %}) | 2.5.2.2<br>40.00.17.01 | ⚠️ | Debug-enabled on 2.5.2, requires permanent root via boot partition modifying on 2.5.2.2 |
-| [Nokia 8000 4G]({% link docs/devices/nokia-sparkler.md %}) | 2.5.4<br>20.00.17.01 | ✅ | No engmode-extension apps, requires boot partition patching to root |
-| [Nokia 6300 4G]({% link docs/devices/nokia-leo.md %}) | 2.5.4<br>30.00.17.01 | ✅ | No engmode-extension apps, requires boot partition patching to root<br>(excl. TA-1324 not rootable due to different PK_HASH ⇒ no substitute loader) |
+| [Nokia 8110 4G]({% link devices/nokia-argon.md %}) | 2.5.1<br>17.00.17.01 | ✅ |  |
+| [Nokia 2720 Flip]({% link devices/nokia-beatles.md %}) | 2.5.2.2<br>40.00.17.02 | ⚠️ | Debug-enabled on 2.5.2, requires permanent root via boot partition modifying on 2.5.2.2 |
+| [Nokia 800 Tough]({% link devices/nokia-coconut.md %}) | 2.5.2.2<br>40.00.17.01 | ⚠️ | Debug-enabled on 2.5.2, requires permanent root via boot partition modifying on 2.5.2.2 |
+| [Nokia 8000 4G]({% link devices/nokia-sparkler.md %}) | 2.5.4<br>20.00.17.01 | ✅ | No engmode-extension apps, requires boot partition patching to root |
+| [Nokia 6300 4G](https://minhduc-bui1.github.io/nokia-leo) | 2.5.4<br>30.00.17.01 | ✅ | No engmode-extension apps, requires boot partition patching to root<br>(excl. TA-1324 not rootable due to different PK_HASH ⇒ no substitute loader) |
 | Nokia 2720 V Flip | 2.5.4<br>10.00.17.12 | 🔒 | Rooting procedures should be the same as 8000 4G/6300 4G, but phone rejects patched boot image |
 | Nokia 2760 Flip | 3.1 | 🔒 | ADB reports as unauthorized |
-| [Nokia 2780 Flip]({% link docs/devices/nokia-weeknd.md %}) | 3.1 | ⚠️ | Custom firmware & manual injection to sideload, no debugging. ADB reports as unauthorized |
-| [CAT B35]({% link docs/devices/cat-b35.md %}) | 2.5.1 | ⚠️ | Requires extracting using EDL and editing ADB hex on data partition |
+| [Nokia 2780 Flip]({% link devices/nokia-weeknd.md %}) | 3.1 | ⚠️ | Custom firmware & manual injection to sideload, no debugging. ADB reports as unauthorized |
+| [CAT B35]({% link devices/cat-b35.md %}) | 2.5.1 | ⚠️ | Requires extracting using EDL and editing ADB hex on data partition |
 | Doro 7050 | 2.5 | ⚠️ | No KaiStore. Power + Vol- to boot into FFBM, 'adb shell start b2g', use W2D to turn on debugging mode. Wallace Toolbox for permanent dev menu |
-| [Doro 7060/7070]({% link docs/devices/doro-7060.md %}) | 2.5.1 | ⚠️ | No KaiStore. Power + Vol- to boot into FFBM, 'adb shell start b2g', use W2D to turn on debugging mode. Wallace Toolbox for permanent dev menu |
+| [Doro 7060/7070]({% link devices/doro-7060.md %}) | 2.5.1 | ⚠️ | No KaiStore. Power + Vol- to boot into FFBM, 'adb shell start b2g', use W2D to turn on debugging mode. Wallace Toolbox for permanent dev menu |
 | Energizer E241 | 2.5.1.1 | ❓ |  |
 | Energizer E241s | 2.5.1.2 | ✅ |  |
 | Energizer E242s | 2.5.3.2 | 🔒 | Credits to u/CaramelSpoonful on Reddit for confirming |
@@ -46,7 +46,7 @@ Table of Contents
 | Alcatel 3078 3G | 2.5.1.1 | ❓ |  |
 | Alcatel 3088X | 2.5.1.1 | ✅ | W2D for debug mode |
 | Alcatel Go Flip 1/2 (4044v) | 1.0 | ✅ | After turning on debugging mode, dial ##3424# to enable serial port |
-| [Alcatel Go Flip 3/<br>Alcatel SMARTFLIP]({% link docs/devices/alcatel-4052.md %}) | 2.5.2 | 🔒 |  |
+| [Alcatel Go Flip 3/<br>Alcatel SMARTFLIP]({% link devices/alcatel-4052.md %}) | 2.5.2 | 🔒 |  |
 | Alcatel Go Flip 4 (4056w) | 3.0 | 🔒 | ADB reports as unauthorized.<br>Credits to u/tbrrss on Reddit for confirming |
 | Alcatel MyFlip (A405DL) | 2.5.x | ⚠️ | Requires extracting using EDL and editing ADB hex on data partition |
 | Alcatel MyFlip 2 (A406DL) | 2.5.4 | ✅ | No engmode-extension apps, no rooting |

@@ -38,14 +38,14 @@ last_modified_date: 2023-09-30
 </table>
 </details>
 
-<img width=460 style="float:right" src="../../assets/nokia-sparkler/nokia_8000_4G-emotional-Range.png">
+<img width=460 style="float:right" src="../assets/nokia-sparkler/nokia_8000_4G-emotional-Range.png">
 
 Table of Contents
 {: .text-delta }
 - TOC
 {:toc}
 
-As this device is almost identical to the Nokia 6300 4G, everything you need to know about this phone, including special codes, boot modes and rooting guide are located in the [Nokia 6300 4G]({% link docs/devices/nokia-leo.md %}) page.
+As this device is almost identical to the Nokia 6300 4G, everything you need to know about this phone, including special codes, boot modes and rooting guide are located in the [Nokia 6300 4G](https://minhduc-bui1.github.io/nokia-leo) page.
 
 ## Source code
 HMD Global/Nokia Mobile has published the device's source code for its Linux 4.9 kernel, B2G and certain third-party libraries used in this phone, which can be downloaded directly from [here](https://nokiaphones-opensource.azureedge.net/download/phones/Nokia_8000_4G_20.00.17.01_OSS.tar.gz).

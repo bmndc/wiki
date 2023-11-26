@@ -38,14 +38,14 @@ last_modified_date: 2023-10-11
 </table>
 </details>
 
-<img width=460 style="float:right" src="../../assets/nokia-beatles/nokia_2720-emotional.png">
+<img width=460 style="float:right" src="../assets/nokia-beatles/nokia_2720-emotional.png">
 
 Table of Contents
 {: .text-delta }
 - TOC
 {:toc}
 
-Announced at IFA 2019 together with the rugged [Nokia 800 Tough](https://wiki.bananahackers.net/devices/nokia-800-tough), the budget Nokia 110, Nokia 6.2 and Nokia 7.2, the Nokia 2720 Flip is the second KaiOS phone to be released under the HMD-era as a successor to the bananaphone [Nokia 8110 4G](https://wiki.bananahackers.net/devices/nokia-8110-4g). This phone brings back the flip design inspired by the original Nokia 2720 Fold (2007) that many people loved, mixing it with 4G LTE connectivity and access to modern services such as WhatsApp, Facebook, Twitter, Google Maps and YouTube.
+Announced at IFA 2019 together with the rugged [Nokia 800 Tough]({% link devices/nokia-coconut.md %}), the budget Nokia 110, Nokia 6.2 and Nokia 7.2, the Nokia 2720 Flip is the second KaiOS phone to be released under the HMD-era as a successor to the bananaphone [Nokia 8110 4G]({% link devices/nokia-argon.md %}). This phone brings back the flip design inspired by the original Nokia 2720 Fold (2007) that many people loved, mixing it with 4G LTE connectivity and access to modern services such as WhatsApp, Facebook, Twitter, Google Maps and YouTube.
 
 The phone also features:
 - a big 2.8-inch screen on the inside and an external 1.3-inch screen for displaying time, incoming calls and text notifications
@@ -145,6 +145,6 @@ Remember, **only buy from trusted, reputable sources**, even if they offer highe
 EDL programmer for this phone can be found on BananaHackers' [EDL archive site](https://edl.bananahackers.net/loaders/2720.mbn) with hardware ID 0x009600e100420029.
 
 ## Sideloading and debugging third-party applications
-On v22 and earlier: see [Sideloading and debugging/WebIDE]({% link docs/guides/WebIDE.md %}).
+On v22 and earlier: see [Sideloading and debugging/WebIDE]({% link development/WebIDE.md %}).
 
-On v30 and later: see [ROOT: Boot partition modifying]({% link docs/devices/nokia-leo.md %}#root-boot-partition-modifying-non-us-only).
+On v30 and later: see [ROOT: Boot partition modifying](https://minhduc-bui1.github.io/nokia-leo#root-boot-partition-modifying-non-us-only).

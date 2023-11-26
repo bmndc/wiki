@@ -39,14 +39,14 @@ nav_exclude: true
 </table>
 </details>
 
-<img style="float:right" src="../../assets/nokia-argon/nokia_8110-emotional.png">
+<img style="float:right" src="../assets/nokia-argon/nokia_8110-emotional.png">
 
 Table of Contents
 {: .text-delta }
 - TOC
 {:toc}
 
-![The yellow Nokia 8110 4G is standing upright at the center of a pixelated world. Around it are ad banners for the apps available on the phone. Texts on the upper left say: Nokia 8110, Reloaded For the originals, with Nokia logo at the bottom right.](../../assets/nokia-argon/banner.png)
+![The yellow Nokia 8110 4G is standing upright at the center of a pixelated world. Around it are ad banners for the apps available on the phone. Texts on the upper left say: Nokia 8110, Reloaded For the originals, with Nokia logo at the bottom right.](../assets/nokia-argon/banner.png)
 *Illustration by eBoy. Creative Director: [Tim van der Mee](https://timvandermee.com/Nokia-8110-Reloaded)*
 {:.fs-2}
 
