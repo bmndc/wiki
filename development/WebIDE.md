@@ -37,19 +37,29 @@ Before you ask: no, despite using Android compatibility layer for hardware suppo
 
 *Need a video tutorial? If you're on Linux, KaiOS Technologies officially made one for their own WebIDE client KaiOSRT which can be found [here](https://www.youtube.com/watch?v=wI-HW2cLrew). Alternatively, there's also one on BananaHackers' YouTube channel [here](https://www.youtube.com/watch?v=SoKD7IBTvM4).*
 
+<div class="w2d">
+  <img width="100%" alt="Demostration of the W2D website opened in KaiOS browser, with a huge Launch developer menu button shown in front" src="../assets/webide/w2d.jpeg">
+  <p class="fs-2"><em>W2D website</em></p>
+</div>
+<style>
+  .w2d {
+    @media (min-width:1100px) { width: 265px; height: 320px; float: right; padding-left: 25px }
+    margin: auto; width: 50vw
+  }
+  .w2d p { margin: 0; padding: 0 }
+</style>
+
 ### Turn on debugging mode on your phone
 1. Check whether your phone can be debugged and any special notes to follow on the [Devices page]({% link devices/devices.md %}).
    - Some may have specific codes that can be dialed from the home screen to quickly activate debugging mode, i.e. `*#*#33284#*#*` for Nokia devices and both `*#*#33284#*#*` and `*#*#0574#*#*` for Energizers and others. More details of this can be found on each device page.
 2. Navigate to https://w2d.bananahackers.net using default Browser on the phone. Use D-Pad keys to move the cursor and click on the big front <kbd>Launch Developer menu</kbd> button.
 3. In the newly opened Developer menu, select the first <kbd>Debugger</kbd> option, then <kbd>ADB and DevTools</kbd> from the dropdown menu. You should see a bug icon in the status bar letting you know ~~your phone has bugs inside~~ you're in debugging mode.
-
-<img width=300 style="margin-top:20px" alt="Demostration of the W2D website opened in KaiOS browser, with a huge Launch developer menu button shown in front" src="../assets/webide/w2d.jpeg">
-<img width=300 style="margin-top:20px" alt="Demostration of the Debugger menu with three options Disabled, ADB only and ADB and DevTools shown. The last is highlighted and selected. An icon in shape of a bug can be seen in the status bar" src="../assets/webide/developer_menu.jpeg">
-
-{:style="counter-reset:none"}
 4. If you're connecting to a Linux-based PC, you may need to go to Settings, Storage and turn on <kbd>USB Storage</kbd> for `udev` to properly register your phone as an USB peripheral. An icon in the status bar will appear indicating storage access via USB.
 
-<img width=300 style="margin-top:20px" alt="Demostration of the Storage page within Settings where the USB Storage option is highlighted and shown as Enabled. An icon in shape of the USB logo can be seen in the status bar" src="../assets/webide/usb_storage.jpeg">
+<p align="center">
+  <img width="240" alt="Demostration of the Debugger menu with three options Disabled, ADB only and ADB and DevTools shown. The last is highlighted and selected. An icon in shape of a bug can be seen in the status bar" src="../assets/webide/developer_menu.jpeg">
+  <img width="240" alt="Demostration of the Storage page within Settings where the USB Storage option is highlighted and shown as Enabled. An icon in shape of the USB logo can be seen in the status bar" src="../assets/webide/usb_storage.jpeg">
+</p>
 
 {:style="counter-reset:none"}
 5. Connect the phone to your computer with the USB cable.
@@ -83,6 +93,7 @@ $ adb devices
 List of devices attached
 1a2b3c4d	device
 ```
+
 {:style="counter-reset:none"}
 9. If you prefer to use other WebIDE clients, or if you have trouble connecting later on as `adbd` fails to detect your phone, forward ADB access to TCP socket 6000 for debugging:
 
