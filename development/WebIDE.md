@@ -70,11 +70,12 @@ Before you ask: no, despite using Android compatibility layer for hardware suppo
 > Skip to next part when you're done.
 
 6. On your computer, visit [Android Developers' SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) website and click on the link correspond to your operating system under the Downloads section. Read the terms if you want to, tick the box and click the green button to have the SDK downloaded to your computer.
-{:style="counter-reset:none"}
 
 ![Screenshot of Android Developers' SDK download page with download links for three operating systems under the Downloads section](../assets/webide/sdk_website.png)
 
 7. Extract the downloaded archive to a folder (double-click the file on macOS/Linux, 7-Zip > <kbd>Extract here</kbd> on Windows), navigate to its `platform-tools` root and open a command-line window by that directory.
+{:style="counter-reset:none"}
+
 8. Type `adb devices` to start the ADB binary server. ADB will automatically detect all devices with active debugging mode connected to the computer over USB. If a `device` shows, you're good to go! Otherwise, go back, check if you've missed any steps or whether [your phone supports ADB]({% link devices/devices.md %}).
    - Note that if you're unable to run `adb`, you may need to make it an executable: `chmod +x ./adb`
 
@@ -101,6 +102,7 @@ WIP
 </details>
 
 ### Connect to WebIDE
+
 10. We'll use [Waterfox Classic](https://classic.waterfox.net) for WebIDE (Firefox 59 and Pale Moon <28.6.1 will also do the job just fine). To download, head to the browser's homepage, download and install the version correspond to your OS.
 {:style="counter-reset:none"}
 
