@@ -62,8 +62,8 @@ Before you ask: no, despite using Android compatibility layer for hardware suppo
   <img width="240" alt="Demostration of the Storage page within Settings where the USB Storage option is highlighted and shown as Enabled. An icon in shape of the USB logo can be seen in the status bar" src="../assets/webide/usb_storage.jpeg">
 </p>
 
-{:style="counter-reset:none"}
 5. Connect the phone to your computer with the USB cable.
+{:style="counter-reset:none"}
 
 ### Download and set up ADB
 > Now, if your operating system has a package manager, you can utilize that to quickly install and set up ADB:
@@ -76,14 +76,13 @@ Before you ask: no, despite using Android compatibility layer for hardware suppo
 > 
 > Skip to next part when you're done.
 
-{:style="counter-reset:none"}
 6. On your computer, visit [Android Developers' SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) website and click on the link correspond to your operating system under the Downloads section. Read the terms if you want to, tick the box and click the green button to have the SDK downloaded to your computer.
+{:style="counter-reset:none"}
 
 ![Screenshot of Android Developers' SDK download page with download links for three operating systems under the Downloads section](../assets/webide/sdk_website.png)
-![Screenshot of SDK term agreement pop-up](../assets/webide/sdk_download.png)
 
-{:style="counter-reset:none"}
 7. Extract the downloaded archive to a folder (double-click the file on macOS/Linux, 7-Zip > <kbd>Extract here</kbd> on Windows), navigate to its `platform-tools` root and open a command-line window by that directory.
+{:style="counter-reset:none"}
 8. Type `adb devices` to start the ADB binary server. ADB will automatically detect all devices with active debugging mode connected to the computer over USB. If a `device` shows, you're good to go! Otherwise, go back, check if you've missed any steps or whether [your phone supports ADB]({% link devices/devices.md %}).
    - Note that if you're unable to run `adb`, you may need to make it an executable: `chmod +x ./adb`
 
@@ -95,8 +94,8 @@ List of devices attached
 1a2b3c4d	device
 ```
 
-{:style="counter-reset:none"}
 9. If you use other WebIDE clients, or if you have trouble connecting later on as `adbd` fails to detect your phone, forward ADB access to TCP socket 6000 for debugging:
+{:style="counter-reset:none"}
 
 ```
 $ adb forward tcp:6000 localfilesystem:/data/local/debugger-socket
@@ -110,38 +109,31 @@ WIP
 </details>
 
 ### Connect to WebIDE
-
-{:style="counter-reset:none"}
 10. We'll use [Waterfox Classic](https://classic.waterfox.net) for WebIDE (Firefox 59 and Pale Moon <28.6.1 will also do the job just fine). To download, head to the browser's homepage, download and install the version correspond to your OS.
+{:style="counter-reset:none"}
 
 ![Screenshot of Waterfox Classic browser's homepage with blue download buttons for three operating systems at the middle of the page](../assets/webide/waterfox_classic.png)
 
+11. Open Waterfox Classic and press the hamburger menu button at the right end of the toolbar, click the <kbd>Developer</kbd> entry (tenth option from top to bottom, left to right), then click <kbd>WebIDE</kbd>.
 {:style="counter-reset:none"}
-11. Open Waterfox Classic and press the hamburger menu button at the right end of the toolbar, click the <kbd>Developer</kbd> entry, then click <kbd>WebIDE</kbd>.
 
-![Demostration of the main dropdown menu when pressing the hamburger button, with Developer highlighted as the tenth option from top to bottom, left to right](../assets/webide/waterfox_classic_menu.jpeg)
 ![Demostration of the main menu sliding out to show the Web Developer submenu, with WebIDE highlighted as the tenth option from top to bottom](../assets/webide/waterfox_classic_dev.jpeg)
 
 *Tip: For quicker access to WebIDE, press its shortcut <kbd>Shift</kbd> + <kbd>F8</kbd> while you're in the browser.*
 
+12. Your phone's name should appear in the right pane as the first option under USB Devices section. Click it to connect. If you don't see any, click <kbd>Remote Runtime</kbd> in the right pane, leave it as default at `localhost:6000` and press OK. If you still cannot connect your phone to WebIDE, check if you've missed any steps or whether [your phone allows DevTools]({% link devices/devices.md %}).
 {:style="counter-reset:none"}
-12. Your phone's name should appear in the right pane. Click it to connect. If you don't see any, click <kbd>Remote Runtime</kbd> in the right pane, leave it as default at `localhost:6000` and press OK. If you still cannot connect your phone to WebIDE, check if you've missed any steps or whether [your phone allows DevTools]({% link devices/devices.md %}).
-
-![Screenshot of WebIDE interface, with the device's name as the first option under USB Devices section in the right pane](../assets/webide/device_name.jpeg)
 
 ![Screenshot of WebIDE interface with Remote Runtime pop-up shown after pressing the option in the right pane. The pop-up has 'localhost:6000' as the content of the input box, with two buttons to confirm or close.](../assets/webide/localhost_6000.png)
 
 *If you're using other means to access WebIDE such as Firefox v59 or Pale Moon <28.6.1, you may now see a warning header about mismatched build date. You can safely ignore it as WebIDE was mainly designed to support Firefox OS device builds released alongside that Firefox/Pale Moon versions.*
 
 ### Ready to sideload apps
-
-{:style="counter-reset:none"}
 13. To sideload an app, download it (you can find lots of great apps on [BananaHackers Store](https://store.bananahackers.net) and GitHub!) and extract its ZIP content (if you see an OmniSD-packaged `application.zip` you may need to extract that too).
-14. Select <kbd>Open Packaged Apps</kbd> in WebIDE's left sidebar and navigate to the root of the app folder you just extracted.
-
-![Screenshot of WebIDE interface with a device connected. The Open Packaged Apps is being highlighted as the second option in the left pane from top to bottom](../assets/webide/open_packaged_apps.png)
-
 {:style="counter-reset:none"}
+
+14. Select <kbd>Open Packaged Apps</kbd> in WebIDE's left sidebar (second option from top) and navigate to the root of the app folder you just extracted.
+
 15. Once you've got the app loaded, press the triangle <kbd>Install and Run</kbd> in the top bar to sideload!
 
 ![Screenshot of WebIDE interface with an app selected. The triangle Install and Run button (first one left to right) is being highlighted on the top pane](../assets/webide/install_and_run.png)
@@ -173,9 +165,8 @@ Dedicated to those adrenaline-fueled who want to complicate their lives.
 ```
 $ wget -S -O - https://raw.githubusercontent.com/cm-b2g/B2G/1230463/tools/51-android.rules | sudo tee >/dev/null /etc/udev/rules.d/51-android.rules; sudo udevadm control --reload-rules
 ```
-
-{:style="counter-reset:none"}
 2. Plug your phone to the computer using an USB cable and obtain the Vendor ID of the phone:
+{:style="counter-reset:none"}
 
 ```
 $ lsusb
@@ -184,20 +175,21 @@ Bus 001 Device 007: ID 05c6:f003 Qualcomm, Inc. Nokia 8110 4G
 ```
 In our case, the Qualcomm-based 8110 4G has the Vendor ID of `05c6`.
 
-{:style="counter-reset:none"}
 3. Open `/etc/udev/rules.d/51-android.rules` in your preferred text editor ***as root***. Append this line, replace `05c6` with the Vendor ID you got above:
+{:style="counter-reset:none"}
 
 ```
 SUBSYSTEM=="usb", ATTR{idVendor}=="05c6", MODE="0664", GROUP="plugdev"
 ```
 
-{:style="counter-reset:none"}
 4. Execute this command ***as root*** to make `51-android.rules` read-only for all users on the system:
+{:style="counter-reset:none"}
+
 ```
 $ sudo chmod a+r /etc/udev/rules.d/51-android.rules
 ```
-{:style="counter-reset:none"}
-5. Now, no longer as root, create `~/.android/adb_usb.ini` in your HOME directory. Open it using your preferred text editor and put the obtained Vendor ID value in HEX: `0xABCD`, whereas `ABCD` is Vendor ID
 
+5. Now, no longer as root, create `~/.android/adb_usb.ini` in your HOME directory. Open it using your preferred text editor and put the obtained Vendor ID value in HEX: `0xABCD`, whereas `ABCD` is Vendor ID
 {:style="counter-reset:none"}
+
 6. Re-run `adb devices`.
