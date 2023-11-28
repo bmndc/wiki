@@ -111,7 +111,7 @@ WIP
 {:style="counter-reset:none"}
 
 <div class="altf8">
-  <img height="100%" alt="Demostration of the main menu sliding out to show the Web Developer submenu, with WebIDE highlighted as the tenth option from top to bottom" src="../assets/webide/waterfox_classic_dev.jpeg">
+  <img width="100%" alt="Demostration of the main menu sliding out to show the Web Developer submenu, with WebIDE highlighted as the tenth option from top to bottom" src="../assets/webide/waterfox_classic_dev.jpeg">
   <p class="fs-2"><em>Tip: For quicker access to WebIDE, press its shortcut <kbd>Shift</kbd> + <kbd>F8</kbd> while you're in the browser.</em></p>
 </div>
 
@@ -192,9 +192,9 @@ $ sudo chmod a+r /etc/udev/rules.d/51-android.rules
 <style>
   .w2d {
     @media (min-width:1100px) { width: 265px; float: right; padding: 0 0 30px 25px }
-    margin: auto; width: 60vw
+    margin: 0 auto; width: 60vw
   }
   .w2d p { margin: 0; padding: 0 }
-  .altf8 { height: 100vh; padding-bottom: 40px; margin:auto }
+  .altf8 { width: 70vw; margin: 0 auto }
   .altf8 p { margin: 0; padding: 0 }
 </style>
