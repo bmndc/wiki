@@ -192,7 +192,7 @@ $ sudo chmod a+r /etc/udev/rules.d/51-android.rules
 <style>
   .w2d {
     @media (min-width:1100px) { width: 265px; float: right; padding: 0 0 30px 25px }
-    margin: 0 auto; width: 60vw
+    margin: 0 auto
   }
   .w2d p { margin: 0; padding: 0 }
   .altf8 { max-width: 485px; margin: 0 auto }
