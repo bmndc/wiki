@@ -43,18 +43,19 @@ Before you ask: no, despite using Android compatibility layer for hardware suppo
 </div>
 <style>
   .w2d {
-    @media (min-width:1100px) { width: 265px; height: 320px; float: right; padding-left: 25px }
-    margin: auto; width: 50vw
+    @media (min-width:1100px) { width: 265px; float: right; padding: 0 0 30px 25px }
+    margin: auto; width: 60vw
   }
   .w2d p { margin: 0; padding: 0 }
 </style>
 
 ### Turn on debugging mode on your phone
 1. Check whether your phone can be debugged and any special notes to follow on the [Devices page]({% link devices/devices.md %}).
-   - Some may have specific codes that can be dialed from the home screen to quickly activate debugging mode, i.e. `*#*#33284#*#*` for Nokia devices and both `*#*#33284#*#*` and `*#*#0574#*#*` for Energizers and others. More details of this can be found on each device page.
+   - Some may have specific codes that can be dialed to quickly activate debugging mode, i.e. `*#*#33284#*#*` for Nokia devices and both `*#*#33284#*#*` and `*#*#0574#*#*` for Energizers and others. Details can be found on each device page.
 2. Navigate to https://w2d.bananahackers.net using default Browser on the phone. Use D-Pad keys to move the cursor and click on the big front <kbd>Launch Developer menu</kbd> button.
 3. In the newly opened Developer menu, select the first <kbd>Debugger</kbd> option, then <kbd>ADB and DevTools</kbd> from the dropdown menu. You should see a bug icon in the status bar letting you know ~~your phone has bugs inside~~ you're in debugging mode.
 4. If you're connecting to a Linux-based PC, you may need to go to Settings, Storage and turn on <kbd>USB Storage</kbd> for `udev` to properly register your phone as an USB peripheral. An icon in the status bar will appear indicating storage access via USB.
+   - If you need to skip this step, feel free to go through the painstaking [Setting up USB access on Linux](#setting-up-usb-access-on-linux) process below.
 
 <p align="center">
   <img width="240" alt="Demostration of the Debugger menu with three options Disabled, ADB only and ADB and DevTools shown. The last is highlighted and selected. An icon in shape of a bug can be seen in the status bar" src="../assets/webide/developer_menu.jpeg">
@@ -95,7 +96,7 @@ List of devices attached
 ```
 
 {:style="counter-reset:none"}
-9. If you prefer to use other WebIDE clients, or if you have trouble connecting later on as `adbd` fails to detect your phone, forward ADB access to TCP socket 6000 for debugging:
+9. If you use other WebIDE clients, or if you have trouble connecting later on as `adbd` fails to detect your phone, forward ADB access to TCP socket 6000 for debugging:
 
 ```
 $ adb forward tcp:6000 localfilesystem:/data/local/debugger-socket
@@ -146,3 +147,57 @@ WIP
 ![Screenshot of WebIDE interface with an app selected. The triangle Install and Run button (first one left to right) is being highlighted on the top pane](../assets/webide/install_and_run.png)
 
 > If you encounter an issue in a sideloaded app and want to debug, click the wrench to open the Developer Tools.
+
+## Other WebIDE alternatives
+* [KaiOS RunTime](https://developer.kaiostech.com/docs/02.getting-started/01.env-setup/simulator) (Linux): official developing environment for KaiOS 2.5 made by KaiOS Technologies the company. 
+  - To download and set up KaiOSRT on Ubuntu, type these commands one-by-one in Terminal:
+```
+wget https://s3.amazonaws.com/kaicloudsimulatordl/developer-portal/simulator/Kaiosrt_ubuntu.tar.bz2
+tar -axvf Kaiosrt_ubuntu.tar.bz2
+cd kaiosrt-v2.5-ubuntu-20190925163557-n378
+tar -axvf kaiosrt-v2.5.en-US.linux-x86_64.tar.bz2
+cd kaiosrt
+./kaiosrt
+```
+*It's also possible to get KaiOSRT to work on Windows 10 and later using Windows Subsystem for Linux (WSLg). [See this video on YouTube for action](https://youtu.be/eg2SOCTMxYU).*
+
+* Firefox 59 (ESR 52.9): the last official Firefox version to bundle with working WebIDE and other tools for development on Firefox OS devices, before Mozilla decided to kill the project in 2016. Archives of all Firefox releases can be found [here](https://archive.mozilla.org).
+* Pale Moon 28.6.1 (Windows/Linux): a popular fork of Firefox with older user interface, legacy Firefox add-on support and always running in single-process mode. Archives of all releases can be found [here]( https://www.palemoon.org/archived.shtml).
+* jkelol111's [Make KaiOS Install](https://github.com/jkelol111/make-kaios-install): another command-line tool to install apps using KaiOS's remote debugging protocol.
+
+## Setting up USB access on Linux
+Dedicated to those adrenaline-fueled who want to complicate their lives.
+
+1. Download and install `51-android.rules` by typing this long streak of command:
+
+```
+$ wget -S -O - https://raw.githubusercontent.com/cm-b2g/B2G/1230463/tools/51-android.rules | sudo tee >/dev/null /etc/udev/rules.d/51-android.rules; sudo udevadm control --reload-rules
+```
+
+{:style="counter-reset:none"}
+2. Plug your phone to the computer using an USB cable and obtain the Vendor ID of the phone:
+
+```
+$ lsusb
+Bus 001 Device 007: ID 05c6:f003 Qualcomm, Inc. Nokia 8110 4G
+                       ^^^^
+```
+In our case, the Qualcomm-based 8110 4G has the Vendor ID of `05c6`.
+
+{:style="counter-reset:none"}
+3. Open `/etc/udev/rules.d/51-android.rules` in your preferred text editor ***as root***. Append this line, replace `05c6` with the Vendor ID you got above:
+
+```
+SUBSYSTEM=="usb", ATTR{idVendor}=="05c6", MODE="0664", GROUP="plugdev"
+```
+
+{:style="counter-reset:none"}
+4. Execute this command ***as root*** to make `51-android.rules` read-only for all users on the system:
+```
+$ sudo chmod a+r /etc/udev/rules.d/51-android.rules
+```
+{:style="counter-reset:none"}
+5. Now, no longer as root, create `~/.android/adb_usb.ini` in your HOME directory. Open it using your preferred text editor and put the obtained Vendor ID value in HEX: `0xABCD`, whereas `ABCD` is Vendor ID
+
+{:style="counter-reset:none"}
+6. Re-run `adb devices`.
