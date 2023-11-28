@@ -78,6 +78,7 @@ Before you ask: no, despite using Android compatibility layer for hardware suppo
 {:style="counter-reset:none"}
 
 8. Type `adb devices` to start the ADB binary server. ADB will automatically detect all devices with active debugging mode connected to the computer over USB. If a `device` shows, you're good to go! Otherwise, go back, check if you've missed any steps or whether [your phone supports ADB]({% link devices/devices.md %}).
+{:style="counter-reset:none"}
    - Note that if you're unable to run `adb`, you may need to make it an executable: `chmod +x ./adb`
 
 ```
