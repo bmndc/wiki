@@ -75,7 +75,6 @@ Before you ask: no, despite using Android compatibility layer for hardware suppo
 ![Screenshot of Android Developers' SDK download page with download links for three operating systems under the Downloads section](../assets/webide/sdk_website.png)
 
 7. Extract the downloaded archive to a folder (double-click the file on macOS/Linux, 7-Zip > <kbd>Extract here</kbd> on Windows), navigate to its `platform-tools` root and open a command-line window by that directory.
-{:style="counter-reset:none"}
 8. Type `adb devices` to start the ADB binary server. ADB will automatically detect all devices with active debugging mode connected to the computer over USB. If a `device` shows, you're good to go! Otherwise, go back, check if you've missed any steps or whether [your phone supports ADB]({% link devices/devices.md %}).
    - Note that if you're unable to run `adb`, you may need to make it an executable: `chmod +x ./adb`
 
@@ -124,7 +123,6 @@ WIP
 
 ### Ready to sideload apps
 13. To sideload an app, download it (you can find lots of great apps on [BananaHackers Store](https://store.bananahackers.net) and GitHub!) and extract its ZIP content (if you see an OmniSD-packaged `application.zip` you may need to extract that too).
-{:style="counter-reset:none"}
 
 14. Select <kbd>Open Packaged Apps</kbd> in WebIDE's left sidebar (second option from top) and navigate to the root of the app folder you just extracted.
 
