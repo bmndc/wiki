@@ -193,6 +193,6 @@ $ sudo chmod a+r /etc/udev/rules.d/51-android.rules
     margin: 0 auto; width: 60vw
   }
   .w2d p { margin: 0; padding: 0 }
-  .altf8 { width: 32vw; margin: 0 auto }
+  .altf8 { width: 485px; margin: 0 auto }
   .altf8 p { margin: 0; padding: 0 }
 </style>
