@@ -41,13 +41,6 @@ Before you ask: no, despite using Android compatibility layer for hardware suppo
   <img width="100%" alt="Demostration of the W2D website opened in KaiOS browser, with a huge Launch developer menu button shown in front" src="../assets/webide/w2d.jpeg">
   <p class="fs-2"><em>W2D website</em></p>
 </div>
-<style>
-  .w2d {
-    @media (min-width:1100px) { width: 265px; float: right; padding: 0 0 30px 25px }
-    margin: auto; width: 60vw
-  }
-  .w2d p { margin: 0; padding: 0 }
-</style>
 
 ### Turn on debugging mode on your phone
 1. Check whether your phone can be debugged and any special notes to follow on the [Devices page]({% link devices/devices.md %}).
@@ -117,9 +110,10 @@ WIP
 11. Open Waterfox Classic and press the hamburger menu button at the right end of the toolbar, click the <kbd>Developer</kbd> entry (tenth option from top to bottom, left to right), then click <kbd>WebIDE</kbd>.
 {:style="counter-reset:none"}
 
-![Demostration of the main menu sliding out to show the Web Developer submenu, with WebIDE highlighted as the tenth option from top to bottom](../assets/webide/waterfox_classic_dev.jpeg)
-
-*Tip: For quicker access to WebIDE, press its shortcut <kbd>Shift</kbd> + <kbd>F8</kbd> while you're in the browser.*
+<div class="altf8">
+  <img height="100%" alt="Demostration of the main menu sliding out to show the Web Developer submenu, with WebIDE highlighted as the tenth option from top to bottom" src="../assets/webide/waterfox_classic_dev.jpeg">
+  <p class="fs-2"><em>Tip: For quicker access to WebIDE, press its shortcut <kbd>Shift</kbd> + <kbd>F8</kbd> while you're in the browser.</em></p>
+</div>
 
 12. Your phone's name should appear in the right pane as the first option under USB Devices section. Click it to connect. If you don't see any, click <kbd>Remote Runtime</kbd> in the right pane, leave it as default at `localhost:6000` and press OK. If you still cannot connect your phone to WebIDE, check if you've missed any steps or whether [your phone allows DevTools]({% link devices/devices.md %}).
 {:style="counter-reset:none"}
@@ -143,6 +137,7 @@ WIP
 ## Other WebIDE alternatives
 * [KaiOS RunTime](https://developer.kaiostech.com/docs/02.getting-started/01.env-setup/simulator) (Linux): official developing environment for KaiOS 2.5 made by KaiOS Technologies the company. 
   - To download and set up KaiOSRT on Ubuntu, type these commands one-by-one in Terminal:
+
 ```
 wget https://s3.amazonaws.com/kaicloudsimulatordl/developer-portal/simulator/Kaiosrt_ubuntu.tar.bz2
 tar -axvf Kaiosrt_ubuntu.tar.bz2
@@ -193,3 +188,13 @@ $ sudo chmod a+r /etc/udev/rules.d/51-android.rules
 {:style="counter-reset:none"}
 
 6. Re-run `adb devices`.
+
+<style>
+  .w2d {
+    @media (min-width:1100px) { width: 265px; float: right; padding: 0 0 30px 25px }
+    margin: auto; width: 60vw
+  }
+  .w2d p { margin: 0; padding: 0 }
+  .altf8 { height: 100vh; padding-bottom: 40px; margin:auto }
+  .altf8 p { margin: 0; padding: 0 }
+</style>
