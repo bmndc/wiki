@@ -37,11 +37,14 @@ callouts:
   warning:
     title: Warning
     color: yellow
-  caution:
+  is-warning:
+    title: Warning
+    color: yellow
+  is-error:
     title: Caution
     color: red
-  note:
+  is-info:
     title: Note
     color: blue
-  success:
+  is-success:
     color: green
