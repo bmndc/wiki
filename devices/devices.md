@@ -2,6 +2,7 @@
 title: Devices
 nav_order: 2
 has_children: true
+layout: default
 has_toc: false
 last_modified_date: 2023-10-10
 ---

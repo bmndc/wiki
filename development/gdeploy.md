@@ -2,6 +2,7 @@
 title: gdeploy
 parent: Sideloading and debugging
 nav_order: 2
+layout: default
 ---
 # `gdeploy`
 `gdeploy` is a small cross-platform command-line utility developed by Luxferre as an alternative to the graphical WebIDE, and can even be used as NodeJS module/library. According to Luxferre, 'it uses the same `firefox-client` backend but has much simpler architecture for application management'.
