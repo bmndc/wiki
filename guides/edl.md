@@ -1,7 +1,6 @@
 ---
 title: Fastboot and EDL
 parent: Customization
-layout: default
 ---
 {:.no_toc}
 

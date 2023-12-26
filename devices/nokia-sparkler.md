@@ -1,7 +1,6 @@
 ---
 title: Nokia 8000 4G
 parent: Devices
-layout: default
 nav_exclude: true
 last_modified_date: 2023-09-30
 ---

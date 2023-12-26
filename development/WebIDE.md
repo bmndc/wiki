@@ -1,7 +1,6 @@
 ---
 title: ADB and WebIDE
 parent: Sideloading and debugging
-layout: default
 nav_order: 1
 last_modified_date: 2023-11-28
 ---
