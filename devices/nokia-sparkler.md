@@ -10,30 +10,45 @@ last_modified_date: 2023-09-30
 
 <details markdown="block">
   <summary dir="rtl">View device specification table</summary>
-<table>
-  <thead><tr><th colspan="2">Nokia 8000 4G (nokia-sparkler)</th></tr></thead>
+<table style="font-size:small">
+  <thead><tr><th></th><th>Nokia 6300 4G (nokia-leo)</th><th>Nokia 8000 4G (nokia-sparkler)</th></tr></thead>
   <tbody>
-    <tr><td>Released</td><td>13 November 2020</td></tr>
-    <tr><td>Model</td><td>TA-1300, TA-1303, TA-1305, TA-1311</td></tr>
-  <tr><td colspan="2"><strong>Specifications</strong></td></tr>
-    <tr><td>SoC</td><td>Qualcomm MSM8909 Snapdragon 210<br>(4 x 1.1GHz Cortex-A7)</td></tr>
-    <tr><td>RAM</td><td>512MB LPDDR2/3</td></tr>
-    <tr><td>GPU</td><td>Adreno 304</td></tr>
-    <tr><td>Storage</td><td>4GB eMMC 4.5 (+ up to 32GB microSDHC card)</td></tr>
-    <tr><td>Network</td><td>2G GSM, 3G UMTS, 4G LTE Cat4 150/50Mbps<br><em>+ EU (except East Ukraine, Azerbaijan, Georgia), APAC: band 1, 3, 5, 7, 8, 20<br>+ HK, Macau, MENA, CN, Nigeria, Tanzania: band 1, 3, 5, 7, 8, 20, 28, 38, 39, 40, 41<br>+ ROW: band 1, 3, 5, 7, 8, 20, 28, 38, 40</em><br>VoLTE &amp; VoWiFi support<br>Single or Dual SIM (Nano-SIM, dual-standby)</td></tr>
-    <tr><td>Screen</td><td>320 x 240 @ 143 PPI<br>2.8 inches QVGA TFT LCD, 16M colors</td></tr>
-    <tr><td>Bluetooth</td><td>4.0, A2DP, LE</td></tr>
-    <tr><td>Wi-Fi</td><td>802.11b/g/n, 2.4GHz, Hotspot</td></tr>
-    <tr><td>Peripherals</td><td>GPS</td></tr>
-    <tr><td>Cameras</td><td>Rear: 2MP, LED flash</td></tr>
-    <tr><td>Dimensions<br>(HWD)</td><td>132.2 * 56.5 * 12.3 (mm)<br>5.20 * 2.22 * 0.48 (in)</td></tr>
-    <tr><td>Weight</td><td>110.2 g (3.88 oz)</td></tr>
-    <tr><td>Ports</td><td>- microUSB charging &amp; USB 2.0 data transferring port<br>- 3.5mm headphone jack</td></tr>
-    <tr><td>Battery</td><td>Removable Li-Ion 1500mAh (BL-4XL), 5W wired charging</td></tr>
-  <tr><td colspan="2"><strong>KaiOS info</strong></td></tr>
-    <tr><td>Version</td><td>KaiOS 2.5.4</td></tr>
-    <tr><td>WA VoIP</td><td>Supported</td></tr>
-    <tr><td>Build no.</td><td>10.00.17.01, 12.00.17.01, 20.00.17.01, 30.00.17.01</td></tr>
+    <tr><td>Released</td><td colspan=2>13 November 2020</td></tr>
+    <tr><td>Model</td><td>TA-1286, TA-1287, TA-1291, TA-1294, TA-1307, TA-1324</td>
+      <td>TA-1300, TA-1303, TA-1305, TA-1311</td></tr>
+  <tr><td colspan=3 align="center"><strong>Specifications</strong></td></tr>
+    <tr><td>SoC</td><td colspan=2>Qualcomm MSM8909 Snapdragon 210<br>(4 x 1.1GHz Cortex-A7)</td></tr>
+    <tr><td>RAM</td><td colspan=2>512MB LPDDR2/3</td></tr>
+    <tr><td>GPU</td><td colspan=2>Adreno 304</td></tr>
+    <tr><td>Storage</td><td colspan=2>4GB eMMC 4.5 (+ up to 32GB microSDHC card)</td></tr>
+    <tr><td>Network</td><td>2G GSM, 3G UMTS, 4G LTE Cat4 150/50Mbps<br><em>
+      + EU (except East Ukraine, Azerbaijan, Georgia), APAC: band 1, 3, 5, 7, 8, 20<br>
+      + MENA, CN, Nigeria, Tanzania: band 1, 3, 5, 7, 8, 20, 28, 38, 39, 40, 41<br>
+      + US: band 2, 4, 5, 12, 17, 66, 71<br>
+      + LATAM: band 2, 3, 4, 5, 7, 28<br>
+      + ROW: band 1, 3, 5, 7, 8, 20, 38, 40</em><br>
+      VoLTE &amp; VoWiFi support<br>Single or Dual SIM (Nano-SIM, dual-standby)</td>
+      <td>2G GSM, 3G UMTS, 4G LTE Cat4 150/50Mbps<br><em>
+      + EU (except East Ukraine, Azerbaijan, Georgia), APAC: band 1, 3, 5, 7, 8, 20<br>
+      + HK, Macau, MENA, CN, Nigeria, Tanzania: band 1, 3, 5, 7, 8, 20, 28, 38, 39, 40, 41<br>
+      + ROW: band 1, 3, 5, 7, 8, 20, 28, 38, 40</em><br>
+      VoLTE &amp; VoWiFi support<br>Single or Dual SIM (Nano-SIM, dual-standby)</td></tr>
+    <tr><td>Screen</td><td>320 * 240 @ 167 PPI<br>2.4 inches QVGA TFT LCD, 16M colors</td>
+      <td>320 * 240 @ 143 PPI<br>2.8 inches QVGA TFT LCD, 16M colors</td></tr>
+    <tr><td>Bluetooth</td><td colspan=2>4.0, A2DP, LE</td></tr>
+    <tr><td>Wi-Fi</td><td colspan=2>802.11b/g/n, 2.4GHz, Hotspot (up to 8 devices)</td></tr>
+    <tr><td>Peripherals</td><td colspan=2>GPS &amp; GLONASS</td></tr>
+    <tr><td>Cameras</td><td>Rear: VGA with fixed focus, LED flash</td><td>Rear: 2MP with fixed focus, LED flash</td></tr>
+    <tr><td>Dimensions<br>(HWD)</td><td>131.4 * 53 * 13.7 (mm)<br>5.17 * 2.09 * 0.54 (in)</td>
+      <td>132.2 * 56.5 * 12.3 (mm)<br>5.20 * 2.22 * 0.48 (in)</td></tr>
+    <tr><td>Weight</td><td>With battery: 104.1g (3.67oz)</td><td>With battery: 107.9g (3.81oz)</td></tr>
+    <tr><td>Ports</td><td colspan=2>- microUSB charging &amp; USB 2.0 data transferring port<br>- 3.5mm headphone jack</td></tr>
+    <tr><td>Battery</td><td colspan=2>Removable Li-Ion 1500mAh (BL-4XL), 5W wired charging<br>
+      (up to 25 days of 4G standby advertised)</td></tr>
+  <tr><td colspan=3 align="center"><strong>KaiOS info</strong></td></tr>
+    <tr><td>Version</td><td colspan=2>KaiOS 2.5.4</td></tr>
+    <tr><td>WA VoIP</td><td colspan=2>Supported</td></tr>
+    <tr><td>Build no.</td><td colspan=2>10.00.17.01, 12.00.17.01, 20.00.17.01, 30.00.17.01</td></tr>
   </tbody>
 </table>
 </details>
