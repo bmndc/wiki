@@ -38,3 +38,4 @@ nav_exclude: true
 </table>
 </details>
 
+<img src="../assets/cgartenberg_190821_3598_0012.jpg" style="float:right;width:460;height:460;object-fit:cover;">
