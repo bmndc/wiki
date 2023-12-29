@@ -65,7 +65,7 @@ Overall plastic build material and hinge design are also hardware issues to cons
 - [Nokia 2720 Flip (2019) reviews and some hacks](https://www.reddit.com/r/KaiOS/comments/lp0y2e/nokia_2720_flip_2019_review_and_some_hacks/) on r/KaiOS
 - [Thinking out on buying a Nokia 2720 flip for using it as a daily driver](https://www.reddit.com/r/KaiOS/comments/k3w5d2/thinking_out_on_buying_a_nokia_2720_flip_for/) on r/KaiOS
 
-![Image of two variants of the 2720 Flips on a white surface: the left closed one comes in White, and the right opened one showing the apps list comes in Black.](../../assets/nokia-beatles/banner.jpg)
+![Image of two variants of the 2720 Flips on a white surface: the left closed one comes in White, and the right opened one showing the apps list comes in Black.](https://cdn.vox-cdn.com/uploads/chorus_asset/file/19168613/cgartenberg_190821_3598_0015.jpg)
 *[Photo by Chaim Gartenberg for The Verge](https://www.theverge.com/circuitbreaker/2019/9/5/20850793/nokia-2720-flip-phone-hmd-800-rugged-110-feature-phones-ifa-2019)*
 {:.fs-2}
 
