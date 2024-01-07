@@ -181,7 +181,7 @@ As discovered by atipls on Discord, on the mainboard of the 6300 4G, there are 3
 ## Sideloading and debugging third-party applications
 BananaHackers' definitions put this phone and most other KaiOS 2.5.4 devices in the first category, which means that you can install and debug apps from outside sources, but with a few caveats: apps with 'forbidden' permissions, such as `embed-apps`, `embed-widgets` and `engmode-extension` cannot be sideloaded, and you cannot debug apps that came with the device using WebIDE's Developer Tools (you can, however, see the system's global warnings and errors with `adb logcat`).
 
-For detailed instructions, see [Sideloading and debugging/WebIDE]({% link ../development/WebIDE.md %}).
+For detailed instructions, see [Sideloading and debugging/WebIDE]({% link development/WebIDE.md %}).
 
 **Do note that OmniSD, one of the methods used for on-device sideloading, and many Gerda-related apps requires the `navigator.mozApps.mgmt.import` API that has been removed from KaiOS 2.5.2.2, and therefore no longer work on this phone.** However, the Privileged factory reset feature that could be used on KaiOS 2.5.2 and older can now be activated after permanent rooting to gain privileged userspace session (see [Next steps](#next-steps)).
 
