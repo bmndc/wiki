@@ -1,0 +1,50 @@
+title: KaiOS Wiki
+description: BananaHackers Wiki hosted on GitHub Pages
+theme: just-the-docs
+color_scheme: bananahackers
+
+url: https://minhduc-bui1.github.io/wiki
+logo: "/assets/banana.png"
+
+aux_links:
+  BananaHackers Store: https://store.bananahackers.net
+  GitHub: https://github.com/minhduc-bui1/wiki
+  Reddit: https://reddit.com/r/KaiOS
+  Discord: https://discord.gg/rQ93zEu
+
+aux_links_new_tab: true
+
+nav_external_links:
+  - title: W2D Jailbreak & Hotspot
+    url: https://minhduc-bui1.github.io/nokia-leo/w2d
+  - title: Go back to old BH Wiki
+    url: https://wiki.bananahackers.net
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+last_edit_timestamp: true
+last_edit_time_format: "%B %e, %Y"
+
+gh_edit_link: true
+gh_edit_link_text: "Edit this entry on GitHub"
+gh_edit_repository: "https://github.com/minhduc-bui1/wiki"
+gh_edit_branch: "main"
+#gh_edit_source: docs
+gh_edit_view_mode: "tree"
+
+callouts:
+  warning:
+    title: Warning
+    color: yellow
+  is-warning:
+    title: Warning
+    color: yellow
+  is-error:
+    title: Caution
+    color: red
+  is-info:
+    title: Note
+    color: blue
+  is-success:
+    color: green
