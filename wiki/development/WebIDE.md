@@ -25,7 +25,7 @@ Before you ask: no, despite using Android compatibility layer for hardware suppo
 ## Sideloading 101
 ### What we'll need
 - a computer with command-line tool installed: Command Prompt on Windows, Terminal on macOS/Linux
-- [a debug-enabled phone running KaiOS 2.5]({% link devices/devices.md %})
+- [a debug-enabled phone running KaiOS 2.5]({% link devices.md %})
 - an USB cable with data transferring
 - an Internet connection to download tools and navigate to W2D (optional if there are debug codes)
 - an archive extractor installed to extract our tools:
@@ -43,7 +43,7 @@ Before you ask: no, despite using Android compatibility layer for hardware suppo
 </div>
 
 ### Turn on debugging mode on your phone
-1. Check whether your phone can be debugged and any special notes to follow on the [Devices page]({% link devices/devices.md %}).
+1. Check whether your phone can be debugged and any special notes to follow on the [Devices page]({% link devices.md %}).
    - Some may have specific codes that can be dialed to quickly activate debugging mode, i.e. `*#*#33284#*#*` for Nokia devices and both `*#*#33284#*#*` and `*#*#0574#*#*` for Energizers and others. Details can be found on each device page.
 2. Navigate to https://w2d.bananahackers.net using default Browser on the phone. Use D-Pad keys to move the cursor and click on the big front <kbd>Launch Developer menu</kbd> button.
 3. In the newly opened Developer menu, select the first <kbd>Debugger</kbd> option, then <kbd>ADB and DevTools</kbd> from the dropdown menu. You should see a bug icon in the status bar letting you know ~~your phone has bugs inside~~ you're in debugging mode.
@@ -77,7 +77,7 @@ Before you ask: no, despite using Android compatibility layer for hardware suppo
 7. Extract the downloaded archive to a folder (double-click the file on macOS/Linux, 7-Zip > <kbd>Extract here</kbd> on Windows), navigate to its `platform-tools` root and open a command-line window by that directory.
 {:style="counter-reset:none"}
 
-8. Type `adb devices` to start the ADB binary server. ADB will automatically detect all devices with active debugging mode connected to the computer over USB. If a `device` shows, you're good to go! Otherwise, go back, check if you've missed any steps or whether [your phone supports ADB]({% link devices/devices.md %}).
+8. Type `adb devices` to start the ADB binary server. ADB will automatically detect all devices with active debugging mode connected to the computer over USB. If a `device` shows, you're good to go! Otherwise, go back, check if you've missed any steps or whether [your phone supports ADB]({% link devices.md %}).
 {:style="counter-reset:none"}
    - Note that if you're unable to run `adb`, you may need to make it an executable: `chmod +x ./adb`
 
@@ -118,7 +118,7 @@ WIP
   <p class="fs-2"><em>Tip: For quicker access to WebIDE, press its shortcut <kbd>Shift</kbd> + <kbd>F8</kbd> while you're in the browser.</em></p>
 </div>
 
-12. Your phone's name should appear in the right pane as the first option under USB Devices section. Click it to connect. If you don't see any, click <kbd>Remote Runtime</kbd> in the right pane, leave it as default at `localhost:6000` and press OK. If you still cannot connect your phone to WebIDE, check if you've missed any steps or whether [your phone allows DevTools]({% link devices/devices.md %}).
+12. Your phone's name should appear in the right pane as the first option under USB Devices section. Click it to connect. If you don't see any, click <kbd>Remote Runtime</kbd> in the right pane, leave it as default at `localhost:6000` and press OK. If you still cannot connect your phone to WebIDE, check if you've missed any steps or whether [your phone allows DevTools]({% link devices.md %}).
 {:style="counter-reset:none"}
 
 ![Screenshot of WebIDE interface with Remote Runtime pop-up shown after pressing the option in the right pane. The pop-up has 'localhost:6000' as the content of the input box, with two buttons to confirm or close.](../assets/webide/localhost_6000.png)

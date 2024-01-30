@@ -10,7 +10,7 @@ last_modified_date: 2023-12-09
 This is a fork of [BananaHackers Wiki hosted on Wiki.js](https://wiki.bananahackers.net), hosted on GitHub Pages for accessibility.
 
 You may want to:
-- [check whether your KaiOS phone is debug-enabled]({% link devices/devices.md %})
+- [check whether your KaiOS phone is debug-enabled]({% link devices.md %})
 - [learn how to sideload third-party apps on your KaiOS phone]({% link sideloading/sideloading.md %})
 
 {: .warning }
