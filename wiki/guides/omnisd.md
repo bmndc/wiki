@@ -14,9 +14,6 @@ nav_order: 4
 >
 > Luxferre, OmniSD's original developer, has been working on a second, improved version of OmniSD, but so far no progress has been announced.
 
-OmniSD is an application installer which directly install compatible ZIP packages onto your KaiOS phone, without the need of computers. Developed by Luxferre and writtrn, it leverages the `navigator.mozApps.mgmt.import` API found in Firefox OS to register your apps.
+OmniSD is an application installer which directly install compatible ZIP packages onto your KaiOS phone, without the need of computers. Developed by Luxferre and written in HTML, CSS and JavaScript, it leverages the `navigator.mozApps.mgmt.import` API found in Firefox OS to register your apps.
 
-OmniSD accepts application packages in the `.zip` format. An OmniSD-compatible app package must have:
-- a nested `application.zip` containing the content of the actual app;
-- an `update.webapp`
-- a `manifest.json` to provide package information to OmniSD.
+To install OmniSD, just sideload the app using WebIDE.

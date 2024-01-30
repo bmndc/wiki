@@ -37,7 +37,7 @@ Depending on the form factor and the motherboard's design, each device model has
 If you manage to get it, the booting logo will flash momentarily, then the screen turns black as if you've turned off the phone. Else, the normal boot sequence will be triggered instead, and you'll have to start over.
 
 ### Using Android Debug Bridge `adb`
-While having the phone on and connected to the computer via an USB cable, turn on debugging mode on the phone and set up ADB on your computer (see [Sideloading and debugging/ADB and WebIDE]({% link development/WebIDE.md %})), then in the command-line window, type in `adb reboot edl`. This will send a signal to your phone telling to reboot to EDL mode.
+While having the phone on and connected to the computer via an USB cable, turn on debugging mode on the phone and set up ADB on your computer (see [Sideloading and debugging/ADB and WebIDE]({% link development/webide.md %})), then in the command-line window, type in `adb reboot edl`. This will send a signal to your phone telling to reboot to EDL mode.
 
 Don't use this if you're unbricking your phone.
  

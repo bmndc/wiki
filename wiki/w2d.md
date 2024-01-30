@@ -87,7 +87,7 @@ jtd.addEvent(openHotspot, 'click', function(){
 </script>
 
 ## Connect to ADB wirelessly
-If you don't have an USB cable nearby and need to quickly debug your app, this button below will open an ADB port of 5555 on your phone so that you can connect to your computer's ADB wirelessly by typing `adb connect [your.phone.ip.address]:5555`. For more details, see [Sideloading and debugging/ADB and WebIDE]({% link development/WebIDE.md %}).
+If you don't have an USB cable nearby and need to quickly debug your app, this button below will open an ADB port of 5555 on your phone so that you can connect to your computer's ADB wirelessly by typing `adb connect [your.phone.ip.address]:5555`. For more details, see [Sideloading and debugging/ADB and WebIDE]({% link development/webide.md %}).
 
 You can find your phone's local IP address (192.168.1.x) by going to *Settings, Network & Connectivity, Wi-Fi, Available networks* and click on the connected Wi-Fi access point; or download N4NO's [My IP Address](https://www.kaiostech.com/store/apps/?bundle_id=com.n4no.myipaddress) from KaiStore.
 

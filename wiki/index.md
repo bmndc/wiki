@@ -11,7 +11,7 @@ This is a fork of [BananaHackers Wiki hosted on Wiki.js](https://wiki.bananahack
 
 You may want to:
 - [check whether your KaiOS phone is debug-enabled]({% link devices.md %})
-- [learn how to sideload third-party apps on your KaiOS phone]({% link sideloading/sideloading.md %})
+- [learn how to sideload third-party apps on your KaiOS phone]({% link sideloading.md %})
 
 {: .warning }
 > 1. All information and resources on this website are provided on an as-is basis, free at no costs and publicly available to everyone. We currently are NOT operating any services for e.g. injecting third-party apps via KaiStore's Developer Portal (it's against their ToS) or modifying the operating system. Beware — anyone charging you for such things may be SCAM!

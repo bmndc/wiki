@@ -17,7 +17,7 @@ Table of Contents
 
 ## Quick reference table
 - A green tick (✅) indicates that this device is debug-enabled out-of-box. To enable debugging mode, go to w2d.bananahackers.net on the device's Browser, click on *Launch Developer menu* and toggle *ADB and DevTools* under *Debugger*. Some devices also have a dedicated code for quick toggling debugging mode, with `*#*#33284#*#*` being the most common.
-  - Check out the dedicated [Sideloading and debugging]({% link sideloading/sideloading.md %}) section for more information on methods of installing and debugging third-party apps.
+  - Check out the dedicated [Sideloading and debugging]({% link sideloading.md %}) section for more information on methods of installing and debugging third-party apps.
 - A warning symbol (⚠️) means that this device needs additional steps prior to activate debugging capability, such as editing some system files or at worst requiring permanent root access. Read the notes and the device's dedicated page for information and guides.
 - A lock (🔒) means that this device is, sadly, currently unable to be debugged using most of the known methods. [Not all hope is lost, though.]({% link sideloading/recovery-inject.md %})
 - A question mark (❓) means that this device is untested. We cannot get our hands on all available KaiOS devices to test them out, and we need your help! If you want to contribute to this table, post your discoveries on [r/KaiOS subreddit](https://reddit.com/r/KaiOS), [BananaHackers Google Groups](https://groups.google.com/g/bananahackers) or hit me up on [GitHub](https://github.com/minhduc-bui1/wiki/issues/new/choose)!

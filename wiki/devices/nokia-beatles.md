@@ -145,6 +145,6 @@ Remember, **only buy from trusted, reputable sources**, even if they offer highe
 EDL programmer for this phone can be found on BananaHackers' [EDL archive site](https://edl.bananahackers.net/loaders/2720.mbn) with hardware ID 0x009600e100420029.
 
 ## Sideloading and debugging third-party applications
-On v22 and earlier: see [Sideloading and debugging/WebIDE]({% link development/WebIDE.md %}).
+On v22 and earlier: see [Sideloading and debugging/WebIDE]({% link development/webide.md %}).
 
 On v30 and later: see [ROOT: Boot partition modifying](https://minhduc-bui1.github.io/nokia-leo#root-boot-partition-modifying-non-us-only).
