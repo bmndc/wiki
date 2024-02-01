@@ -4,9 +4,9 @@ nav_order: 2
 has_children: true
 layout: default
 has_toc: false
-last_modified_date: 2023-10-10
+last_modified_date: 2024-02-01
 ---
-![A row of various KaiOS phones](../assets/Devices-Lineup-211130-2t.png)
+![A row of various KaiOS phones](assets/Devices-Lineup-211130-2t.png)
 # Devices
 {: .no_toc }
 
@@ -50,10 +50,9 @@ Table of Contents
 | Alcatel Go Flip 4 (4056w) | 3.0 | 🔒 | ADB reports as `unauthorized`<br>*Credits to u/tbrrss on Reddit for confirming* |
 | Alcatel MyFlip (A405DL) | 2.5.x | ⚠️ | Requires extracting using EDL and editing ADB hex on data partition |
 | Alcatel MyFlip 2 (A406DL) | **2.5.4** | ✅ | No `engmode-extension` apps, no rooting |
-| AT&T Cingular Flip IV<br>(U102AA) | **2.5.3.1** | ✅ | No rooting (confirmed on 2.5.3) |
+| AT&T Cingular Flip IV/<br>Cricket Debut Flip | **2.5.3.1** | ✅ | No rooting (confirmed on 2.5.3) |
 | AT&T Cingular Flex | **2.5.4** | ✅ | No `engmode-extension` apps, no rooting |
 | AT&T Cingular Flex 2/<br>Cricket Debut Flex | 3.1 | 🔒 | ADB reports as `unauthorized`<br>*Credits to u/canyouswim73 on Reddit for confirming* |
-| Cricket Debut Flip | 3.1 | 🔒 | ADB reports as `unauthorized` |
 | TCL Flip Pro | 3.0 | 🔒 | ADB fails to detect device |
 | IRIS Flip | 3.1 | 🔒 | First phone with eSIM support and 1GB of RAM. To enable ADB access, dial `*#*#9527#*#*`. DevTools is restricted for now |
 | myPhone Up Smart 3G | 2.5.1.1 | ❓ |  |
