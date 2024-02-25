@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: bundler
-    directory: /_wiki/
+    directory: /.wiki/
     schedule:
       interval: daily
     allow:
