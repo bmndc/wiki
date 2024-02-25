@@ -15,7 +15,7 @@ aux_links:
 aux_links_new_tab: true
 
 nav_external_links:
-  - title: Go back to old BH Wiki
+  - title: Back to BananaHackers Wiki
     url: https://wiki.bananahackers.net
 
 back_to_top: true
@@ -28,7 +28,7 @@ gh_edit_link: true
 gh_edit_link_text: "Edit this entry on GitHub"
 gh_edit_repository: "https://github.com/minhduc-bui1/archkai"
 gh_edit_branch: "main"
-gh_edit_source: wiki
+gh_edit_source: .wiki
 gh_edit_view_mode: "tree"
 
 callouts:
