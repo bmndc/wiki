@@ -37,7 +37,7 @@ callouts:
     color: yellow
   is-warning:
     title: Warning
-    color: worange
+    color: yellow
   is-error:
     title: Caution
     color: red
