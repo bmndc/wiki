@@ -43,6 +43,6 @@ callouts:
     color: red
   is-info:
     title: Note
-    color: blue
+    color: rgba(227, 242, 253, 0)
   is-success:
     color: green
