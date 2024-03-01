@@ -1,6 +1,7 @@
 ---
 title: Devices
 nav_order: 2
+has_children: true
 layout: default
 has_toc: false
 last_modified_date: 2024-02-01
@@ -53,10 +54,11 @@ Table of Contents
 | AT&T Cingular Flex | **2.5.4** | ✅ | No `engmode-extension` apps, no rooting |
 | AT&T Cingular Flex 2/<br>Cricket Debut Flex | 3.1 | 🔒 | ADB reports as `unauthorized`<br>*Credits to u/canyouswim73 on Reddit for confirming* |
 | TCL Flip Pro | 3.0 | 🔒 | ADB fails to detect device |
-| IRIS Flip | 3.1 | 🔒 | First phone with eSIM support and 1GB of RAM. To enable ADB access, dial `*#*#9527#*#*`. DevTools is restricted for now |
+| IRIS Flip<br>*Consumer Cellular* | 3.1 | 🔒 | First phone with eSIM support and 1GB of RAM. To enable ADB access, dial `*#*#9527#*#*`. DevTools is restricted for now |
+| [Orbic Journey Pro] | 3.1 | ❓ | **NEW!** First KaiOS 3 phone to be released outside the US. |
 | myPhone Up Smart 3G | 2.5.1.1 | ❓ |  |
 | myPhone Up Smart LTE | **2.5.3.1** | 🔒 | ADB reports as `unauthorized` |
-| Crosscall Core-S4 | **2.5.3.2** | ✅ | No engmode-extension apps |
+| Crosscall Core-S4 | **2.5.3.2** | ✅ | No `engmode-extension` apps |
 | Maxcom MK241 | 2.5.1 | ❓ |  |
 | Maxcom MK281 | 2.5.1.1 | ✅ |  |
 | Accent Nubia 50K | 2.5.1.1 | ❓ |  |
@@ -84,6 +86,7 @@ Table of Contents
 [CAT B35]: {% link devices/cat-b35.md %}
 [Doro 7060/7070]: {% link devices/doro-7060.md %}
 [Alcatel Go Flip 3/<br>Alcatel SMARTFLIP]: {% link devices/alcatel-4052.md %}
+[Orbic Journey Pro]: {% link devices/orbic-o4f231.md %}
 
 [manual injection]: https://git.abscue.de/affe_null/weeknd-toolbox
 [ADB reports as unauthorized]: https://discord.com/channels/472006912846594048/472006912846594050/1097387870123208754
