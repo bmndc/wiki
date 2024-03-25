@@ -6,4 +6,4 @@ Whoa! You've been landed here because the page you're visiting doesn't exist... 
 
 Check back later :)
 
-[Go back to Home]({% link index.md %})
+[Go back to Home]({% link README.md %})
