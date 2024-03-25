@@ -44,7 +44,7 @@ Don't use this if you're unbricking your phone.
 ### Using an EDL cable
 An EDL cable is an USB cable that specializes in transmitting signals for EDL mode between your phone and computer.
 
-You can make an EDL cable for yourself by stripping the insulation of a spare USB cable and wiring part of D+ and Ground wires in a way that sends the signal to tell the phone to switch to EDL mode. [Here's a specific guide on how to do just that.]({% link error.md %})
+You can make an EDL cable for yourself by stripping the insulation of a spare USB cable and wiring part of D+ and Ground wires in a way that sends the signal to tell the phone to switch to EDL mode. [Here's a specific guide on how to do just that.]()
 
 Alternatively, you can find lots of pre-made EDL cables online for as cheap as $2 in Philippines (citing Cyan). Pre-made EDL cables has a button attached: while holding down the button, insert the cable to the device, wait for 5 seconds and then you can let it go.
 
@@ -52,7 +52,7 @@ Alternatively, you can find lots of pre-made EDL cables online for as cheap as $
 
 > This method is RISKY and mainly used by professionals, as it requires you to disassemble your phone, find and short the pins that trigger the primary bootloader, which in turn boot your phone in EDL mode. If you don't know what you're doing, you can damage your phone in the process altogether. **Proceed with caution.**
 > 
-> A dedicated guide for this method can be found [here]({% link error.md %}).
+> A dedicated guide for this method can be found [here]().
 {:.is-warning}
 
 ## Exiting EDL mode
