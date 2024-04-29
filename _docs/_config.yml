@@ -6,9 +6,6 @@ color_scheme: bananahackers
 url: https://minhduc-bui1.github.io/wiki
 logo: "/assets/banana.png"
 
-plugins:
-  - jekyll-redirect-from
-
 aux_links:
   BananaHackers Store: https://store.bananahackers.net
   Reddit: https://reddit.com/r/KaiOS
