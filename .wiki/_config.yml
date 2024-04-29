@@ -6,6 +6,9 @@ color_scheme: bananahackers
 url: https://minhduc-bui1.github.io/archkai
 logo: "/assets/banana.png"
 
+plugins:
+  - jekyll-redirect-from
+
 aux_links:
   BananaHackers Store: https://store.bananahackers.net
   GitHub: https://github.com/minhduc-bui1/arkaive
