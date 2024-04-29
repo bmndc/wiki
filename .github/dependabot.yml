@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: bundler
-    directory: /_docs/
+    directory: /docs/
     schedule:
       interval: daily
     allow:
