@@ -4,7 +4,6 @@ parent: Devices
 layout: default
 nav_exclude: true
 last_modified_date: 2023-10-10
-redirect_to: https://minhduc-bui1.github.io/nokia-leo
 ---
 # Nokia 6300 4G (nokia-leo)
 {: .no_toc }

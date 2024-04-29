@@ -3,7 +3,7 @@ description: BananaHackers Wiki hosted on GitHub Pages
 theme: just-the-docs
 color_scheme: bananahackers
 
-url: https://minhduc-bui1.github.io/archkai
+url: https://minhduc-bui1.github.io/wiki
 logo: "/assets/banana.png"
 
 plugins:
@@ -11,7 +11,6 @@ plugins:
 
 aux_links:
   BananaHackers Store: https://store.bananahackers.net
-  GitHub: https://github.com/minhduc-bui1/arkaive
   Reddit: https://reddit.com/r/KaiOS
   Discord: https://discord.gg/rQ93zEu
 
@@ -29,9 +28,9 @@ last_edit_time_format: "%B %e, %Y"
 
 gh_edit_link: true
 gh_edit_link_text: "Edit this entry on GitHub"
-gh_edit_repository: "https://github.com/minhduc-bui1/arkaive"
+gh_edit_repository: "https://github.com/minhduc-bui1/wiki"
 gh_edit_branch: "main"
-gh_edit_source: .wiki
+gh_edit_source: _docs
 gh_edit_view_mode: "tree"
 
 callouts:
