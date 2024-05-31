@@ -3,6 +3,6 @@ updates:
   - package-ecosystem: bundler
     directory: /docs/
     schedule:
-      interval: daily
+      interval: weekly
     allow:
       - dependency-type: direct
