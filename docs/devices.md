@@ -67,7 +67,7 @@ Table of Contents
 | MTN Smart 3G | **2.5.1.2** | ❓ |  |
 | Multilaser/ObaPhone ZAPP | 2.5.1.1 | ✅ |  |
 | Multilaser ZAPP II 3G | **2.5.1.2** | ✅ |  |
-| TTfone TT240 | 2.5.1.1 | ✅ |  |
+| [TTfone TT240] | 2.5.1.1 | ✅ |  |
 | BKAV C85 | 2.5.1.1 | ❓ | Imported from China and sold in Vietnam with limited quantity. If you have this phone, contact #device-dev on our Discord server. |
 | Viettel V6504 | **2.5.3.2** | ❓ | Press and hold 2 on boot to enter Recovery mode |
 | Itel it9200 4G | **2.5.1.2** | ❓ |  |
@@ -81,12 +81,13 @@ Table of Contents
 [Nokia 2720 Flip]: {% link devices/nokia-beatles.md %}
 [Nokia 800 Tough]: {% link devices/nokia-coconut.md %}
 [Nokia 8000 4G]: {% link devices/nokia-sparkler.md %}
-[Nokia 6300 4G]: https://minhduc-bui1.github.io/nokia-leo
+[Nokia 6300 4G]: https://bmndc.github.io/nokia-leo
 [Nokia 2780 Flip]: {% link devices/nokia-weeknd.md %}
 [CAT B35]: {% link devices/cat-b35.md %}
 [Doro 7060/7070]: {% link devices/doro-7060.md %}
 [Alcatel Go Flip 3/<br>Alcatel SMARTFLIP]: {% link devices/alcatel-4052.md %}
 [Orbic Journey Pro]: {% link devices/orbic-o4f231.md %}
+[TTfone TT240]: {% link devices/ttfone-tt240.md %}
 
 [manual injection]: https://git.abscue.de/affe_null/weeknd-toolbox
 [ADB reports as unauthorized]: https://discord.com/channels/472006912846594048/472006912846594050/1097387870123208754
