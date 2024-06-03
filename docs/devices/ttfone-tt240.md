@@ -4,34 +4,37 @@ parent: Devices
 layout: default
 nav_exclude: true
 last_modified_date: 2024-06-02
+
+released: "27 November 2020"
+model: "FS361"
+soc: "Spreadtrum SC7731E (4 × 1.3GHz Cortex-A7)"
+ram: "512MB LPDDR3"
+gpu: "Mali-400 MP1"
+storage: "4GB (+ up to 32GB microSDHC slot)"
+network: >
+    2G GSM, 3G UMTS<br>
+    Single SIM (standard SIM)
+screen: "320 × 240 (167 PPI), 2.4 inches QVGA TFT LCD"
+bluetooth: "4.0, A2DP"
+wifi: "802.11b/g/n, Hotspot (up to 8 devices)"
+peripheral: "GPS &amp; GLONASS"
+camera: >
+    Rear: VGA with fixed focus, LED flash<br>
+    Front: VGA with fixed focus
+dimension: "123 × 52 × 12 (mm) 4.84 × 2.05 × 0.47 (in)"
+weight: "With battery: 99 g (3.49 oz)"
+port: >
+    - microUSB charging &amp; USB 2.0 data transferring port<br>
+    - 3.5mm headphone jack
+battery: "Removable Li-Ion 1400mAh (up to 11d 16h of standby advertised)"
+kaios_ver: "KaiOS 2.5.1.1"
+wavoip: "Not supported"
+buildno: "I324MS_TTFONE_V05-030323"
 ---
 # TTfone TT240
 {:.no_toc}
 
-{% include spec.html
-    name="TTfone TT240"
-    released="27 November 2020"
-    model="FS361"
-    soc="Spreadtrum SC7731E (4 × 1.3GHz Cortex-A7)"
-    ram="512MB LPDDR3"
-    gpu="Mali-400 MP1"
-    storage="4GB (+ up to 32GB microSDHC slot)"
-    network="2G GSM, 3G UMTS<br>Single SIM (standard SIM)"
-    screen="320 * 240 (167 PPI), 2.4 inches QVGA TFT LCD"
-    bluetooth="4.0, A2DP"
-    wifi="802.11b/g/n, Hotspot (up to 8 devices)"
-    peripheral="GPS &amp; GLONASS"
-    camera="Rear: VGA with fixed focus, LED flash<br>
-            Front: VGA with fixed focus"
-    dimension="123 × 52 × 12 (mm) 4.84 × 2.05 × 0.47 (in)"
-    weight="With battery: 99 g (3.49 oz)"
-    port="- microUSB charging &amp; USB 2.0 data transferring port<br>
-          - 3.5mm headphone jack"
-    battery="Removable Li-Ion 1400mAh (up to 11d 16h of standby advertised)"
-    kaios_ver="KaiOS 2.5.1.1"
-    wavoip="Not supported"
-    buildno="I324MS_TTFONE_V05-030323"
-%}
+{% include spec.html %}
 
 Table of Contents
 {: .text-delta }

@@ -1,39 +1,39 @@
 <details><summary dir="rtl">View device specification table</summary>
-    <table><thead><tr><th colspan=2>{{ include.name }}</th></tr></thead>
+    <table><thead><tr><th colspan=2>{{ page.title }}</th></tr></thead>
       <tbody>
-        {% if include.announced %}
-            <tr><td>Announced</td><td>{{ include.announced }}</td></tr>
+        {% if page.announced %}
+            <tr><td>Announced</td><td>{{ page.announced }}</td></tr>
         {% endif %}
-            <tr><td>Released</td><td>{{ include.released }}</td></tr>
-            <tr><td>Model</td><td>{{ include.model }}</td></tr>
-        {% if include.color %}
-            <tr><td>Colors</td><td>{{ include.color }}</td></tr>
+            <tr><td>Released</td><td>{{ page.released }}</td></tr>
+            <tr><td>Model</td><td>{{ page.model }}</td></tr>
+        {% if page.color %}
+            <tr><td>Colors</td><td>{{ page.color }}</td></tr>
         {% endif %}
-        {% if include.msrp %}
-            <tr><td>MSRP</td><td>{{ include.msrp }}</td></tr>
+        {% if page.msrp %}
+            <tr><td>MSRP</td><td>{{ page.msrp }}</td></tr>
         {% endif %}
         <tr><td align=center colspan=2><strong>Specifications</strong></td></tr>
-            <tr><td>SoC</td><td>{{ include.soc }}</td></tr>
-            <tr><td>RAM</td><td>{{ include.ram }}</td></tr>
-            <tr><td>GPU</td><td>{{ include.gpu }}</td></tr>
-            <tr><td>Storage</td><td>{{ include.storage }}</td></tr>
-            <tr><td>Network</td><td>{{ include.network }}</td></tr>
-            <tr><td>Screen</td><td>{{ include.screen }}</td></tr>
-            <tr><td>Bluetooth</td><td>{{ include.bluetooth }}</td></tr>
-            <tr><td>Wi-Fi</td><td>{{ include.wifi }}</td></tr>
-            <tr><td>Peripherals</td><td>{{ include.peripheral }}</td></tr>
-            <tr><td>Camera</td><td>{{ include.camera }}</td></tr>
-            <tr><td>Dimensions<br>(HWD)</td><td>{{ include.dimension }}</td></tr>
-            <tr><td>Weight</td><td>{{ include.weight }}</td></tr>
-            <tr><td>Ports</td><td>{{ include.port }}</td></tr>
-        {% if include.extra %}
-            <tr><td>Specials</td><td>{{ include.extra }}</td></tr>
+            <tr><td>SoC</td><td>{{ page.soc }}</td></tr>
+            <tr><td>RAM</td><td>{{ page.ram }}</td></tr>
+            <tr><td>GPU</td><td>{{ page.gpu }}</td></tr>
+            <tr><td>Storage</td><td>{{ page.storage }}</td></tr>
+            <tr><td>Network</td><td>{{ page.network }}</td></tr>
+            <tr><td>Screen</td><td>{{ page.screen }}</td></tr>
+            <tr><td>Bluetooth</td><td>{{ page.bluetooth }}</td></tr>
+            <tr><td>Wi-Fi</td><td>{{ page.wifi }}</td></tr>
+            <tr><td>Peripherals</td><td>{{ page.peripheral }}</td></tr>
+            <tr><td>Camera</td><td>{{ page.camera }}</td></tr>
+            <tr><td>Dimensions<br>(HWD)</td><td>{{ page.dimension }}</td></tr>
+            <tr><td>Weight</td><td>{{ page.weight }}</td></tr>
+            <tr><td>Ports</td><td>{{ page.port }}</td></tr>
+        {% if page.extra %}
+            <tr><td>Specials</td><td>{{ page.extra }}</td></tr>
         {% endif %}
-            <tr><td>Battery</td><td>{{ include.battery }}</td></tr>
+            <tr><td>Battery</td><td>{{ page.battery }}</td></tr>
         <tr><td align=center colspan=2><strong>KaiOS info</strong></td></tr>
-            <tr><td>Version</td><td>{{ include.kaios_ver }}</td></tr>
-            <tr><td>WA VoIP</td><td>{{ include.wavoip }}</td></tr>
-            <tr><td>Build no.</td><td>{{ include.buildno }}</td></tr>
+            <tr><td>Version</td><td>{{ page.kaios_ver }}</td></tr>
+            <tr><td>WA VoIP</td><td>{{ page.wavoip }}</td></tr>
+            <tr><td>Build no.</td><td>{{ page.buildno }}</td></tr>
       </tbody>
     </table>
 </details>
