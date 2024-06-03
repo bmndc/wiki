@@ -5,6 +5,10 @@ layout: default
 nav_exclude: true
 last_modified_date: 2023-10-10
 ---
+<script>
+  window.location.href = "https://bmndc.github.io/nokia-leo" + window.location.hash;
+</script>
+
 # Nokia 6300 4G (nokia-leo)
 {: .no_toc }
 
