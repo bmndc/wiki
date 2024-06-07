@@ -8,13 +8,14 @@ nav_exclude: true
 {:.no_toc}
 *also known as Cricket Debut Flex (U1030AC)*
 
-<details markdown="block"><summary dir="rtl">View device specification table</summary>
+<details markdown="block">
+  <summary dir="rtl">View device specification table</summary>
 <table>
-  <thead><tr><th colspan=2>AT&amp;T Cingular Flex 2/Cricket Debut Flex (U1030Ax)</th></tr><thead>
+  <thead><tr><th colspan="2">AT&amp;T Cingular Flex 2/Cricket Debut Flex (U1030Ax)</th></tr><thead>
   <tbody>
     <tr><td>Released</td><td>21 June 2023</td></tr>
     <tr><td>Model</td><td>U1030AA, U1030AC</td></tr>
-    <tr><td align=center colspan=2><strong>Specifications</strong></td></tr>
+    <tr><td align="center" colspan="2"><strong>Specifications</strong></td></tr>
     <tr><td>SoC</td><td>Qualcomm QM215 Snapdragon 215 (4 × 1.3GHz Cortex-A53)</td></tr>
     <tr><td>RAM</td><td>512MB LPDDR3</td></tr>
     <tr><td>GPU</td><td>Adreno 308</td></tr>
@@ -30,10 +31,9 @@ nav_exclude: true
     <tr><td>Ports</td><td>- USB Type-C 2.0 charging &amp; data transferring port<br>- 3.5mm headphone jack</td></tr>
     <tr><td>Specials</td><td>M4/T4 hearing aid compatibility</td></tr>
     <tr><td>Battery</td><td>Removable Li-Ion 1450mAh (up to 6d 18h of 4G standby advertised)</td></tr>
-    <tr><td align=center colspan=2><strong>KaiOS info</strong></td></tr>
+    <tr><td align="center" colspan="2"><strong>KaiOS info</strong></td></tr>
     <tr><td>Version</td><td>KaiOS 3.1</td></tr>
     <tr><td>WA VoIP</td><td>Not available</td></tr>
     <tr><td>Build no.</td><td>01.02.10</td></tr>
   </tbody>
-</table>
-</details>
+</table></details>
