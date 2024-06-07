@@ -52,7 +52,7 @@ Table of Contents
 | Alcatel MyFlip 2 (A406DL) | **2.5.4** | ✅ | No `engmode-extension` apps, no rooting |
 | AT&T Cingular Flip IV/<br>Cricket Debut Flip | **2.5.3.1** | ✅ | No rooting (confirmed on 2.5.3) |
 | AT&T Cingular Flex | **2.5.4** | ✅ | No `engmode-extension` apps, no rooting |
-| AT&T Cingular Flex 2/<br>Cricket Debut Flex | 3.1 | 🔒 | ADB reports as `unauthorized`<br>*Credits to u/canyouswim73 on Reddit for confirming* |
+| [AT&T Cingular Flex 2/<br>Cricket Debut Flex] | 3.1 | 🔒 | ADB reports as `unauthorized`<br>*Credits to u/canyouswim73 on Reddit for confirming* |
 | TCL Flip Pro | 3.0 | 🔒 | ADB fails to detect device |
 | IRIS Flip<br>*Consumer Cellular* | 3.1 | 🔒 | First phone with eSIM support and 1GB of RAM. To enable ADB access, dial `*#*#9527#*#*`. DevTools is restricted for now |
 | [Orbic Journey Pro] | 3.1 | ❓ | **NEW!** First KaiOS 3 phone to be released outside the US. |
@@ -86,6 +86,7 @@ Table of Contents
 [CAT B35]: {% link devices/cat-b35.md %}
 [Doro 7060/7070]: {% link devices/doro-7060.md %}
 [Alcatel Go Flip 3/<br>Alcatel SMARTFLIP]: {% link devices/alcatel-4052.md %}
+[AT&T Cingular Flex 2/<br>Cricket Debut Flex]: {% link devices/att-u1030aa.md %}
 [Orbic Journey Pro]: {% link devices/orbic-o4f231.md %}
 [TTfone TT240]: {% link devices/ttfone-tt240.md %}
 
