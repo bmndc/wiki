@@ -4,8 +4,6 @@ $nav-width: 275px;
 $content-width: 960px;
 body {
     font-size: 14px !important;
-}
-h1, h2, h3, h4, h5, h6 {
     counter-set: step-counter 0;
 }
 ol {
