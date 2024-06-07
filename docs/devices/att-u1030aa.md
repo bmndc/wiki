@@ -11,7 +11,7 @@ nav_exclude: true
 <details markdown="block">
   <summary dir="rtl">View device specification table</summary>
 <table>
-  <thead><tr><th colspan="2">AT&amp;T Cingular Flex 2/Cricket Debut Flex (U1030Ax)</th></tr><thead>
+  <thead><tr><th colspan="2">AT&amp;T Cingular Flex 2/Cricket Debut Flex (U1030Ax)</th></tr></thead>
   <tbody>
     <tr><td>Released</td><td>21 June 2023</td></tr>
     <tr><td>Model</td><td>U1030AA, U1030AC</td></tr>
