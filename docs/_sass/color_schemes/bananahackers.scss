@@ -1,7 +1,7 @@
 $body-font-family: roboto, freesans, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", "Helvetica Neue", arial, sans-serif, "Segoe UI Emoji";
 $link-color: #007550;
 $nav-width: 275px;
-$content-width: 960px;
+$content-width: calc(960px + 32px);
 body {
     font-size: 14px !important;
     counter-set: step-counter 0;
