@@ -39,17 +39,17 @@ We'll refer to this guide as the main, officially supported method of installing
 - latest version of Android Debug Bridge (ADB): [Windows], [macOS], [Linux]
     - you can also install from your operating system's package manager:
     - Windows:
-        - [Chocolatey]: `choco install adb`
+        - [Chocolatey][choco]: `choco install adb`
         - Scoop: `scoop install main/adb` 
         - `winget` [prohibits installing executables with symlinks]
-    - [macOS (Homebrew)]: `brew install android-platform-tools`
+    - [macOS (Homebrew)][brew]: `brew install android-platform-tools`
     - Debian/Ubuntu: `sudo apt-get install adb`
-    - [Fedora]: `sudo dnf install android-tools`
+    - [Fedora][dnf]: `sudo dnf install android-tools`
     - [Arch]/Manjaro: `sudo pacman -S android-tools`
     - Termux (terminal emulator on Android): `pkg install android-tools`
     - *tip: If you download the SDK from Android Developers' website, [include the extracted ADB folder in PATH for quick access]. This will be handled for you if you've installed ADB via package manager.*
 - Mozilla got rid of the old WebIDE since Firefox 59, so we'll have to install an older version of Firefox:
-    - [Waterfox Classic]: the most recently maintained browser which still has old WebIDE
+    - [Waterfox Classic][waterfox]: the most recently maintained browser which still has old WebIDE
     - [Pale Moon 28.6.1](https://archive.palemoon.org/palemoon/28.x/28.6.1/) (Windows/Linux): a popular fork of Firefox with older user interface, legacy Firefox add-on support and always runs in single-process mode.
     - Firefox 59 (ESR 52.9): the last official Firefox version to be bundled with working WebIDE and other tools for development on Firefox OS devices, before Mozilla decided to kill the project in 2016. Archives of all Firefox releases can be found [here](https://archive.mozilla.org).
     - [KaiOS RunTime] (Ubuntu): official development environment for KaiOS 2.5 made by KaiOS. It's also possible to get KaiOSRT to work on Windows 10 and later using Windows Subsystem for Linux (WSLg). [See this video on YouTube for action].
@@ -229,13 +229,13 @@ Finally, re-run `adb devices`.
 [Windows]: https://dl.google.com/android/repository/platform-tools-latest-windows.zip
 [macOS]: https://dl.google.com/android/repository/platform-tools-latest-darwin.zip
 [Linux]: https://dl.google.com/android/repository/platform-tools-latest-linux.zip
-[Chocolatey]: https://community.chocolatey.org/packages/adb
+[choco]: https://community.chocolatey.org/packages/adb
 [prohibits installing executables with symlinks]: https://github.com/microsoft/winget-pkgs/issues/4082
-[macOS (Homebrew)]: https://formulae.brew.sh/cask/android-platform-tools
-[Fedora]: https://packages.fedoraproject.org/pkgs/android-tools/android-tools
+[brew]: https://formulae.brew.sh/cask/android-platform-tools
+[dnf]: https://packages.fedoraproject.org/pkgs/android-tools/android-tools
 [Arch]: https://archlinux.org/packages/extra/x86_64/android-tools
 [include the extracted ADB folder in PATH for quick access]: https://gist.github.com/nex3/c395b2f8fd4b02068be37c961301caa7
-[Waterfox Classic]: https://classic.waterfox.net
+[waterfox]: https://classic.waterfox.net
 [Pale Moon 28.6.1]: https://archive.palemoon.org/palemoon/28.x/28.6.1/
 [KaiOS RunTime]: https://s3.amazonaws.com/kaicloudsimulatordl/developer-portal/simulator/Kaiosrt_ubuntu.tar.bz2
 [See this video on YouTube for action]: https://youtu.be/eg2SOCTMxYU
