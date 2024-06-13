@@ -40,8 +40,8 @@ callouts:
   is-error:
     title: Caution
     color: red
-  is-info:
+  is-note:
     title: Note
-    color: wblue
+    color: blue
   is-success:
     color: green
