@@ -3,62 +3,62 @@ title: ADB and WebIDE
 parent: Sideloading and debugging
 nav_order: 1
 layout: default
-last_modified_date: 2023-11-28
+last_modified_date: 2024-06-13
 ---
 # ADB and WebIDE
 
-*Not to be confused with [jailbreaking](https://en.wikipedia.org/wiki/IOS_jailbreaking) on iOS devices, which is the act of using exploits to gain elevated permissions and bypass Apple's security restrictions on their devices.*
+*Not to be confused with [jailbreaking] on iOS devices, which is the act of using exploits to gain elevated permissions and bypass Apple's security restrictions on their devices.*
 
 Now, let's learn how to sideload and debug an application on your KaiOS phone using ADB and WebIDE. This will let us install apps which might be not available from KaiStore, or ones that you are developing.
 
 ADB, short for Android Debug Bridge, is a powerful toolset that can be used on Android-based devices to unlock access to a range of functions beyond what the typical user interface provides. It's mainly designed for app developers to get access to system logs and debug the performance of their apps, but it's also a great tools for power users and enthusiasts to control their phones through shell access, install third-party APKs, tweak the system and restore it from being a dead paperweight.
 
-While KaiOS and Firefox OS are not directly based on Android and you cannot install APKs on them, their Gonk layer makes significant use of Android's well-established hardware compatibility, including the ability to use ADB to interact with the phone through a computer.[^4] This is for the sake of deploying the OS onto different hardware without raising the cost for development.
+While KaiOS and Firefox OS are not directly based on Android and you cannot install APKs on them, their Gonk layer [makes significant use of Android's well-established hardware compatibility], including the ability to use ADB to interact with the phone through a computer. This is for the sake of deploying the OS onto different hardware without raising the cost for development.
 
-Meanwhile, WebIDE, short for Web Integrated Development Environment, allows you to create, edit, run and debug web applications on Firefox OS (and later KaiOS) devices and simulators. It's built on the former Firefox OS App Manager[^5] but with additional functions such as a code editor, boilerplate code templates and manifest validation, and includes Firefox debugging tools. With it, you can also connect your browser to one or multiple "runtimes" where you can manage app installation.
+Meanwhile, WebIDE, short for Web Integrated Development Environment, allows you to create, edit, run and debug web applications on Firefox OS (and later KaiOS) devices and simulators. It's [built on the former Firefox OS App Manager] but with additional functions such as a code editor, boilerplate code templates and manifest validation, and includes Firefox debugging tools. With it, you can also connect your browser to one or multiple "runtimes" where you can manage app installation.
 
 We'll refer to this guide as the main, officially supported method of installing third-party apps onto your KaiOS phone, for the sake of simplicity. Other methods, such as Luxferre's CLI `gdeploy`, are also available.
 
-{:.is-note}
-> This guide is only applicable on debug-enabled KaiOS 2.5 devices, and is no longer relevant for recent versions. In 2021, Mozilla partnered with KaiOS Technologies to "modernize the old Boot2Gecko codebase to run atop a modern Gecko so that it can be used by KaiOS as a basis for their future phones"[^1], and redesigned WebIDE in the process (currently included in Firefox Developer Edition).
+{:.note}
+> This guide is only applicable on debug-enabled KaiOS 2.5 devices, and is no longer relevant for recent versions. In 2021, [Mozilla partnered with KaiOS Technologies] to "modernize the old Boot2Gecko codebase to run atop a modern Gecko so that it can be used by KaiOS as a basis for their future phones", and redesigned WebIDE in the process (currently included in Firefox Developer Edition).
 > 
-> For debug-enabled KaiOS 3 devices, follow the instructions for KaiOS’s `appscmd` on [the official Developer Portal](https://developer.kaiostech.com/docs/sfp-3.0/getting-started/env-setup/os-env-setup).
+> For debug-enabled KaiOS 3 devices, follow the instructions for KaiOS’s `appscmd` on [the official Developer Portal].
 >
-> Before proceeding, make sure that your phone is debug-enabled, or you have taken steps to enable debugging capability on your phone. To check if your phone is debug-enabled, go to [Devices page on BananaHackers Wiki](https://wiki.bananahackers.net/devices).
+> Before proceeding, make sure that your phone is debug-enabled, or you have taken steps to enable debugging capability on your phone. To check if your phone is debug-enabled, go to [Devices page on BananaHackers Wiki].
 >
-> **Be careful when installing apps from unknown sources**; it's never a bad practice to proof-read their source code. While there are certain security practices, such as prohibiting installing apps with `engmode-extension` permission, KaiOS is still prone to malicious code[^2] [^3] which can result in performance degradation, data loss or worse.
+> **Be careful when installing apps from unknown sources**; it's never a bad practice to proof-read their source code. While there are certain security practices, such as prohibiting installing apps with `engmode-extension` permission, KaiOS is still [prone to] [malicious code] which can result in performance degradation, data loss or worse.
 
 ## What we need
 
 - a phone running KaiOS 2.5 (again, KaiOS 3 users should NOT follow this guide);
 - a x86_64 computer running Windows, macOS or Linux;
-	- armhf/aarch64 users may need to use `gdeploy` or [build one of the browsers below from source](https://new.reddit.com/r/KaiOS/comments/rawwhz/webide_capable_program_linux_arm/)
+	- armhf/aarch64 users may need to use `gdeploy` or [build one of the browsers below from source]
 - an USB cable with data transferring capability;
 - an Internet connection for both your phone and computer;
-- an archiver: built-in file manager on macOS/Linux, [7-Zip](https://www.7-zip.org/download.html) or WinRAR on Windows; 
-- latest version of Android Debug Bridge (ADB): [Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip), [macOS](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip), [Linux](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
+- an archiver: built-in file manager on macOS/Linux, [7-Zip] or WinRAR on Windows; 
+- latest version of Android Debug Bridge (ADB): [Windows], [macOS], [Linux]
     - you can also install from your operating system's package manager:
     - Windows:
-        - [Chocolatey](https://community.chocolatey.org/packages/adb): `choco install adb`
+        - [Chocolatey]: `choco install adb`
         - Scoop: `scoop install main/adb` 
-        - `winget` [prohibits installing executables with symlinks](https://github.com/microsoft/winget-pkgs/issues/4082)
-    - [macOS (Homebrew)](https://formulae.brew.sh/cask/android-platform-tools): `brew install android-platform-tools`
+        - `winget` [prohibits installing executables with symlinks]
+    - [macOS (Homebrew)]: `brew install android-platform-tools`
     - Debian/Ubuntu: `sudo apt-get install adb`
-    - [Fedora](https://packages.fedoraproject.org/pkgs/android-tools/android-tools): `sudo dnf install android-tools`
-    - [Arch](https://archlinux.org/packages/extra/x86_64/android-tools)/Manjaro: `sudo pacman -S android-tools`
+    - [Fedora]: `sudo dnf install android-tools`
+    - [Arch]/Manjaro: `sudo pacman -S android-tools`
     - Termux (terminal emulator on Android): `pkg install android-tools`
-    - *tip: If you download the SDK from Android Developers' website, [include the extracted ADB folder in PATH for quick access](https://gist.github.com/nex3/c395b2f8fd4b02068be37c961301caa7). This will be handled for you if you've installed ADB via package manager.*
+    - *tip: If you download the SDK from Android Developers' website, [include the extracted ADB folder in PATH for quick access]. This will be handled for you if you've installed ADB via package manager.*
 - Mozilla got rid of the old WebIDE since Firefox 59, so we'll have to install an older version of Firefox:
-    - [Waterfox Classic](https://classic.waterfox.net): the most recently maintained browser which still has old WebIDE
+    - [Waterfox Classic]: the most recently maintained browser which still has old WebIDE
     - [Pale Moon 28.6.1](https://archive.palemoon.org/palemoon/28.x/28.6.1/) (Windows/Linux): a popular fork of Firefox with older user interface, legacy Firefox add-on support and always runs in single-process mode.
     - Firefox 59 (ESR 52.9): the last official Firefox version to be bundled with working WebIDE and other tools for development on Firefox OS devices, before Mozilla decided to kill the project in 2016. Archives of all Firefox releases can be found [here](https://archive.mozilla.org).
-    - [KaiOS RunTime](https://s3.amazonaws.com/kaicloudsimulatordl/developer-portal/simulator/Kaiosrt_ubuntu.tar.bz2) (Ubuntu): official development environment for KaiOS 2.5 made by KaiOS. It's also possible to get KaiOSRT to work on Windows 10 and later using Windows Subsystem for Linux (WSLg). [See this video on YouTube for action](https://youtu.be/eg2SOCTMxYU).
+    - [KaiOS RunTime] (Ubuntu): official development environment for KaiOS 2.5 made by KaiOS. It's also possible to get KaiOSRT to work on Windows 10 and later using Windows Subsystem for Linux (WSLg). [See this video on YouTube for action].
 
-*Need a video tutorial? If you’re on Linux, KaiOS Technologies officially made one for their own WebIDE client KaiOSRT which can be found [here](https://www.youtube.com/watch?v=wI-HW2cLrew). Alternatively, there’s also one on BananaHackers’ YouTube channel [here](https://www.youtube.com/watch?v=SoKD7IBTvM4).*
+*Need a video tutorial? If you’re on Linux, KaiOS Technologies officially made one for their own WebIDE client KaiOSRT which can be found [on their channel]. Alternatively, there’s also [one on BananaHackers’ YouTube channel].*
 
 ---
 
-Begin by turning on debugging mode on your phone and connecting your phone to the computer with the USB cable. This step will differ for each device; if you're unsure, it's best to look up your phone on the [Devices page on BananaHackers Wiki](https://wiki.bananahackers.net).
+Begin by turning on debugging mode on your phone and connecting your phone to the computer with the USB cable. This step will differ for each device; if you're unsure, it's best to look up your phone on the [Devices page on BananaHackers Wiki].
 
 On your computer, install ADB from the package manager, or download the SDK Platform Tools from Android Developers' website, which should contain the latest version of ADB. Extract the downloaded archive to a folder, then navigate to the `platform-tools` folder using Command Prompt or Terminal.
 
@@ -81,6 +81,8 @@ List of devices attached
 ```
 
 <details markdown="block"><summary>Connect to ADB over Wi-Fi</summary>
+
+---
 
 *I was not able to get this to work. Proceed with caution.*
 
@@ -107,9 +109,11 @@ $ adb forward tcp:6000 localfilesystem:/data/local/debugger-socket
 
 Replace `192.168.1.14` with your phone's IP address assigned by local network—the same network your computer is on.
 
-You can find your phone's local IP address (192.168.1.x) by going to Settings, Network & Connectivity, Wi-Fi, Available networks, click on the connected Wi-Fi access point and look under IP address; or download N4NO’s [My IP Address](https://www.kaiostech.com/store/apps/?bundle_id=com.n4no.myipaddress) from KaiStore.
+You can find your phone's local IP address (192.168.1.x) by going to Settings, Network & Connectivity, Wi-Fi, Available networks, click on the connected Wi-Fi access point and look under IP address; or download N4NO’s [My IP Address] from KaiStore.
 
-It's also possible to connect to your phone entirely without an USB cable, though the connection will be less reliable. See [Connect to ADB wirelessly on Launch hidden settings](https://bmndc.github.io/nokia-leo/w2d#connect-to-adb-wirelessly) page for more details.
+It's also possible to connect to your phone entirely without an USB cable, though the connection will be less reliable. See [Connect to ADB wirelessly on Launch hidden settings] page for more details.
+
+---
 
 </details>
 
@@ -117,7 +121,13 @@ Download and install either the latest version of Waterfox Classic, Firefox 59/E
 
 ![](https://raw.githubusercontent.com/bmndc/nokia-leo/docs/assets/images/webide/waterfox-download.png)
 
-Open the browser and press <kbd>Alt</kbd> to show the menu bar, then select Tools, Web Developer, WebIDE (or press its shortcut: <kbd>Shift</kbd> + <kbd>F8</kbd>) to open WebIDE.
+Open the browser and press <kbd>Alt</kbd> to show the menu bar, then select Tools, Web Developer, WebIDE (or press <kbd>Shift</kbd> + <kbd>F8</kbd>).
+
+{:.tip}
+> Execute this command to open WebIDE without having to start Waterfox Classic beforehand:
+> ```console
+> waterfox.exe -chrome chrome://webide/content/webide.xul
+> ```
 
 <p align="center"><img src="https://raw.githubusercontent.com/bmndc/nokia-leo/docs/assets/images/webide/waterfox-menu.png"></p>
 
@@ -136,7 +146,7 @@ Then, click Remote Runtime in the right pane, leave it as default at `localhost:
 
 *If you’re using older browsers to access WebIDE such as Firefox v59 or Pale Moon <28.6.1, at this point you may see a warning header about mismatched build date. You can safely ignore it as WebIDE was mainly designed to support Firefox OS device builds released alongside that Firefox/Pale Moon versions.*
 
-To sideload an application, download a packaged file (you can find great apps on [BananaHackers Store](https://store.bananahackers.net) and GitHub!) and extract it into a dedicated folder. Make sure that there's a `manifest.webapp` at the root of the extracted folder. If you see an `application.zip` (which indicates the app was packaged for OmniSD), unzip it.
+To sideload an application, download a packaged file (you can find great apps on [BananaHackers Store] and GitHub!) and extract it into a dedicated folder. Make sure that there's a `manifest.webapp` at the root of the extracted folder. If you see an `application.zip` (which indicates the app was packaged for OmniSD), unzip it.
 
 <p align="center"><img src="https://raw.githubusercontent.com/bmndc/nokia-leo/docs/assets/images/webide/explorer-manifest.png"></p>
 
@@ -146,7 +156,7 @@ In WebIDE, select Open Packaged App in its left sidebar and navigate to the root
 
 Once you get the app loaded with no errors, press the triangle Install and Run in the top bar to sideload.
 
-*Feel free to ignore this warning: "app submission to the Marketplace requires a [size in px] icon". if you were to upload your apps to the Firefox Marketplace, a 128px icon is required to display your app in the splash screen. While KaiStore also requires app icons to be in certain sizes, a 128px icon is no longer necessary, only 56px and 112px.[^6] You can get rid of this error by including a 128px icon in the app's manifest.*
+*Feel free to ignore this warning: "app submission to the Marketplace requires a [size in px] icon". if you were to upload your apps to the Firefox Marketplace, a 128px icon is required to display your app in the splash screen. While KaiStore also requires app icons to be in certain sizes, a 128px icon is no longer necessary, [only 56px and 112px]. You can get rid of this error by including a 128px icon in the app's manifest.*
 
 # Setting up USB access on Linux
 
@@ -200,18 +210,42 @@ Finally, re-run `adb devices`.
 
 **References used for this page**
 
-1. [ADB & Fastboot](https://ivan-hc.github.io/bananahackers/adb.html) and [WebIDE and other Development tools](https://ivan-hc.github.io/bananahackers/webide.html) on BananaHackers website
-2. Martin Kaptein's [Side-loading and deploying custom apps to KaiOS](https://mk24.me/blog/sideloading-and-deploying-apps-to-kai-os/) blog post
-3. [Android Debug Bridge](https://wiki.archlinux.org/title/Android_Debug_Bridge) on Arch Linux Wiki, distributed under GNU Free Documentation License 1.3
-4. [Run apps on a hardware device](https://developer.android.com/studio/run/device) on Android Developers' website, distributed under Apache 2.0 License
-5. (https://wiki.mozilla.org/KaiOS)
-6. https://www.reddit.com/r/KaiOS/comments/1d0iur3/security_analysis_of_the_kaios_feature_phone/
-    Note: Fabrice Desré, former Chief Architect of KaiOS Technologies, confirmed that there are factual errors in the report i.e. apps are handled in their own processes rather than in the same runtime, and that the research team never contacted KaiOS."
+- [ADB & Fastboot](https://ivan-hc.github.io/bananahackers/adb.html) and [WebIDE and other Development tools](https://ivan-hc.github.io/bananahackers/webide.html) on BananaHackers website
+- Martin Kaptein's [Side-loading and deploying custom apps to KaiOS](https://mk24.me/blog/sideloading-and-deploying-apps-to-kai-os/) blog post
+- [Android Debug Bridge](https://wiki.archlinux.org/title/Android_Debug_Bridge) on Arch Linux Wiki, distributed under GNU Free Documentation License 1.3
+- [Run apps on a hardware device](https://developer.android.com/studio/run/device) on Android Developers' website, distributed under Apache 2.0 License
 
-[^3]: https://research.nccgroup.com/2020/08/24/whitepaper-exploring-the-security-of-kaios-mobile-applications/
-[^4]: https://kaios.dev/2024/03/kaios-system-properties/
-[^5]: https://www.infoq.com/news/2014/06/webide/
-[^6]: https://developer.kaiostech.com/docs/distribution/submission-guideline/
+[the hidden Developer menu]: https://w2d.bananahackers.net
+[jailbreaking]: https://en.wikipedia.org/wiki/IOS_jailbreaking
+[makes significant use of Android's well-established hardware compatibility]: https://kaios.dev/2024/03/kaios-system-properties/
+[built on the former Firefox OS App Manager]: https://www.infoq.com/news/2014/06/webide/
+[Mozilla partnered with KaiOS Technologies]: https://wiki.mozilla.org/KaiOS
+[the official Developer Portal]: https://developer.kaiostech.com/docs/sfp-3.0/getting-started/env-setup/os-env-setup
+[Devices page on BananaHackers Wiki]: https://wiki.bananahackers.net/devices
+[prone to]: https://www.reddit.com/r/KaiOS/comments/1d0iur3/security_analysis_of_the_kaios_feature_phone/ "Note: Fabrice Desré, former Chief Architect of KaiOS Technologies, confirmed that there are factual errors in the report i.e. apps are handled in their own processes rather than in the same runtime, and that the research team never contacted KaiOS."
+[malicious code]: https://research.nccgroup.com/2020/08/24/whitepaper-exploring-the-security-of-kaios-mobile-applications/
+[build one of the browsers below from source]: https://new.reddit.com/r/KaiOS/comments/rawwhz/webide_capable_program_linux_arm/
+[7-Zip]: https://www.7-zip.org/download.html
+[Windows]: https://dl.google.com/android/repository/platform-tools-latest-windows.zip
+[macOS]: https://dl.google.com/android/repository/platform-tools-latest-darwin.zip
+[Linux]: https://dl.google.com/android/repository/platform-tools-latest-linux.zip
+[Chocolatey]: https://community.chocolatey.org/packages/adb
+[prohibits installing executables with symlinks]: https://github.com/microsoft/winget-pkgs/issues/4082
+[macOS (Homebrew)]: https://formulae.brew.sh/cask/android-platform-tools
+[Fedora]: https://packages.fedoraproject.org/pkgs/android-tools/android-tools
+[Arch]: https://archlinux.org/packages/extra/x86_64/android-tools
+[include the extracted ADB folder in PATH for quick access]: https://gist.github.com/nex3/c395b2f8fd4b02068be37c961301caa7
+[Waterfox Classic]: https://classic.waterfox.net
+[Pale Moon 28.6.1]: https://archive.palemoon.org/palemoon/28.x/28.6.1/
+[KaiOS RunTime]: https://s3.amazonaws.com/kaicloudsimulatordl/developer-portal/simulator/Kaiosrt_ubuntu.tar.bz2
+[See this video on YouTube for action]: https://youtu.be/eg2SOCTMxYU
+[on their channel]: https://www.youtube.com/watch?v=wI-HW2cLrew
+[one on BananaHackers’ YouTube channel]: https://www.youtube.com/watch?v=SoKD7IBTvM4
+[My IP Address]: https://www.kaiostech.com/store/apps/?bundle_id=com.n4no.myipaddress
+[Connect to ADB wirelessly on Launch hidden settings]: https://bmndc.github.io/nokia-leo/w2d#connect-to-adb-wirelessly
+[BananaHackers Store]: https://store.bananahackers.net
+[only 56px and 112px]: https://developer.kaiostech.com/docs/distribution/submission-guideline/
+[Make KaiOS Install]: https://github.com/jkelol111/make-kaios-install
 
 <!-- {:.warning}
 > KaiOS 2.5 only. To sideload apps on debug-enabled KaiOS 3 devices, follow the instructions on using KaiOS's in-house `appscmd` on [the official Developer Portal](https://developer.kaiostech.com/docs/sfp-3.0/getting-started/env-setup/os-env-setup).
