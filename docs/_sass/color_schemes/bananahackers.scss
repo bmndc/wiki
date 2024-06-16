@@ -3,7 +3,7 @@ $nav-width: 275px;
 $content-width: calc(960px + 32px);
 @media (min-width: 50rem) {
     body {
-        font-size: 14px;
+        font-size: 14px !important;
     }
 }
 h2, .rs-count {
